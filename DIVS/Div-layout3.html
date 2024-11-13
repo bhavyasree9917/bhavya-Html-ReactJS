@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+<style>
+    .container {
+    border: 3px solid;
+    width: 950px;
+    margin: auto;
+    margin-top: 40px;
+}
+div#heading {
+    background: darkred;
+    margin: 10px;
+    padding: 15px;
+}
+#heading h1 {
+    color: black;
+    text-align: center;
+}
+.middle.section {
+    margin: 10px;
+    overflow: auto;
+}
+.chaild1 {
+    background: cornflowerblue;
+    width: 450px;
+    float: left;
+}
+.chaild ul {
+    list-style-type: none;
+}
+.chaild ul li {
+    line-height: 2;
+}
+.chaild2 {
+    float: right;
+}
+div#footer {
+    background: aqua;
+    height: 50px;
+    margin: 10px;
+    color: black;
+    text-align: center;
+}
+.chaild1 ul li {
+    height: 50px;
+}
+img {
+    width: 400px;
+    height: 400px;
+}
+</style>
+<body>
+    <div class="container">
+      <div id="heading">
+        <h1>Beauty in nature</h1>
+      </div> 
+      <div class="middle section" >
+        <div class="chaild1">
+            <ul>
+                <li>flowers</li>
+                <li>fruits</li>
+                <li>vegetables</li>
+                <li>leafss</li>
+            </ul>
+        </div>
+        <div class="chaild2">
+            <h2>Nature image</h2>
+            <p>
+                <img src="../download.jpg" alt="">
+            </p>
+        </div>
+      </div>
+      <div id="footer">Beauty in nature</div>
+    </div>
+</body>
+</html>
