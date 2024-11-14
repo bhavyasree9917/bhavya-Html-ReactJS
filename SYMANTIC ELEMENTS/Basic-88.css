@@ -1,0 +1,45 @@
+.row1 {
+    background: black;
+    color: white;
+}
+header {
+    width: 850px;
+    margin: auto;
+    overflow: auto;
+}
+.basic88 {
+    width: 300px;
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+.basic88 h2 {
+    margin: 0;
+}
+.basic88 p {
+    margin: 0;
+}
+header nav {
+    width: 450px;
+    float: right;
+    margin: 20px 20px 20px 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+.row2 {
+    width: 850px;
+    margin: auto;
+    margin-top: 15px;
+}
+.row3 {
+    width: 850px;
+    margin: auto;
+}
+figure img {
+    width: 240px;
+    padding-left: 0;
+}
+figure {
+    margin: 0;
+}
