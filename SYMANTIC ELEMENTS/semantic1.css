@@ -4,7 +4,7 @@
 h1 {
     border: 2px solid;
     margin: 5px;
-    height: 50px;
+    height: 65px;
     text-align: center;
 }
 nav {
@@ -12,6 +12,7 @@ nav {
     margin: 5px;
     height: 50px;
     text-align: center;
+    background-color: crimson;
 }
 .midparentrow {
     margin: 5px;
@@ -26,23 +27,28 @@ section {
     border: 2px solid;
     height: 100px;
     text-align: center;
+    background-color: azure;
 }
 article {
     border: 2px solid;
     width: 700px;
+    float: right;
     height: 100px;
     text-align: center;
+    background-color: purple;
 }
 aside {
     border: 2px solid;
-    width: 620px;
+    width: 690px;
     float: right;
     height: 200px;
     text-align: center;
+    background-color: red;
 }
 footer {
     border: 2px solid;
     margin: 5px;
     height: 50px;
     text-align: center;
+    background-color: yellow;
 }
