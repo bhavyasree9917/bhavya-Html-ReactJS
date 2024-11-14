@@ -32,30 +32,20 @@ div#subparent {
 section {
     border: 2px solid;
     margin: 10px;
-    height: 100px;
+    height: 200px;
     text-align: center;
     background-color: darkgray;
 }
 article {
     border: 2px solid;
-    height: 100px;
+    height: 200px;
     text-align: center;
     background-color: crimson;
     margin: 0 10px 10px 10px;
 }
 aside {
-    width: 300px;
-    float: right;
-    height: 214px;
     text-align: center;
-    border: 2px solid;
-    margin: 30px;
-}
-aside img {
-    width: 240px;
-    padding: 4px;
-    border: 2px solid;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
 }
 footer {
     height: 40px;
