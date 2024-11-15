@@ -23,27 +23,26 @@ nav {
     float: left;
 }
 section {
-    width: 700px;
     border: 2px solid;
-    height: 100px;
+    width: 600px;
     text-align: center;
-    background-color: azure;
+    background-color: red;
+    height: 200px;
 }
 article {
     border: 2px solid;
-    width: 700px;
-    float: right;
-    height: 100px;
+    width: 600px;
+    height: 200px;
     text-align: center;
-    background-color: purple;
+    background-color: aqua;
 }
 aside {
     border: 2px solid;
-    width: 690px;
     float: right;
-    height: 200px;
+    height: 400px;
     text-align: center;
-    background-color: red;
+    background-color: orange;
+    width: 300px;
 }
 footer {
     border: 2px solid;
