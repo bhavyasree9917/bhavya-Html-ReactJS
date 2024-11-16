@@ -1,0 +1,187 @@
+.container {
+    overflow: auto;
+}
+.row1 {
+    background: black;
+    color: white;
+    height: 88px;
+}
+header {
+    width: 800px;
+    background: gray;
+    margin: auto;
+}
+.basic {
+    width: 220px;
+    float: left;
+    margin-top: 10px;
+}
+.basic h1 {
+    padding: 0;
+    margin: 0;
+}
+.basic p {
+    padding: 0;
+    margin: 0;
+}
+nav {
+    float: right;
+    margin-top: 13px;
+    background: black;
+}
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.row2 {
+    margin: auto;
+    width: 800px;
+}
+.row2 img {
+    margin-top: 30px;
+    width: 800px;
+}
+.row3 {
+    width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+.childs {
+    width: 185px;
+    float: left;
+    margin-right: 15px;
+}
+.childs figure {
+    margin-left: 0;
+}
+.childs figure img {
+    width: 28px;
+    height: 28px;
+    float: left;
+    border: 1px solid;
+    padding: 2px;
+}
+span {
+    font-size: 15px;
+    margin-left: 14px;
+}
+.child figcaption p {
+    font-size: 13px;
+}
+.childspara a {
+    color: orange;
+    text-decoration: none;
+}
+.childs4 {
+    width: 185px;
+    float: right;
+}
+.child4 figure img {
+    width: 28px;
+    height: 28px;
+    float: left;
+    border: 1px solid;
+}
+span {
+    font-size: 15px;
+    margin-left: 14px;
+}
+.child figcaption p {
+    font-size: 13px;
+}
+.childspara {
+    float: right;
+}
+.childpara a {
+    color: red;
+    text-decoration: none;
+}
+.row4 {
+    width: 900px;
+    margin: auto;
+    overflow: auto;
+    border-bottom: 1px solid;
+    color: gray;
+}
+.parent1 {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+.parent1 {
+    width: 300px;
+    height: 180px;
+    float: left;
+}
+p.parent2 {
+    float: right;
+}
+.row5 {
+    width: 900px;
+    margin: auto;
+    overflow: auto;
+    margin-top: 20px;
+}
+.row5 article {
+    width: 580px;
+    float: left;
+}
+.child1 {
+    overflow: auto;
+    width: 394px;
+}
+.child.img {
+    width: 170px;
+    float: left;
+}
+.child img img {
+    width: 390px;
+    float: right;
+    margin-left: 10px;
+}
+.child1cap {
+    width: 390px;
+    float: right;
+    margin-left: 10px;
+}
+.child1cap p {
+    font-size: 15px;
+}
+#childpara a {
+    color: orange;
+    text-decoration: none;
+    font-size: 13px;
+}
+aside {
+    float: right;
+    width: 300px;
+}
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+aside ul li {
+    border-bottom: 1px solid lightgrey;
+    font-size: 15px;
+    color: grey;
+}
+.row6 {
+    background: black;
+    color: white;
+}
+footer {
+    width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+p#footerpara1 {
+    float: left;
+    font-size: 13px;
+}
+p#footerpara2 {
+    float: right;
+    font-size: 13px;
+}
+
+
