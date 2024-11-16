@@ -1,0 +1,125 @@
+.row1 {
+    background: aqua;
+    color: red;
+}
+header {
+    width: 850px;
+    margin: auto;
+    overflow: auto;
+}
+.Pawan.kalyan {
+    width: 300px;
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+.pawankalyan h2 {
+    margin: 0;
+}
+.pawankalyan p {
+    margin: 0;
+}
+header nav {
+    width: 450px;
+    float: right;
+    margin: 20px 20px 20px 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+.row2 {
+    width: 850px;
+    margin: auto;
+    margin-top: 15px;
+}
+.row2 img {
+    width: 850px;
+}
+.row3 {
+    width: 850px;
+    margin: auto;
+}
+.childs {
+    width: 283px;
+    float: left;
+}
+figure img {
+    width: 280px;
+    padding-left: 0;
+}
+figure {
+    margin: 0;
+}
+p#ancherPara {
+    float: right;
+    font-size: 11px;
+}
+#ancherpara a {
+    color: red;
+}
+.row4 {
+    width: 850px;
+    overflow: auto;
+    margin: auto;
+}
+article {
+    width: 420px;
+    float: left;
+}
+aside {
+    width: 420px;
+    float: right;
+}
+aside img {
+    width: 410px;
+    border: 1px solid;
+    padding: 4px;
+    height: 240px;
+}
+article p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+.parentSection {
+    background: #333333;
+    color: white;
+}
+.subSection {
+    width: 850px;
+    margin: auto;
+    overflow: auto;
+}
+section {
+    width: 190px;
+    float: left;
+    margin: 20px 11px 20px;
+}
+section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+section ul li {
+    font-size: 12px;
+    line-height: 2;
+    border-bottom: 1px solid;
+    color: red;
+    cursor: pointer;
+}
+.row6 {
+    background: yellow;
+    color: red;
+}
+footer {
+    width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+p#footerpara1 {
+    float: left;
+    font-size: 13px;
+}
+p#footerpara2 {
+    float: right;
+    font-size: 13px;
+}
