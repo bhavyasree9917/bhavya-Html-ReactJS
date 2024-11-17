@@ -62,6 +62,13 @@ nav ul li {
     border: 1px solid;
     padding: 2px;
 }
+.childs4 figure img {
+    width: 28px;
+    height: 28px;
+    float: left;
+    border: 1px solid;
+    padding: 2px;
+}
 span {
     font-size: 15px;
     margin-left: 14px;
@@ -129,16 +136,16 @@ p.parent2 {
 }
 .child1 {
     overflow: auto;
-    width: 394px;
 }
-.child.img {
+.childimg {
     width: 170px;
     float: left;
 }
-.child img img {
-    width: 390px;
-    float: right;
-    margin-left: 10px;
+.child1img img {
+    width: 170px;
+    height: 150px;
+    border: 1px solid;
+    padding: 3px;
 }
 .child1cap {
     width: 390px;
