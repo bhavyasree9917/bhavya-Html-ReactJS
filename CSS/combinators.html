@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p{
+            color: orangered;
+        }
+        div>p{
+            color: blue;
+        }
+        div+p{
+            background-color: red;
+        }
+        div~p{
+            border: 2px solid;
+            color: aqua;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--four different combinators
+    1.descendent selector(space)
+    2.child selecctor(>)
+    3.adjacent selector(+)
+    4.General sibilings selector(~)
+    -->
+    <div>
+        <p>1.Employee unions have extended their support to the decision, arguing that it is consistent with the Andhra
+            Pradesh Endowments Act, the TTD Act, and a 1989 government order mandating that only Hindus be employed in
+            temple-related roles.</p>
+            <p>
+                2.Employee unions have extended their support to the decision, arguing that it is consistent with the Andhra
+                Pradesh Endowments Act, the TTD Act, and a 1989 government order mandating that only Hindus be employed in
+                temple-related roles.
+            </p>
+    </div>
+    <p>
+        3.Employee unions have extended their support to the decision, arguing that it is consistent with the Andhra
+        Pradesh Endowments Act, the TTD Act, and a 1989 government order mandating that only Hindus be employed in
+        temple-related roles.
+    </p>
+    <p>
+        4.Employee unions have extended their support to the decision, arguing that it is consistent with the Andhra
+        Pradesh Endowments Act, the TTD Act, and a 1989 government order mandating that only Hindus be employed in
+        temple-related roles.
+    </p>
+</body>
+
+</html>
