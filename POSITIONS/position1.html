@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positions</title>
+    <style>
+        body{
+            background-color:aquamarine;
+        }
+        .container{
+            background-color: aqua;
+            border: 2px solid;
+        
+        }
+        .staircase{
+            position: relative;
+            width: 500px;
+            height: 500px;
+        }
+        .step{
+            position: absolute;
+            width: 75px;
+            height: 25px;
+            background-color: white;
+            text-align: center;
+        }
+        .step:first-child{
+            top: 20px;
+            left: 660px;
+            color: aqua;
+        }
+        .step:nth-child(2){
+            top: 60px;
+            left:600px ;
+            color: blue;
+        }
+        .step:nth-child(3){
+            top: 100px;
+            left: 540px;
+            color: brown;
+        }
+        .step:nth-child(4){
+            top: 140px;
+            left:480px ;
+            color: orangered;
+        }
+        .step:nth-child(5){
+            top: 180px;
+            left: 420px;
+            color: green;
+        }
+        .step:nth-child(6){
+            top: 220px;
+            left:360px ;
+            color: deeppink;
+        }
+        .step:nth-child(7){
+            top: 260px;
+            left:300px ;
+            color: greenyellow;
+        }
+        .step:nth-child(8){
+            top:300px ;
+            left:240px ;
+            color: lawngreen;
+        }
+        .step:last-child {
+    top: 330px;
+    left: 180px;
+    color: springgreen;
+}
+        
+            
+    
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="staircase">
+        <div class="step">step1</div>
+        <div class="step">step2</div>
+        <div class="step">step3</div>
+        <div class="step">step4</div>
+        <div class="step">step5</div>
+        <div class="step">step6</div>
+        <div class="step">step7</div>
+        <div class="step">step8</div>
+        <div class="step">step9</div>
+        <img src="../download (3).jpg" alt="">
+</div>
+</div>
+</body>
+</html>
