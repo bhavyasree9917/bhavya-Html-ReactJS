@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content:"companies in mobile phones"counter(section)":";
+        }
+    </style>
+</head>
+<body>
+    <!--automatic numbering with counters(which will
+    track now many times they are used)-->
+    <h1>companies in mobile phones</h1>
+    <h2>vivo</h2>
+    <h2>oppo</h2>
+    <h2>apple</h2>
+    <h2>samsung</h2>
+    <h2>mi</h2>
+    
+</body>
+</html>
