@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         .Basics {
+        position: relative;
+        display: inline-block;
+        border-bottom: 2px double rgb(60, 10, 20);
+      }
+
+      .Basics .text{
+        visibility: hidden;
+        width: 270px;
+        background-color: red;
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        bottom: 100px;
+        left: 50%;
+      }
+      .Basics:hover .text {
+        visibility: visible;
+      }
+      .cpu .abrivation {
+        visibility: hidden;
+      }
+      .cpu:hover .abrivation {
+        visibility: visible;
+      }
+     
+    </style>
 </head>
 <body>
-   
+    <h2>Basics</h2>
+    <p>computer is an electronic device which stores data and process it and gives output.</p>
+
+    <div class="Basics">
+      Hover On Me
+      <span class="text">text</span>
+    </div>
+
+    <div class="cpu">
+      cpu
+      <span class="abrivation">central processing unit</span>
+    </div>
 </body>
 </html>
