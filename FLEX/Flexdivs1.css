@@ -1,0 +1,44 @@
+.parent {
+    
+    border: 2px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  }
+  .flex-Item {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .child-1{
+    background-color: red;
+  }
+  .child-2{
+    background-color: green;
+  }
+  .child-3{
+    background-color: aqua;
+  }
+  .child-4{
+    background-color: blue;
+  }
+  .child-5{
+    background-color: blueviolet;
+  }
+  .child-6{
+    background-color: brown;
+  }
+  .child-7{
+    background-color: lawngreen;
+  }
+  .child-8{
+    background-color: indianred;
+  }
+  .child-9{
+    background-color: darkgoldenrod;
+  }
+  .child-10{
+    background-color: deeppink;
+  }
+  
