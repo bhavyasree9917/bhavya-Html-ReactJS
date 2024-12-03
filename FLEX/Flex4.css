@@ -2,7 +2,7 @@
     margin: 2px;
 }
 h2{
-    color: red;
+    color: white;
 }
 body{
     font-size: 20px ;
@@ -30,7 +30,7 @@ body{
     flex: 1 1 rem;
     border-radius: 50%;
     background-image: url(../artificial-forming.jpg);
-    border: 10px double red;
+    border: 10px double yellow;
 }
 .flex-article{
     background-color: rgb(144, 13, 85);
@@ -39,7 +39,7 @@ body{
     flex: 1 1 5rem;
     border-radius: 50%;
     background-image: url(../artificial-forming.jpg);
-    border: 10px double green;
+    border:10px double greenyellow;
 }
 .flex-aside{
     background-color: rgb(0, 0, 0);
