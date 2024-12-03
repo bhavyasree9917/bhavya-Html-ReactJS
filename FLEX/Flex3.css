@@ -1,0 +1,106 @@
+*/{
+    box-sizing: border-box;
+    padding: opx;
+    margin: opx;
+}
+
+
+body{
+    background-color:grey;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: darkgoldenrod;
+    
+}
+.row1{
+    background-color:darkgoldenrod;
+    color: rgb(51, 17, 174);
+}
+header{
+    width: 850px;
+    margin: auto;
+    overflow: auto;
+
+}
+.sportscars{
+    width: 300px;
+    float: left;
+    margin: 20px 20px 0;
+}
+.sportscars h2{
+    margin: 0;
+}
+.header nav{
+    width: 450px;
+    float: right;
+    margin: 20px 20px 0;
+}
+nav ul li{
+    display: inline;
+    margin-right: 15px;
+    background-color: darkgoldenrod;
+    color: deeppink;
+
+}
+nav ul li:hover{
+    color: red;
+}
+.row2{
+    display: flex;
+    
+}
+.card{
+    background: white;
+    width: 500px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 15px;
+}
+.card-image{
+    background-color:blue;
+    height: 200px;
+}
+.car-1{
+    background-image: url(../download\ \(9\).jpg);
+}
+.car-2{
+    background-image: url(../download\ \(10\).jpg);
+}
+.car-3{
+    background-image: url(../download\ \(11\).jpg);
+}
+.card p{
+    padding: 10px;
+    justify-content: space-between;
+}
+.card a{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.card a:hover{
+    background-color: aqua;
+    color: green;
+}
+.card:hover{
+    background-color: rgb(152, 26, 78);
+    color: red;
+    cursor: pointer;
+}
+footer {
+    width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+p#footerpara1 {
+    float: left;
+    font-size: 13px;
+}
+p#footerpara2 {
+    float: right;
+    font-size: 13px;
+}
