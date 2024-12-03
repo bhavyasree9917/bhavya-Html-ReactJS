@@ -43,6 +43,7 @@ nav ul li{
     background-color: darkgoldenrod;
     color: deeppink;
 
+
 }
 nav ul li:hover{
     color: red;
@@ -64,16 +65,22 @@ nav ul li:hover{
 }
 .car-1{
     background-image: url(../download\ \(9\).jpg);
+
 }
 .car-2{
     background-image: url(../download\ \(10\).jpg);
 }
 .car-3{
     background-image: url(../download\ \(11\).jpg);
+    
 }
 .card p{
     padding: 10px;
     justify-content: space-between;
+    background-color: white;
+}
+.card p:hover{
+    background-color: rgb(162, 10, 106);
 }
 .card a{
     background-color: black;
@@ -90,17 +97,4 @@ nav ul li:hover{
     background-color: rgb(152, 26, 78);
     color: red;
     cursor: pointer;
-}
-footer {
-    width: 800px;
-    margin: auto;
-    overflow: auto;
-}
-p#footerpara1 {
-    float: left;
-    font-size: 13px;
-}
-p#footerpara2 {
-    float: right;
-    font-size: 13px;
 }
