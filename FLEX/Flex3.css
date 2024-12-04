@@ -64,7 +64,7 @@ nav ul li:hover{
     height: 200px;
 }
 .car-1{
-    background-image: url(../download\ \(9\).jpg);
+    background-image: url(../download\ \(9\).jpg)
 
 }
 .car-2{
@@ -80,7 +80,7 @@ nav ul li:hover{
     background-color: white;
 }
 .card p:hover{
-    background-color: rgb(162, 10, 106);
+    background-color: rgb(152, 26, 78);
 }
 .card a{
     background-color: black;
@@ -98,3 +98,18 @@ nav ul li:hover{
     color: red;
     cursor: pointer;
 }
+.flex-footer{
+    background-color:darkgoldenrod;
+    padding-top:2rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+}
+.flex-footer:hover{
+    background-color: green;
+    color: blue;
+
+    }
+
+    
+
