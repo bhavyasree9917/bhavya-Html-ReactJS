@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.container {
+    width: 1506px;
+    background: rgb(18, 188, 197);
+    height: 1000px;
+}
+.row1 {
+    width: 1506px;
+    background:#1eff00;
+    height: 172px;
+}
+.row1 h1 {
+    float: left;
+    padding-left: 50px;
+    padding-top: 30px;
+    box-shadow:0px 0px 20px rgba(145, 6, 82, 0.5);
+    background: red;
+
+}
+.row1 li {
+    display: inline;
+    padding-top: 30px;
+    padding-right: 95px;
+}
+.row1 li {
+    display: inline;
+    padding-top: 30px;
+    padding-right: 95px;
+    float: right;
+}
+.row1 form {
+    float: right;
+    padding-top: 30px;
+    padding-right: 104px;
+}
+input[type="text"] {
+    width: 244px;
+    height: 30px;
+    border-radius: 16px;
+}
+.row1 li:hover{
+    background: red;
+    border-radius: 20px;
+    width: 20px;
+}
+.row2 div {
+    padding: 20px;
+    background: rgb(153, 127, 255);
+}
+
+.row2 {
+    width: 1506px;
+    display: flex;
+    padding-left: 338px;
+
+}
+.row2 img {
+    
+    width: 200px;
+    height: 170px;
+}
+.row3 {
+    width: 1506px;
+    background: black;
+    
+}
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top,rgba(182, 67, 119, 0.5)50%,rgba(12, 162, 42, 0.5)50%);
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    border-radius: 10px;
+    padding: 25px;
+ }
+ .form h2{
+     width: 220px;
+     font-family: sans-serif;
+     text-align: center;
+     color: orangered;
+     font-size: 22px;
+     background-color: white;
+     border-radius: 10px;
+     margin: 6px;
+     padding: 17px;
+     cursor: pointer;
+ }
+ .form h2:hover{
+ background-color: aqua;
+ }
+ .form input{
+     width: 240px;
+     height: 35px;
+     border-bottom: 2px solid red;
+     border-top: none;
+     border-bottom: none;
+     border-left: none;
+     color: white;
+     font-size: 15px;
+     margin-top: 30px;
+     
+     font-family: sans-serif;
+ 
+ }
+ .form input:focus{
+     outline: none;
+ }
+ 
+ 
+ .btnn{
+     width: 240px;
+     height: 40px;
+     background: white;
+     border: none;
+     margin-top: 30px;
+     font-size: 18px;
+     border-radius: 10px;
+     cursor: pointer;
+     color: #770236;
+     transition: 0.4s ease;
+ }
+ .btnn:hover{
+     background-color:red;
+     color: rgb(150, 10, 73);
+ }
+ .form.link{
+     font-family: Arial, sans-serif;
+     font-size: 30px;
+     padding-top: 20px;
+     text-align: center;
+ }
+ .liw{
+     padding-top: 15px;
+     padding-bottom: 10px;
+     text-align: center;
+     border-radius: 50%;
+ }
+
+ #search_section {
+     float: right;
+     margin: 100px 20px 0 0;
+ }
+ 
+ #search_section form {
+     float: right;
+     margin: 0px;
+     padding: 0px;
+ }
+ table {
+    width: 1142px;
+    height: 128px;
+    text-align: center;
+}
+.table {
+    float: right;
+    width: 1143px;
+    background:linear-gradient(to top,rgb(191, 12, 116) 50%,rgba(14, 174, 20, 0.5)50%);
+}
+.disinline {
+    float: right;
+    width: 1143px;
+}
+#disInline .a {
+    display: inline;
+
+    background-color: blue;
+}
+
+#disBlock .b {
+    display: block;
+    
+    background-color: crimson;
+}
+
+#disInlinBlock .c {
+    display: inline-block;
+
+    background-color: yellow;
+}
+
+.row4 {
+    width: 1506px;
+}
+.row3 img {
+    width: 59px;
+    float: right;
+    height: 41px;
+    border-radius: 41px;
+}
+.row4 img {
+    float: left;
+    padding-top: 200px;
+    padding-left: 45px;
+    border-image: url(../ai-generated-networking-building-business-background-photo.jpg) 10% around;
+}
+.row4 img:hover{
+    opacity:0.5;
+}
+div#dropDown {
+    float: right;
+    width: 587px;
+    padding-top: 58px;
+}
+.dropdown-content {
+    display: none;
+  }
+  #dropDown:hover .dropdown-content {
+    display: block;
+    color: blue;
+  }
+  .transition {
+    width: 200px;
+    height: 200px;
+    background-color: lawngreen;
+    border: 10px solid;
+    transition: width 5s, height 8s;
+    float: right;
+    padding-top: 20px;
+  }
+  .transition {
+    transition-timing-function: ease;
+  }
+  .transition:hover {
+    width: 400px;
+    height: 300px;
+    border-radius: 50%;
+    border-image: url(../images\ \(4\).jpg)
+    10% round;
+    background-color: aqua;
+    text-align: center;
+    
+  }
+ 
+
+
+
