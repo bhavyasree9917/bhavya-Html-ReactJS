@@ -295,6 +295,7 @@ select {
 #header {
     padding: 20px 0;
     display: flex;
+    justify-content: space-around;
 }
 
 #header #hgroup {
@@ -551,6 +552,7 @@ select {
 #footer {
     padding: 20px 0;
     display: flex;
+    justify-content: space-between;
 }
 
 #footer p {
