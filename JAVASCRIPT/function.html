@@ -7,38 +7,66 @@
 </head>
 <body>
     <h1>normal function</h1>
-    <script>
-        function adding(num1,num2,num3){
-            var total=(num1+num2+num3)
-            document.write("adding",total)
+       <script> 
+        // function adding(num1,num2,num3){
+        //     var total=(num1+num2+num3)
+        //     document.write("adding",total)
+        // }
+        // adding(10,20,30)
+        
+        function addingthenumbers(num1,num2,num3){
+            return(num1+num2+num3)
         }
-        adding(10,20,30)
+        var total=addingthenumbers(10,20,30);
+        document.write("addingthenumbers",total)
+
     </script>
     <hr>
     <h1>expression function</h1>
     <script>
-        var adding=function(num1,num2,num3){
-         var total=(num1+num2+num3)  
-         document.write("adding",total) 
+        // var adding=function(num1,num2,num3){
+        //  var total=(num1+num2+num3)  
+        //  document.write("adding",total) 
+        // }
+        // adding(20,50,78)
+
+        var addingthenumbers=function(num1,num2,num3){
+            return(num1+num2+num3)
         }
-        adding(20,50,78)
+        var total=addingthenumbers(10,20,30);
+        document.write("addingthjenumbers",total)
+
     </script>
     <hr>
     <h1>arrow function</h1>
     <script>
-        var adding=(num1,num2,num3)=>{
-            var total=(num1+num2+num3)
-            document.write("adding",total)
+        // var adding=(num1,num2,num3)=>{
+        //     var total=(num1+num2+num3)
+        //     document.write("adding",total)
+        // }
+        // adding(10,20,30)
+
+        var addingthenumbers=(num1,num2,num3)=>{
+            return(num1+num2+num3)
         }
-        adding(10,20,30)
+        var total=addingthenumbers(10,20,30);
+        document.write("addingthenumbers",total)
+
+      
+
     </script>
     <hr>
     <h1>self invoced function(sif)</h1>
     <script>
-        (function(num1,num2,num3){
-            var total=(num1+num2+num3);
-            document.write("adding",total)
-        })(10,20,40)
+        // (function(num1,num2,num3){
+        //     var total=(num1+num2+num3);
+        //     document.write("adding",total)
+        // })(10,20,40)
+
+var result=(function(num1,num2,num3){
+    return(num1+num2+num3)
+})(10,20,30)
+document.write(result)
     </script>
 
 </body>
