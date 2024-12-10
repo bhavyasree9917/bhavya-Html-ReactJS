@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>normal function in multiplication</h1>
+    <hr>
+    <script>
+    function multiplythenumbers(num1,num2,num3){
+        var total=num1*num2*num3;
+        document.write("multiplythenumbers",total)
+    }
+    multiplythenumbers(23,45,67)
+
+    // function multiplythenumbers(num1,num2,num3){
+    //     return(num1*num2*num3);
+    // }
+    // var total=multiplythenumbers(10,20,30)
+    // document.write("multiplythenumbers",total)
+        
+    </script>
+
+    <h1>expressionfunctionin multiplication</h1>
+    <hr>
+    <script>
+        var multiplythenumbers=function(num1,num2,num3){
+            var total=num1*num2*num3;
+            document.write("multiplythenumbers",total+"<br>")
+        }
+        multiplythenumbers(90,87,65)
+
+        var multiplythenumbers=function(num1,num2){
+            return(num1*num2);
+        }
+        var total=multiplythenumbers(10,34);
+        document.write("multiplythenumbers",total+"<br>")
+    </script>
+    <h1>arrowfunction in multiplication</h1>
+    <hr>
+    <script>
+        var multiplygivennumbers=(num1,num2,num3)=>{
+            var total=num1*num2*num3;
+            document.write("multiplygivennumbers",total+"<br>")
+        }
+        multiplygivennumbers(90,78,65)
+
+        var multiply=(num1,num2,num3)=>{
+            return(num1*num2*num3);
+        }
+        var total=multiply(90,56,45);
+        document.write("multiply",total+"<br>")
+    </script>
+    <h1>self invoced function in multiplication</h1>
+    <hr>
+    <script>
+        (function(num1,num2,num3){
+            var total=num1*num2*num3;
+            document.write("multiply",total+"<br>")
+        })(45,67,65)
+
+        var result=(function(num1,num2,num3){
+            return(num1*num2*num3);
+        })(90,45,34)
+        document.write(result)
+    </script>
+</body>
+</html>
