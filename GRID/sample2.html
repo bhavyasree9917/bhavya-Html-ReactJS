@@ -8,16 +8,16 @@
      #grid-container{
         display: grid;
         background-color: beige;
-        gap: 10px;
-        height: 300px;
+        display: grid;
+        height: 400px;
         /* grid-template-rows: 100px 200px ; */
         /* grid-template-rows: auto; */
-        grid-template-columns: 100px 200px 300px;
+        /* grid-template-columns: 100px 200px 300px; */
         /* grid-template-columns: auto; */
-        /* grid-template-columns: repeat(4,auto); */
-     justify-content: space-around;
+        grid-template-columns: repeat(4,auto);
+     /* justify-content: space-around; */
         /* justify-content: space-between; */
-        /* justify-content: space-evenly; */
+      justify-content: space-evenly;
         /* justify-content: center; */
         /* align-items: flex-start; */
         /* align-items: flex-end; */
@@ -26,8 +26,10 @@
         /* align-content: space-around; */
         /* align-content: space-evenly; */
         /* align-content: center; */
+        gap:10px
      }
      .box{
+    display: grid;
         border: 2px solid orange;
         font-size: 20px;
         padding: 20px;

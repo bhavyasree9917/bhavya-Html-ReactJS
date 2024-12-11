@@ -1,194 +1,220 @@
 .container {
     overflow: auto;
-}
-.row1 {
+  }
+  .row1 {
     background: black;
     color: white;
     height: 88px;
-}
-header {
+  }
+  header {
     width: 800px;
     background: gray;
     margin: auto;
-}
-.basic {
+    display: flex;
+    justify-content: space-between;
+  }
+  .basic {
     width: 220px;
-    float: left;
+    /* float: left; */
     margin-top: 10px;
-}
-.basic h1 {
+  }
+  .basic h1 {
     padding: 0;
     margin: 0;
-}
-.basic p {
+  }
+  .basic p {
     padding: 0;
     margin: 0;
-}
-nav {
-    float: right;
+  }
+  nav {
+    /* float: right; */
     margin-top: 13px;
     background: black;
-}
-nav ul li {
-    display: inline;
+  }
+  .row1 nav ul{
+    display: flex;
+    list-style-type: none;
+  }
+  nav ul li {
+    /* display: inline; */
     margin-right: 40px;
     font-size: 20px;
-}
-.row2 {
+  }
+  .row2 {
+    margin-top: 20px;
     margin: auto;
     width: 800px;
-}
-.row2 img {
+  }
+  .row2 img {
     margin-top: 30px;
-    width: 800px;
-}
-.row3 {
+  }
+  
+  .row3 {
     width: 800px;
     margin: auto;
     overflow: auto;
-}
-.childs {
+    display: flex;
+  }
+  .childs {
     width: 185px;
-    float: left;
+    /* float: left; */
     margin-right: 15px;
-}
-.childs figure {
+  }
+  .childs figure {
     margin-left: 0;
-}
-.childs figure img {
+  }
+  .childs figure img {
     width: 28px;
     height: 28px;
     float: left;
     border: 1px solid;
     padding: 2px;
-}
-.childs4 figure img {
-    width: 28px;
-    height: 28px;
-    float: left;
-    border: 1px solid;
-    padding: 2px;
-}
-span {
+  }
+  span {
     font-size: 15px;
     margin-left: 14px;
-}
-.child figcaption p {
+  }
+  .childs figcaption p {
     font-size: 13px;
-}
-.childspara a {
+  }
+  .childsPara a {
     color: orange;
     text-decoration: none;
-}
-.childs4 {
+  }
+  .childs4 {
     width: 185px;
-    float: right;
-}
-.child4 figure img {
+    /* float: right; */
+  }
+  .childs4 figure img {
     width: 28px;
     height: 28px;
     float: left;
     border: 1px solid;
-}
-span {
+    padding: 2px;
+  }
+  span {
     font-size: 15px;
     margin-left: 14px;
-}
-.child figcaption p {
+  }
+  .childs4 figcaption p {
     font-size: 13px;
-}
-.childspara {
+  }
+  .childsPara {
     float: right;
-}
-.childpara a {
-    color: red;
+  }
+  .childsPara a {
+    color: orange;
     text-decoration: none;
-}
-.row4 {
+  }
+  .row4 {
     width: 900px;
     margin: auto;
     overflow: auto;
     border-bottom: 1px solid;
     color: gray;
+    display: flex;
 }
 .parent1 {
-    width: 200px;
-    height: 100px;
-    float: left;
+  width: 290px;
+  height: 180px;
+  /* float: left; */
 }
 .parent1 {
-    width: 300px;
-    height: 180px;
-    float: left;
+  width: 290px;
+  height: 180px;
+  /* float: left; */
+}
+.parent {
+  width: 290px;
+  height: 180px;
+  /* float: right; */
 }
 p.parent2 {
-    float: right;
+  float: right;
 }
-.row5 {
-    width: 900px;
-    margin: auto;
-    overflow: auto;
-    margin-top: 20px;
+.row5{
+  width:900px;
+  margin: auto;
+  overflow: auto;
+  margin-top: 20px;
 }
-.row5 article {
-    width: 580px;
-    float: left;
+.row5 article{
+  width: 580px;
+  float: left;
 }
-.child1 {
-    overflow: auto;
+.child1{
+  overflow:auto ;
+  display: flex;
 }
-.childimg {
-    width: 170px;
-    float: left;
+.child1img{
+  width: 170px;
+  /* float: left; */
 }
-.child1img img {
-    width: 170px;
-    height: 150px;
-    border: 1px solid;
-    padding: 3px;
+.child2{
+    display: flex;
 }
-.child1cap {
-    width: 390px;
-    float: right;
-    margin-left: 10px;
+.child1img img{
+  width: 170px;
+  height: 150px;
+  border: 1px solid;
+  padding: 3px;
 }
-.child1cap p {
-    font-size: 15px;
+.child1cap{
+  width: 390px;
+  /* float: right; */
+  margin-left: 10px;
 }
-#childpara a {
-    color: orange;
-    text-decoration: none;
-    font-size: 13px;
+.child1cap p{
+  font-size: 15px;
 }
-aside {
-    float: right;
-    width: 300px;
+p#child1para{
+  float: right;
 }
-aside ul {
-    list-style: none;
-    padding: 0;
+#child1para a{
+  color: orange;
+  text-decoration: none;
+  font-size: 13px;
 }
-aside ul li {
-    border-bottom: 1px solid lightgrey;
-    font-size: 15px;
-    color: grey;
+a{
+  float: right;
+  color: orange;
+  font-size: 13px;
+  text-decoration: none;
+}
+aside{
+  width: 198px;
+  /* float: right; */
+  display: flex;
+}
+aside ul{
+list-style: none;
+padding: 0;
+}
+aside ul li{
+  border-bottom: 1px solid lightgray;
+  font-size: 15px;
+  color: gray;
 }
 .row6 {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 footer {
-    width: 800px;
-    margin: auto;
-    overflow: auto;
+  width: 800px;
+  margin: auto;
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
 }
-p#footerpara1 {
-    float: left;
-    font-size: 13px;
+p#footerPara1 {
+  /* float: left; */
+  font-size: 13px;
 }
-p#footerpara2 {
-    float: right;
-    font-size: 13px;
+p#footerPara2 {
+  /* float: right; */
+  font-size: 13px;
 }
-
-
+article p {
+  font-size: 13px;
+}
+  
