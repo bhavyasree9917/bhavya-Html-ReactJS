@@ -306,10 +306,11 @@ select {
 
 #header {
     padding: 20px 0;
+    display: grid;
 }
 
 #header #hgroup {
-    float: left;
+    /* float: left; */
     margin: 0 0 20px 0;
 }
 

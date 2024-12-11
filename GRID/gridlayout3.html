@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+              .container {
+    display: grid
+;
+    /* width: auto; */
+    height: 90vh;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 20% 60% 20%;
+    text-align: center;
+    
+}
+.header {
+    background-color: red;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+.sidenav {
+    background-color: yellow;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.content {
+    background-color: blue;
+    background-image: url(../ai-generated-networking-building-business-background-photo.jpg);
+   
+
+}
+img{
+    width: 500px;
+    height: 100px;
+}
+.aside {
+    background-color: rgb(189, 17, 166);
+}
+.footer {
+    background-color: lawngreen;
+    grid-column: 1 / 4;
+}
+img {
+    width: 275px;
+    height: 280px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h1>company</h1></div>
+        <div class="sidenav"><img src="../download (11).jpg" alt="">
+       
+        </div>
+        <div class="content">content</div>
+        <div class="aside"><img src="../download (12).jpg" alt=""></div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
