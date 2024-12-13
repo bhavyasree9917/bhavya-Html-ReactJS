@@ -18,7 +18,7 @@
 
 }
 .row1{
-    width: 1509px;
+    width: 1531px;
     margin: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -62,10 +62,11 @@ footer {
     padding: 1rem;
     margin-top: 20px;
   }
-  @media (max-width: 800px){
+  @media (max-width: 200px){
 .row1{
     width: 100%;
     flex-direction: column;
+    background-color: blue;
 }
 .box{
     margin: 10px;
