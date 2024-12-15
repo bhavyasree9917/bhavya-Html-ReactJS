@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex,media queries using web layuot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            width: 100%;
+            background-color: aqua;
+            border: 5px solid black;
+           
+        }
+        .wrapper >*{
+            padding: 10px;
+            margin: 5px;
+            flex: 1 100%;
+          
+        }
+      
+
+        .header{
+            background-color: crimson;
+            height: 120px;
+        }
+        .nav{
+            background-color: blue;
+            height: 80px;
+            padding: 1rem;
+        }
+        nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+
+  .liw{
+     padding-top: 15px;
+     padding-bottom: 10px;
+     text-align: center;
+     border-radius: 50%;
+ }
+ .footer img {
+    
+    width: 65px;
+    height: 23px;
+}
+      
+        .footer{
+            background-color: darkgreen;
+            height: 80px;
+    
+        }
+        .main{
+            background-color:rgb(175, 27, 98);
+            height: 300px;
+            padding: 40px;
+            font-size: 10px;
+            text-align: center;
+        }
+        .aside1{
+            background-color: darkred;
+        }
+        .aside ul li{
+            list-style: none;
+        }
+    
+
+        
+        @media (max-width: 800px){
+      
+            .main{
+                flex: 2;
+                height: 600px;
+                flex-direction: column;
+            }
+            .aside1{
+                order:2;
+            }
+            .main{
+                order: 1;
+            }
+            .footer{
+                order: 4;
+            }
+            aside ul li{
+                list-style: none;
+                line-height: 3rem;
+            }
+            .nav ul{
+                flex-direction: column;
+                align-items: center;
+            }
+           
+            
+        }
+        @media (min-width:600px){
+            .aside{
+                flex:1;
+                
+            }
+            .main{
+                background-color: yellow;
+            
+            }
+            footer h1{
+font-size: 10px;
+            }
+
+           
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>youtube video sharing app</h1>
+        </header>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <article class="main">
+            <h1>main content</h1>
+            <p>YouTube is a free video-sharing website that allows users to watch, create, and upload videos. It's one
+                of the most popular sites on the web, with billion</p>
+                
+                <iframe src="https://www.youtube.com/embed/watch?v=FpjJgHkroDI&list=RDFpjJgHkroDI&start_radio=1&rv=cqwc0_C_Yt0" frameborder="0"></iframe>
+                
+                
+                <iframe src="https://www.youtube.com/embed/watch?v=FpjJgHkroDI&list=RDFpjJgHkroDI&start_radio=1&rv=cqwc0_C_Yt0" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/watch?v=FpjJgHkroDI&list=RDFpjJgHkroDI&start_radio=1&rv=cqwc0_C_Yt0" frameborder="0"></iframe>     
+        </article>
+        <aside class=" aside aside1">
+            <h1>categories:-</h1>
+            <ul class=categories>
+                <li><a href="#"></a>like the video</li>
+                <li><a href="#"></a>subscribe the video</li>
+                <li><a href="#"></a>share video</li>
+                <li><a href="#"></a>comments</li>
+                <li><a href="#"></a>hidden</li>
+            </ul>
+            
+        </aside>
+        <footer class="footer">
+           
+            <p class="liw">log in with</p>
+            <img src="../download (14).jpg" alt="">
+            <img src="../download (15).jpg" alt="">
+            <img src="../download (2).png" alt="">
+            <img src="../download (3).png" alt="">
+        </footer>
+    </div>
+</body>
+
+</html>
