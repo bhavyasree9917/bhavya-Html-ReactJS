@@ -55,11 +55,11 @@ code {
 }
 
 .fl_left {
-    float: left;
+    /* float: left; */
 }
 
 .fl_right {
-    float: right;
+    /* float: right; */
 }
 
 img {
@@ -79,13 +79,13 @@ img {
 }
 
 .imgl {
-    float: left;
+    /* float: left; */
     margin: 0 15px 15px 0;
     clear: left;
 }
 
 .imgr {
-    float: right;
+    /* float: right; */
     margin: 0 0 15px 15px;
     clear: right;
 }
@@ -331,7 +331,7 @@ select {
 
 #header nav {
     display: block;
-    float: right;
+    /* float: right; */
     margin: 10px 0 0 0;
     padding: 20px 0;
     color: #C0BAB6;
