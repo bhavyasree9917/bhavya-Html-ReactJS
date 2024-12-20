@@ -30,10 +30,10 @@ nav ul li{
 .row1{
     background: black;
     height: 20vh;
-    width: 100%;
+    width: 1514px;
 }
 .row2{
-    width: 100%;
+    width: 1514px;
     margin: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +71,7 @@ nav ul li{
     background: blue;
 }
 .row3{
-    width:100% ;
+    width:1514px ;
     background: #5610d6;
 }
 .content {
@@ -103,19 +103,18 @@ nav ul li{
     background-color: #9b175d;
   }
   .main {
-    display: flex
-;
+    display: flex;
     justify-content: space-around;
     background: aqua;
 }
 .row4{
-    width: 100%;
+    width: 1514px;
     height: 192px;
     background: aqua;
 }
 
  .row5{
-    width: 100%;
+    width: 1514px;
     overflow: auto;
     margin: auto;
     display: flex;
@@ -194,9 +193,10 @@ nav ul li{
 .row6 {
     background: rgb(198, 23, 113);
   color: white;
+  width: 1514px;
 }
 footer {
-  width: 100%;
+  width: 1514px;
   margin: auto;
   overflow: auto;
   display: flex;
@@ -211,45 +211,37 @@ p#footerPara2 {
   
   font-size: 13px;
 }
-@media (max-width: 800px) {
 
-
-    .row1 nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-  
-  
-    footer {
-      font-size: 0.9rem;
-    }
-  
-  }
   
   @media (max-width: 500px) {
     .container{
         background-color: aqua;
-        width: 450px;
+        width: 490px;
     }
+    
+
+    
     .row1{
-         width: 450px;
-        height: 400px;
+         width: 485px;
+        height: 300px;
         display: flex;
+        /* flex-direction: column; */
     }
     header  {
       font-size: 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-    width: 460px;
+    width: 485px;
     height: 300px;
+
     }
     .row1 nav{
-        width: 450px;
+        width: 485px;
+        height: 300px;
+        display: flex;
+        /* flex-direction: column; */
+        padding-left: 10px;
     }
     .basic{
         font-size: 15px;
@@ -257,30 +249,38 @@ p#footerPara2 {
         flex-direction: column;
     }
     .row2{
-        height: 300px;
-        width: 450px;
+        width: 100%;
+        flex-direction: column;
+        background-color: blue;
     }
-    .row2 img{
-        width: 450px;
-        height: 250px;
+    .box{
+        margin: 10px;
+        width: 98%;
     }
   
-    .row3{
+    .row3 {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 450px;
+        width: 485px;
         height: 500px;
-        /* font-size: 20px; */
+        
     }
+    .row3 content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
     .row4{
         flex-direction: column;
         align-items: center;
-        width: 450px;
+        width: 485px;
         height: 500px;
     }
     .row5{
         flex-direction: column;
-        width: 450px;
+        width: 485px;
         height: auto;
   
     }
@@ -298,7 +298,7 @@ p#footerPara2 {
         width: 450px;
     }
     .row6{
-      width: 450px;
+      width: 485px;
     }
     .row6 footer{
       width:410px;
@@ -310,7 +310,7 @@ p#footerPara2 {
   
         
     }
+} 
     
-    }
    
   
