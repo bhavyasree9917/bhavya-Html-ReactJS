@@ -241,6 +241,7 @@ article p {
   .row1 nav ul {
     flex-direction: column;
     align-items: center;
+
   }
 
   nav ul li {
@@ -309,7 +310,7 @@ article p {
 
   }
   .row5 article{
-      width: 400px;
+      width: 450px;
 font-size: 10px;
 flex: 1;
     margin-bottom: 20px;
