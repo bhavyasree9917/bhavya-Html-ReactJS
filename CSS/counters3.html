@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counters</title>
+    <style>
+        body{
+            counter-reset: section;
+            
+        }
+        h2::before{
+            counter-increment: section;
+            content:"" counter(section) ":-" ;
+        }
+    </style>
+</head>
+<body>
+    <h1>courses in computers</h1>
+    <h2>dca</h2>
+    <h2>pgdca</h2>
+    <h2>java</h2>
+    <h2>python</h2>
+    <h2>javascript</h2>
+    <h2>database</h2>
+    <h2>cprograme</h2>
+</body>
+</html>
