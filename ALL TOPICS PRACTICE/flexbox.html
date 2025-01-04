@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction,justify-content, align-items</title>
+    <style>
+         .container{
+            background: rgb(21, 216, 44);
+            display: flex;
+            flex-direction: row;
+           
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            background: rgb(162, 12, 107);
+            margin: 10px;
+            text-align: center;
+            color: rgb(219, 134, 36);
+            font-size: 24px;
+        }
+        .row{
+            background-color: aqua;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .row1{
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+        }
+        .row2{
+            background-color: brown;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .row3{
+            background-color: chartreuse;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .row4{
+            background-color: blueviolet;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .row5{
+            background-color: chocolate;
+            display: flex;
+            justify-content: space-around;
+        }
+        .row6{
+            background-color: cornsilk;
+            display: flex;
+            justify-content: space-between;
+        }
+        .row7{
+            background-color: cornflowerblue;
+            display: flex;
+            flex-direction: space-evenly;
+        }
+        .row8{
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex-direction</h1>
+    <!-- this property defines the direction of items -->
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="row">
+        <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    </div>
+    <div class="row1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+       
+    </div>
+    <div class="row2">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+       
+    </div>
+    <h1>justify-content</h1>
+    <!-- This property defines the spacing between them -->
+     <div class="row3">
+        
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <div class="row4">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <div class="row5">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <div class="row6">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <div class="row7">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <div class="row8">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+     </div>
+     <h1>align items</h1>
+     <!-- it controls how items are aligned in arelation to each other within the container -->
+
+
+</body>
+</html>
