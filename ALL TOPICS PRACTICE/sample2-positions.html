@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>positions</title>
     <style>
-        .container{
+        .container {
             background-color: aqua;
             border: 2px solid black;
             height: 1000px;
         }
-        .box{
-          border: 2px solid black; 
-          width: 200px; 
-          height: 100px;
-          margin: 5px;
-          padding: 4px;
-          text-align: center;
-          display: inline-block;
+
+        .box {
+            border: 2px solid black;
+            width: 200px;
+            height: 100px;
+            margin: 5px;
+            padding: 4px;
+            text-align: center;
+            display: inline-block;
 
         }
-        #box2{
-            /* position: relative;
+
+        #box2 {
+            /* /* position: relative;
             top: 40px;
             right: 50px; */
 
@@ -29,38 +32,47 @@
             left: 200px;
             top: 200px; */
 
-             /* position: fixed;
-            right: 20px;  */
+            position: fixed;
+            right: 20px;  
 
             position: sticky;
-            top: 2px; 
+            top: 2px;
         }
-
-
     </style>
 </head>
+
 <body>
     <!-- positions are 5 types 1.static 2.relative 3.absolute 4.fixed 5.sticky
+
+
+    there are the css positioning properties .each has a unique behaviour f0r positing relative to parent or viewport
 
 
     1.relative position
     moves from normal position  but still occupies space.
 
+    position relative to its normal position
+
     2.absolute
     positioned relative to the nearest position and removed from the document flow
+    positioned relative to the nearest position ansector.
 
     3.fixed
     always stays in the same position relative to the airport,regardless of scrolling
+    positioned relative to the viewport.
 
 
 4.sticky
-behaves like  a normal element until a scroll position it reached ,then it sticks to a specified position -->
+behaves like  a normal element until a scroll position it reached ,then it sticks to a specified position
+positioned relative until a given scroll position is reached
+ -->
     <div class="container">
         <div class="box" id="box1">1</div>
         <div class="box" id="box2">2</div>
         <div class="box" id="box3">3</div>
         <div class="box" id="box4">4</div>
     </div>
-    
+
 </body>
+
 </html>

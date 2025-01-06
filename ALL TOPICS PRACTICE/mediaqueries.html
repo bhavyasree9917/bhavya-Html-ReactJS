@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media queries</title>
+    <style>
+              * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #topNav {
+        background-color:red;
+        overflow: hidden;
+      }
+    
+      #topNav a {
+        float: left;
+        display: block;
+        color: rgb(48, 26, 154);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      @media screen and (max-width: 800px) {
+        #topNav a {
+        
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+
+    </style>
+</head>
+<body>
+<!-- media queries are a fundamental part of responsive webdesign
+they allow you to apply different styles to a webpage.
+based on the characteristics ,screensizes,orientation
+this ensures that your website looks good and it usable on variety of devices ,from mobile phones  to desktop
+computers. -->
+
+    <h1>media-queries</h1>
+    <p>
+      For years medical experts advised people to drink less coffee, mostly because of
+      research suggesting coffee might increase the risk of heart disease. However,
+      numerous studies conducted recently have discovered coffee’s unexpected health
+      benefits. 
+    </p>
+    <div id="topNav">
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+      <a href="#">media-queries</a>
+    </div>
+</body>
+</html>

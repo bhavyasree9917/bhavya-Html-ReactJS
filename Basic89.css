@@ -109,10 +109,14 @@
   .row4 {
     width: 900px;
     margin: auto;
-    overflow: auto;
+    /* overflow: auto; */
     border-bottom: 1px solid;
     color: gray;
     display: flex;
+}
+.row4 img {
+  width: 227px;
+  height: 146px;
 }
 .parent1 {
   width: 290px;
