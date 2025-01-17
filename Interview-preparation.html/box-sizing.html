@@ -1,13 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>box-sizing</title>
+    <style>
+        /* .box {
+            box-sizing: border-box;
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: aqua;
+        } */
+
+
+        .box{
+            box-sizing: content-box;
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            border: 2px solid red;
+            background-color: chartreuse;
+        }
+    
+        
+    </style>
 </head>
+
 <body>
-    the box-sizing property in css affect the width and height of an elements are calculated
+    <!-- the box-sizing property in css affect the width and height of an elements are calculated
     <br>
     there are two main values
     1.box-sizing:content- box
@@ -31,5 +54,13 @@
     width:200px,padding:20px,margin:5px
     total width=(width(which includes padding and border))
     total width=200px(the padding and border subtracted from the content area)
+ -->
+
+
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat est ad nostrum voluptatibus eius officia at.
+        Tenetur, sit, veniam quam voluptatem ducimus minima incidunt omnis dolore ipsa dolorum temporibus impedit.
+    </div>
 </body>
+
 </html>

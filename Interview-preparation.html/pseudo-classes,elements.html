@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-classes,elements</title>
+    <style>
+        .button {
+            background: red;
+            color: white;
+
+        }
+
+        .button:hover {
+            background-color: blue;
+        }
+
+        .button:active {
+            background-color: rgb(151, 7, 88);
+        }
+
+        li:nth-child(3) {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        li::first-letter {
+            color: blue;
+            text-transform: uppercase;
+
+        }
+        p::first-line{
+            background-color: red;
+        }
+        li::before{
+            content: "1";
+        }
+        p::selection{
+            background-color: aqua;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <button class="button">click to submit
+    </button>
+
+    <li>bhavyasree</li>
+    <li>pawankalyan</li>
+    <li>ram</li>
+    <li>pallavi</li>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, obcaecati nesciunt? Dolor, pariatur eveniet
+        nobis veritatis perspiciatis, voluptate consectetur nisi repudiandae voluptates aliquam tenetur delectus eos
+        omnis sint optio excepturi!</p>
+</body>
+
+</html>

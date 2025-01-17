@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #disinline .a{
+            display: inline;
+            background: red;
+
+
+        }
+        #disblock .b{
+            display: block;
+            width: 200px;
+            height: 20px;
+            background-color: blueviolet;
+        }
+        #disinlineblock .c{
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    these are the display properties that dicate how an element behaves in the layout.
+    <!-- 1.disinline
+    does not start a new line it cannot set width or height.
+    
+    2.disblock
+    
+    starts a new line can set width height.
+    
+    3.disinlineblock
+    does not starts a new line,can set width,height,margin,padding
+     -->
+
+
+    <p id="disinline">Lorem ipsum dolor sit amet <span class="a">consectetur</span> <span class="a">adipisicing elit.</span><span class="a"> Iste unde </span>accusamus natus architecto,
+        molestias vitae.
+        Odio molestiae dicta voluptatibus cupiditate a vitae tenetur ullam, doloremque possimus facere ex laborum
+        soluta.</p>
+
+    <p id="disblock">Lorem ipsum dolor sit <span class="b"> amet,</span>
+        <span class="b"> consectetur</span> <span class="b">adipisicing</span> elit. Inventore minus beatae vel blanditiis
+        explicabo. Delectus numquam alias similique, dolor iure atque. Excepturi tenetur earum harum nam architecto
+        laboriosam maiores voluptatum.</p>
+
+    <p id="disinlineblock">Lorem ipsum dolor sit <span class="c"> amet </span>
+        <span class="c">consectetur</span><span class="c"> adipisicing</span> elit. Ducimus nesciunt, nihil saepe
+        incidunt, nobis amet blanditiis quaerat hic est consequatur minima expedita vitae alias id eos officia quo,
+        delectus reprehenderit?
+
+    </p>
+</body>
+
+</html>
