@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for loop
+        for(i=0;i<=20;i++){
+            document.write(i+"<br/>")
+        }
+
+        //while loop
+
+        var i=0;
+        while(i<10){
+            document.write(i+"<br/>")
+            i++
+        }
+
+        //do-while loop
+
+        var i=10;
+        do{
+            document.write(i)
+
+        }while(i<10);
+
+        //if-statement
+        //    let age=18
+           if(age>=18){
+            document.write("you are eligible for vote")
+           };
+
+        //if-else statement
+        let age=20
+        if(age>=18){
+            document.write("you are eligible for vote")
+        }else{
+            document.write("you are not eligible for vote")
+        }
+
+        //if-else if-else statement
+        let marks=89
+        if(marks>=90){
+            document.write("gradeA")
+        }else if(marks>=80){
+            document.write("gradB")
+        }else if(marks>=70){
+            document.write("gradc")
+        }else{
+            document.write("grade")
+        }
+
+        //nested-if statement
+
+        for(i=1;i<=20;i++){
+            if(i%2==0){
+                if(i%5==0){
+                    document.write(i+"<br/>")
+                }
+            }
+        }
+
+        //ternary operator
+
+        // let age=18
+        age<18?document.write("correct"):document.write("wrong")
+
+
+        // switch statement
+        let days = 7
+        switch (6) {
+            case 1:
+                document.write("sunday")
+                break;
+            case 2:
+                document.write("monday")
+                break;
+            case 3:
+                document.write("tuesday")
+                break;
+            case 4:
+                document.write("wednesday")
+                break;
+            case 5:
+                document.write("thursday")
+                break;
+            case 6:
+                document.write("friday")
+                break;
+            case 7:
+                document.write("saturday")
+                break;
+        }
+
+        // function calculate() {
+        //     var num1 = Number(prompt("enter the first number"))
+        //     var num2 = Number(prompt("enter 2nd value"))
+        //     var operator = prompt("enter mode of calculations")
+        //     switch (operator) {
+        //         case "+":
+        //             document.write(num1 + num2)
+        //             break;
+        //         case "-":
+        //             document.write(num1 - num2)
+        //     }
+        // }
+        // calculate();
+        var student={
+
+        };
+    </script>
+</body>
+
+</html>
