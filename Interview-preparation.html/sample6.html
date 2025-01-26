@@ -7,12 +7,53 @@
 </head>
 <body>
     <script>
-        var i=Number(prompt("enter the age"))
-        if(i>=18){
-            document.write("you are eligible for vote")
-        }else{
-            document.write("you are not eligible")
-        }
+        // var i=Number(prompt("enter the age"))
+        // if(i>=18){
+        //     document.write("you are eligible for vote")
+        // }else{
+        //     document.write("you are not eligible")
+        // }
+
+        //forloop
+        // for(intilisation;conditioncheck;increment/decrement){
+           //code to be exxecuted 
+        // }
+
+        //while loop
+        // while loop will test the condition first and than code to be executed
+        // vari=0
+        // while(i<=10){
+        //     code to be executed
+        //     i++
+        // }
+        //do-while loop
+
+        // var i=0;
+        // do{
+        //     code to be executed
+        //     i++
+        // }while(condition)
+
+        //for in loop used for create a objects
+        // var student={
+        //     name:"bhavyasree",
+        //     age:21,
+        //     contactnumber:9392470961,
+        // };
+        // student.city="chittoor";
+        // student["place"]="puthlapattu";
+        // for(a in student){
+        //     document.write(a+student[a]+"<br/>")
+        // }
+
+        //foreach is used for create an array
+        var user=["bhavyasree","ram","pawankalyan","sree"];
+        user.forEach(function(value,index,array){
+            document.write("value","index","array"+"<br/>")
+        })
+
+
+
     </script>
 </body>
 </html>
