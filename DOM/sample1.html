@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<ul id=lists></ul>
+    <script>
+        // var Heading = document.createElement("h1")
+        // Heading.textContent = "i am heading"
+        // document.body.appendChild(Heading)
+
+        // var paragraph = document.createElement("p")
+        // paragraph.textContent="my name is bhavyasree"
+        // document.body.appendChild(paragraph)
+
+        // var image = document.createElement("img")
+        // image.setAttribute("src","https://www.google.com/imgres?q=nature%20image&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F024%2F669%2F482%2Fsmall_2x%2Fmountain-countryside-landscape-at-sunset-dramatic-sky-over-a-distant-valley-green-fields-and-trees-on-hill-beautiful-natural-landscapes-of-the-carpathians-generative-ai-variation-8-photo.jpeg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fnature-sky&docid=4GammH3cQ_V51M&tbnid=J1z3jgxgN_TqRM&vet=12ahUKEwjloKfGppWLAxUmUWwGHXN-N2AQM3oECFQQAA..i&w=714&h=400&hcb=2&ved=2ahUKEwjloKfGppWLAxUmUWwGHXN-N2AQM3oECFQQAA")
+        //          document.body.appendChild(image)
+
+        // var anchortag=document.createElement("a")
+        // anchortag.setAttribute("href","https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=3261324893564327660&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197649&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1")
+        // anchortag.textContent="amazon"
+        // document.body.appendChild(anchortag)
+
+        var person=document.getElementById("lists")
+        var array=[8,89,89,65,45,65,67,86]
+        for( var i=0;i<array.length;i++){
+              var listItem=document.createElement("li")
+               listItem.innerHTML=array[i]
+            // listItem.textContent=array[i]
+        document.body.appendChild(listItem)
+            
+        }
+    
+    
+      
+        
+
+
+
+    </script>
+</body>
+
+</html>
