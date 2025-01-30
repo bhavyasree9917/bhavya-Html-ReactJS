@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var myTable = document.createElement("table");
+        myTable.setAttribute("border",1)
+        var myTableheading = document.createElement("thead")
+        var myTableBody = document.createElement("tbody")
+
+        var myTr = document.createElement("tr")
+        myTableBody.appendChild(myTr)
+
+        for(i=1;i<=3;i++){
+            var myTh = document.createElement("th");
+            myTh.innerHTML = "Heading "+i
+            myTableheading.appendChild(myTh)
+
+            var myTd = document.createElement("td")
+            myTd.innerHTML = "Table Data "+i;
+            myTr.appendChild(myTd)
+            
+        }
+
+        myTable.appendChild(myTableheading);
+        myTable.appendChild(myTableBody);
+        
+        document.body.appendChild(myTable)
+    </script>
+</body>
+</html>
