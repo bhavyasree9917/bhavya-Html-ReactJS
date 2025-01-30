@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Form Column -->
+    <div class="column">
+      <h1>Hotel Booking</h1>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- <label for="checkin">Check-in Date</label>
+        <input type="date" id="checkin" name="checkin" required> -->
+
+        <!-- <label for="checkout">Check-out Date</label>
+        <input type="date" id="checkout" name="checkout" required> -->
+
+        <!-- <label>Room Type</label>
+        <select id="room" name="room" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option>
+        </select> -->
+
+        <!-- <label>Additional Amenities</label>
+        <div>
+          <label><input type="checkbox" name="amenities" value="wifi"> WiFi</label><br>
+          <label><input type="checkbox" name="amenities" value="breakfast"> Breakfast</label><br>
+          <label><input type="checkbox" name="amenities" value="parking"> Parking</label>
+        </div> -->
+
+        <button id="update" type="button" onclick="signUpForm()">Booknow</button>
+        <button id="signIn" style="display:none"type="button"onclick="updateData()">updatedata</button>
+      </form>
+    </div>
+
+    <!-- Table Column -->
+    <div class="column">
+      <h1>Booking Details</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>delete</th>
+            <th>update</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>John Doe</td>
+            <td>Double</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Jane Smith</td>
+            <td>Suite</td>
+            <td>
+              <button class="edit-btn">Edit</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+    var allUsers = []
+    function signUpForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+     
+      var user = {
+        name,
+        email,
+       
+      }
+      allUsers.push(user)
+      console.log("allUsers")
+      document.getElementById("name").value = ""
+      document.getElementById("email").value = ""
+    
+      readData()
+    }
+
+
+    function readData() {
+      document.querySelector("tbody").innerHTML = ""
+      allUsers.forEach((user, index) => {
+        var myTr = document.createElement("tr")
+        for (var b in user) {
+          var myTd = document.createElement("td")
+          myTd.innerHTML = user[b]
+          myTr.appendChild(myTd)
+        }
+        // creating the edit button 
+        var editTd = document.createElement("td")
+        var editBTN = document.createElement("button")
+        editBTN.innerHTML = "EDIT"
+        editBTN.setAttribute("onclick", "editData(" + index + ")")
+        editTd.appendChild(editBTN)
+        myTr.appendChild(editTd)
+
+        // creating the delet button
+        var delTd = document.createElement("td")
+        var delBTN = document.createElement("button")
+        delBTN.innerHTML = "DELETE"
+        delBTN.setAttribute("onclick", "deleteData(" + index + ")")
+        delTd.appendChild(delBTN)
+        myTr.appendChild(delTd)
+        document.querySelector("tbody").appendChild(myTr)
+      })
+    }
+
+    function deleteData(i) {
+    // function deleteData(i) {
+      //allUsers.splice(i, 1)
+
+  allUsers = allUsers.filter((user, index) => index !== i);
+  readData();
+}
+
+
+    var index;
+    function editData(i) {
+      index = i;
+      document.getElementById("name").value = allUsers[i].name;
+      document.getElementById("email").value = allUsers[i].email;
+     
+      document.getElementById("update").style.display = "none"
+      document.getElementById("signIn").style.display = "block"
+
+    }
+    function updateData() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+    
+      var user = {
+        name,
+        email,
+      
+      }
+
+      allUsers[index] = user;
+      console.log("updated")
+      readData()
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+     
+
+      document.getElementById("update").style.display = "none"
+      document.getElementById("signIn").style.display = "block"
+
+
+    }
+  </script>
+</body>
+</html>
