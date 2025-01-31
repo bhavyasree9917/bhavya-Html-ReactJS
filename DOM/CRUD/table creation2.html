@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tablecontainer"></div>
+    <script>
+        var table=document.createElement("table");
+       table.setAttribute("border",1)
+
+        //creation of header row
+        var headerrow=document.createElement("tr");
+        var header=["name","age","city"];
+        header.forEach(headertext=>{
+            var header=document.createElement("th");
+            header.textContent=headertext;
+            headerrow.appendChild(header);
+        });
+        //create a data row
+
+        var datarow=document.createElement("tr");
+        var data=["bhavyasree","30","tirupathi"];
+        data.forEach(dataitem=>{
+            var cell=document.createElement("td");
+            cell.textcontent=dataitem;
+            datarow.appendChild(cell);
+
+        });
+        table.appendChild(datarow);
+        document.getElementById("tablecontainer").appendChild(table);
+    </script>
+</body>
+</html>
