@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Example</title>
+</head>
+<body>
+    <input type="radio" name="gender" value="male" id="male"> Male
+    <input type="radio" name="gender" value="female" id="female"> Female
+    <input type="radio" name="gender" value="others" id="others"> Others
+
+    <script>
+       
+        var allradioBtns = document.getElementsByName("male");
+
+        for (let i = 0; i < allradioBtns.length; i++) {
+            if (allradioBtns[i].checked) {
+                console.log(allradioBtns[i].value);  
+            }
+        }
+    </script>
+</body>
+</html>
