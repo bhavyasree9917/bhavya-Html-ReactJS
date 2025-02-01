@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">subjects</label><br/>
+    <input type="checkbox" name="subject" value="html">html
+    <input type="checkbox" name="subject" value="javascript">javascript
+    <input type="checkbox" name="subject" value="reactjs">reactjs
+    <input type="checkbox" name="subject" value="python">python
+    <input type="checkbox" name="subject" value="dbms">dbms
+
+    <button onclick="getselectedvalues()">getselectedvalues</button>
+<script>
+    var subjects=[]
+
+    function getselectedvalues(){
+    var allcheckboxes=document.getElementsByName("subjects")
+    for(i=0;i<allcheckboxes.length;i++){
+        if(allcheckboxes[i].checked==true){
+            subjects.push[allcheckboxes[i].value]
+        }
+    }
+    console.log(students)
+}
+</script>
+</body>
+</html>
