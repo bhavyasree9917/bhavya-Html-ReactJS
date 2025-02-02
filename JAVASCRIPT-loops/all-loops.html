@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //       <!-- for loop
+
+        // 1.instalisation
+        // 2.condition check
+        // 3.increment -->
+        // <!-- for loop runs a block of code a specific number of times. -->
+        //  <!-- syntax: for(intilisation;condition;increment/decrement) -->
+        for (i = 1; i <= 20; i++) {
+            if (i % 2 == 0)
+                document.write(i + "</br>")
+            // /while loop  the while loop runs a block of code as long as the condition is true.
+
+            //   syntax:while(condition)
+
+            var i = 0
+            while (i < 10) {
+                document.write(i + "<br/>")
+                i++
+            }
+
+            //do-whileloop
+            // do-while loop is similar to the while loop,but it executes the code at least once before checking the condition.
+
+            // syntax:do{
+
+            // }while(condition); -->
+            // <
+            let i = 20
+            do {
+                document.write(i)
+            } while (i < 20);
+            //for-inloop
+            var user = {
+                name: "sree",
+                age: 20,
+                contact: 9392470961,
+            };
+            user.email = "bhavyasreepspk@email.com";
+            user.village = "ammepalli";
+            user["city"] = "chittoor";
+            user["mandal"] = "puthalapattu";
+            function displayuser() {
+                delete user.age;
+                for (a in user) {
+                    document.write(user[a] + "<br/>")
+                }
+
+            }
+            displayuser();
+            //foreach
+            var students = ["ram", "ramya", "bhavya", "sree", "ram", "pawan"]
+            students.forEach(function (val) {
+                document.write(val + "<br/>")
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>
