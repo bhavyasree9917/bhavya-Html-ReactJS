@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <label>types of mobiles</label><br>
+    <!-- <label>types of mobiles</label><br>
    
     <input type="radio" name="frequency" value="oppo" onclick="displayuser()">oppo<br>
     <input type="radio" name="frequency" value="vivo" onclick="displayuser()">vivo<br>
@@ -20,7 +20,24 @@
                 console.log( radioBtn[i].value)
             }
             }
-        }
-    </script>
+        } -->
+     </script> 
+      <label>types of mobiles</label><br>
+   
+    <input type="radio" name="frequency" value="oppo" onclick="displayuser()">oppo<br>
+    <input type="radio" name="frequency" value="vivo" onclick="displayuser()">vivo<br>
+    <input type="radio" name="frequency" value="iphone" onclick="displayuser()">iphone
+    <script>
+        function displayuser(){
+            var radioBtn=document.getElementsByName("frequency")
+            for(i=0;i<radioBtn.length;i++){
+                if(radioBtn[i].checked==true)
+            {
+                console.log( radioBtn[i].value)
+            }
+            }
+        } 
+     </script> 
+
 </body>
 </html>
