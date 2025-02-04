@@ -6,26 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="">subjects</label><br/>
-    <input type="checkbox" name="subject" value="html">html
-    <input type="checkbox" name="subject" value="javascript">javascript
-    <input type="checkbox" name="subject" value="reactjs">reactjs
-    <input type="checkbox" name="subject" value="python">python
-    <input type="checkbox" name="subject" value="dbms">dbms
+    <label for="">different mobiles</label><br />
+    <input type="checkbox" name="subject" value=" iphone">iphone
+    <input type="checkbox" name="subject" value="vivo">vivo
+    <input type="checkbox" name="subject" value="samsung">samsung
+    <input type="checkbox" name="subject" value="oppo">oppo
+    <input type="checkbox" name="subject" value="nokia">nokia
 
-    <button onclick="getselectedvalues()">getselectedvalues</button>
-<script>
-    var subjects=[]
+    <button onclick="setselectedvalues()">setselectedvalues</button>
+    <script>
+        var subject = ["vivo", "oppo"]
 
-    function getselectedvalues(){
-    var allcheckboxes=document.getElementsByName("subjects")
-    for(i=0;i<allcheckboxes.length;i++){
-        if(allcheckboxes[i].checked==true){
-            subjects.push[allcheckboxes[i].value]
+        function setselectedvalues() {
+            var allcheckboxes = document.getElementsByName("subject")
+            for (i = 0; i < allcheckboxes.length; i++) {
+                console.log(subject[i])
+                for (j = 0; j < allcheckboxes.length; j++) {
+                    if (subject[i] == allcheckboxes[j].value) {
+                        allcheckboxes[j].checked =true;
+            }
+                }
+
+            }
+
         }
-    }
-   console.log(student)
-}
 </script>
 </body>
 </html>
