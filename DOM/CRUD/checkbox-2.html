@@ -6,26 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="">subjects</label><br/>
+    <label for="">subjects</label><br />
     <input type="checkbox" name="subject" value="telugu">telugu
     <input type="checkbox" name="subject" value="english">english
-    <input type="checkbox" name="subject" value="hindi">hindi
-    <input type="checkbox" name="subject" value="maths">maths
+    <input type="checkbox" name="subject" value="mathematics">mathematics
     <input type="checkbox" name="subject" value="science">science
+    <input type="checkbox" name="subject" value="social">social
 
-    <button onclick="getselectedvalues()">getselectedvalues</button>
-<script>
-    var subjects=[]
+    <button onclick="setselectedvalues()">setselectedvalues</button>
+    <script>
+        var subject = ["english", "social"]
 
-    function getselectedvalues(){
-    var allcheckboxes=document.getElementsByName("subjects")
-    for(i=0;i<allcheckboxes.length;i++){
-        if(allcheckboxes[i].checked==true){
-            subjects.push[allcheckboxes[i].value]
+        function setselectedvalues() {
+            var allcheckboxes = document.getElementsByName("subject")
+            for (i = 0; i < allcheckboxes.length; i++) {
+                console.log(subject[i])
+                for (j = 0; j < allcheckboxes.length; j++) {
+                    if (subject[i] == allcheckboxes[j].value) {
+                        allcheckboxes[j].checked =true;
+            }
+                }
+
+            }
+
         }
-    }
-   console.log(student)
-}
 </script>
 </body>
 </html>
