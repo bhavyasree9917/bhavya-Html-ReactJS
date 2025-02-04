@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>types of mobiles</label><br>
+   
+    <input type="radio" name="frequency" value="oppo" onclick="displayuser()">oppo<br>
+    <input type="radio" name="frequency" value="vivo" onclick="displayuser()">vivo<br>
+    <input type="radio" name="frequency" value="iphone" onclick="displayuser()">iphone
+    <script>
+        function displayuser(){
+            var radioBtn=document.getElementsByName("frequency")
+            for(i=0;i<radioBtn.length;i++){
+                if(radioBtn[i].checked==true)
+            {
+                console.log( radioBtn[i].value)
+            }
+            }
+        }
+    </script>
+</body>
+</html>
