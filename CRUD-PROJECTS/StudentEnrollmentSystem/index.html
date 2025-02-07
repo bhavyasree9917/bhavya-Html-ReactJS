@@ -183,26 +183,28 @@
 
                     <label>Courses Enrolled:</label>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="math" value="Mathematics">
+                        <input type="checkbox" id="math"name="courseenrolled" value="Mathematics">
                         <label for="math">Mathematics</label>
 
-                        <input type="checkbox" id="science" value="Science">
+                        <input type="checkbox" id="science"name="courseenrolled" value="Science">
                         <label for="science">Science</label>
 
-                        <input type="checkbox" id="history" value="History">
+                        <input type="checkbox" id="history" name="courseenrolled"value="History">
                         <label for="history">History</label>
 
-                        <input type="checkbox" id="english" value="English">
+                        <input type="checkbox" id="english"name="courseenrolled" value="English">
                         <label for="english">English</label>
 
-                        <input type="checkbox" id="computer" value="Computer Science">
+                        <input type="checkbox" id="computer"name="courseenrolled" value="Computer Science">
                         <label for="computer">Computer Science</label>
                     </div>
 
                     <label for="enrollmentDate">Enrollment Date:</label>
                     <input type="date" id="enrollmentDate" required>
 
-                    <button type="submit">Add Student</button>
+                    
+                    <button type="button" onclick="registeruser()" id="crtbtn">add student</button>
+                    <button type="button" onclick="update()" id="updbtn" style="display:none">Update</button>
                 </form>
             </div>
 
@@ -212,17 +214,19 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            
                             <th>Name</th>
                             <th>Age</th>
                             <th>Gender</th>
                             <th>Courses</th>
                             <th>Enrollment Date</th>
-                            <th>Actions</th>
+                         
+                            <th>delete</th>
+                            <th>edit</th>
                         </tr>
                     </thead>
                     <tbody id="student-list">
-                        <tr>
+                        <!-- <tr>
                             <td>1</td>
                             <td>John Doe</td>
                             <td>20</td>
@@ -257,13 +261,151 @@
                                 <button class="edit">Edit</button>
                                 <button class="delete">Delete</button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
 
     </div>
+    <script>
+       
+        var allUsers = []
+    
+        function registeruser() {
+            
+            var name = document.getElementById("name").value
+            var age= document.getElementById("age").value
+            var enrollmentDate = document.getElementById("enrollmentDate").value
+    
+            var user = {
+                
+                name,
+                age,
+                enrollmentDate,
+                courseenrolled : [],
+                gender: [] 
+            }
+    
+            var checkbox = document.getElementsByName("courseenrolled")
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.courseenrolled.push(checkbox[i].value)
+                }
+                checkbox[i].checked = false
+            }
+    
+            var radio = document.getElementsByName("gender")  
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.gender.push(radio[i].value)  
+                }
+                radio[i].checked = false;
+            }
+    
+            allUsers.push(user)
+            displayUsers()
+            document.getElementById("name").value = ""
+            document.getElementById("age").value = ""
+            document.getElementById("enrollmentDate").value = ""
+        }
+    
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = ""
+            allUsers.forEach(function (user, index) {
+                var tr = document.createElement("tr");
+                for (a in user) {
+                    var td = document.createElement("td");
+                    td.innerHTML = user[a]
+                    tr.appendChild(td)
+                }
+    
+                deltd = document.createElement("td")
+                delbtn = document.createElement("button")
+                delbtn.innerHTML = "delete"
+                delbtn.setAttribute("class", "delete-btn")
+                delbtn.setAttribute("onclick", "del(" + index + ")")
+                deltd.appendChild(delbtn)
+                tr.appendChild(deltd)
+    
+                var edttd = document.createElement("td")
+                var edtbtn = document.createElement("button")
+                edtbtn.innerHTML = "Edit"
+                edtbtn.setAttribute("class", "edit-btn")
+                edtbtn.setAttribute("onclick", "edit(" + index + ")")
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+                document.querySelector("tbody").appendChild(tr)
+            })
+        }
+    
+        function del(i) {
+            allUsers.splice(i, 1);
+            displayUsers();
+        }
+    
+        function edit(i) {
+            indx = i;
+            document.getElementById("name").value = allUsers[i].name;
+            document.getElementById("age").value = allUsers[i].age;
+            document.getElementById("enrollmentDate").value = allUsers[i].enrollmentDate;
+    
+            var checkbox = document.getElementsByName("courseenrolled");
+            for (var k = 0; k < checkbox.length; k++) {
+                checkbox[k].checked = allUsers[i].courseenrolled.includes(checkbox[k].value);
+            }
+    
+            var radio = document.getElementsByName("gender")  
+            for (j = 0; j < radio.length; j++) {
+                radio[j].checked = allUsers[i].gender.includes(radio[j].value);  
+            }
+    
+            document.getElementById("crtbtn").style.display = "none";
+            document.getElementById("updbtn").style.display = "block";
+        }
+    
+        function update() {
+            var name = document.getElementById("name").value
+            var age= document.getElementById("age").value
+            var enrollmentDate = document.getElementById("enrollmentDate").value
+           
+
+    
+            var user = {
+                name,
+                age,
+                enrollmentDate,
+                courseenrolled : [],
+                gender: [] 
+            };
+    
+            var checkbox = document.getElementsByName("courseenrolled");
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.courseenrolled.push(checkbox[i].value);
+                }
+                checkbox[i].checked = false;
+            }
+    
+            var radio = document.getElementsByName("gender") 
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.gender.push(radio[i].value);  
+                }
+                radio[i].checked = false;
+            }
+    
+            allUsers[indx] = user;
+            displayUsers();
+    
+            document.getElementById("name").value = "";
+            document.getElementById("age").value = "";
+            document.getElementById("enrollmentDate").value = "";
+    
+            document.getElementById("updbtn").style.display = "none";
+            document.getElementById("crtbtn").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
