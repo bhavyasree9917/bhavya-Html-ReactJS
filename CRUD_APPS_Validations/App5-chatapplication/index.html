@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea, select {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: not-allowed;
+            width: 100%;
+        }
+
+        button:enabled {
+            background-color: #28a745;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <label for="sender">Sender</label>
+            <input type="text" id="sender" name="sender" required onkeyup="chatForm()">
+            
+            <label for="receiver">Receiver</label>
+            <input type="text" id="receiver" name="receiver" required onkeyup="chatForm()">
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required onkeyup="chatForm()"></textarea>
+            
+            <label for="timestamp">Timestamp</label>
+            <input type="datetime-local" id="timestamp" name="timestamp" required onkeyup="chatForm()">
+            
+            <label for="status">Status</label>
+            <select id="status" name="status" required onkeyup="chatForm()">
+                <option value="">Select Status</option>
+                <option value="Sent">Sent</option>
+                <option value="Received">Received</option>
+                <option value="Read">Read</option>
+                <option value="Failed">Failed</option>
+            </select>
+            
+            <button type="submit" disabled="true">Submit</button>
+        </form>
+    </div>
+
+<script>
+    function chatForm() {
+        var chat = {
+            sender: document.getElementById("sender").value,
+            receiver: document.getElementById("receiver").value,
+            message: document.getElementById("message").value,
+            timestamp: document.getElementById("timestamp").value,
+            status: document.getElementById("status").value
+        };
+
+        var isInvalid = false;
+        for (var a in chat) {
+            if (chat[a] === "") {
+                isInvalid = true;
+            }
+        }
+
+        if (isInvalid) {
+            document.querySelector("button").setAttribute("disabled", true);
+        } else {
+            document.querySelector("button").removeAttribute("disabled");
+        }
+    }
+</script>
+
+</body>
+</html>
