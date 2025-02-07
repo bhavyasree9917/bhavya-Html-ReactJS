@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            /* background-color: #4CAF50; */
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="POST">
+            <label for="id">Event ID</label>
+            <input type="text" id="id" name="id" required onkeyup="inventoryForm()">
+            
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName" required onkeyup="inventoryForm()">
+            
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required onkeyup="inventoryForm()">
+            
+            <label for="time">Time</label>
+            <input type="time" id="time" name="time" required onkeyup="inventoryForm()">
+            
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required onkeyup="inventoryForm()">
+            
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" required onkeyup="inventoryForm()"></textarea>
+            
+            <label for="participants">Participants</label>
+            <input type="text" id="participants" name="participants" required onkeyup="inventoryForm()">
+            
+            <button type="submit" id="submitBtn" disabled>Submit</button>
+        </form>
+    </div>
+    <script>
+        function inventoryForm() {
+            var inventory = {
+                id: document.getElementById("id").value,
+                eventName: document.getElementById("eventName").value,
+                date: document.getElementById("date").value,
+                time: document.getElementById("time").value,
+                location: document.getElementById("location").value,
+                description: document.getElementById("description").value,
+                participants: document.getElementById("participants").value
+            };
+    
+            var isInvalid = false;
+            for (var a in inventory) {
+                if (inventory[a] === "") {
+                    isInvalid = true;
+                }
+            }
+    
+            if (isInvalid) {
+                document.getElementById("submitBtn").setAttribute("disabled", true);
+            } else {
+                document.getElementById("submitBtn").removeAttribute("disabled");
+            }
+        }
+    </script>
+</body>
+</html>
