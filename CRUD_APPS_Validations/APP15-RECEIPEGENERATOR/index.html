@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Recipe Form</h1>
+        <form action="" method="POST">
+            <div class="form-group">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" name="recipeName" required onkeyup="receipeForm()">
+            </div>
+
+            <div class="form-group">
+                <label for="ingredients">Ingredients (comma separated):</label>
+                <input type="text" id="ingredients" name="ingredients" required required onkeyup="receipeForm()">
+            </div>
+
+            <div class="form-group">
+                <label for="popularIngredients">Popular Ingredients:</label>
+                <select id="popularIngredients" name="popularIngredients" required onkeyup="receipeForm()">
+                    <option value="Garlic">Garlic</option>
+                    <option value="Tomato">Tomato</option>
+                    <option value="Chicken">Chicken</option>
+                    <option value="Cheese">Cheese</option>
+                    <option value="Basil">Basil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="dietaryPreferences">Dietary Preferences:</label>
+                <select id="dietaryPreferences" name="dietaryPreferences" required onkeyup="receipeForm()">
+                    <option value="Vegan">Vegan</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Gluten-Free">Gluten-Free</option>
+                    <option value="Low-Carb">Low-Carb</option>
+                    <option value="Dairy-Free">Dairy-Free</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="recipeInstructions">Recipe Instructions:</label>
+                <textarea id="recipeInstructions" name="recipeInstructions" rows="4" required required
+                    onkeyup="receipeForm()"></textarea>
+            </div>
+
+            <div class="form-footer">
+                <button type="submit" disabled="true">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function receipeForm() {
+            var person = {
+                recipeName: document.getElementById("recipeName").value,
+                ingredients: document.getElementById("ingredients").value,
+                popularIngredients: document.getElementById("popularIngredients").value,
+                dietaryPreferences: document.getElementById("dietaryPreferences").value,
+                recipeInstructions: document.getElementById("recipeInstructions").value,
+
+            }
+
+            console.log(person)
+
+            var isInvalid = false;
+            for (a in person) {
+                if (person[a] == "") {
+                    isInvalid = true;
+                }
+            }
+
+            if (isInvalid === true) {
+                document.querySelector("button").setAttribute("disabled", true)
+            } else {
+                document.querySelector("button").removeAttribute("disabled")
+            }
+        }
+    </script>
+</body>
+
+</html>
