@@ -46,16 +46,19 @@
         }
 
         button {
-            padding: 10px;
-            background-color: #4CAF50;
+            background-color: #28a745;
             color: white;
+            padding: 10px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
             cursor: pointer;
         }
 
-        button:hover {
-            background-color: #45a049;
+        button:disabled {
+            background-color: gray;
+            cursor: not-allowed;
         }
     </style>
 </head>
@@ -63,16 +66,42 @@
     <div class="form-container">
         <form action="#" method="POST">
             <label for="vocabularyWords">Vocabulary Word</label>
-            <input type="text" id="vocabularyWords" name="vocabularyWords" required>
+            <input type="text" id="vocabularyWords" name="vocabularyWords" required onkeyup="learningForm()">
             
             <label for="definitions">Definition</label>
-            <textarea id="definitions" name="definitions" rows="4" required></textarea>
+            <textarea id="definitions" name="definitions" rows="4" required onkeyup="learningForm()"></textarea>
             
             <label for="exampleSentences">Example Sentences</label>
-            <textarea id="exampleSentences" name="exampleSentences" rows="4" required></textarea>
+            <textarea id="exampleSentences" name="exampleSentences" rows="4" required onkeyup="learningForm()"></textarea>
             
-            <button type="submit">Submit</button>
+            <button type="submit"disabled="true" >Submit</button>
         </form>
     </div>
+    <script>
+        function learningForm() {
+            var student={
+                vocabularyWords:document.getElementById("vocabularyWords").value,
+                definitions:document.getElementById("definitions").value,
+                exampleSentences:document.getElementById("exampleSentences").value,
+               
+            }
+
+            console.log(student)
+
+            var isInvalid = false;
+            for(a in student){
+                if(student[a] == ""){
+                    isInvalid = true;
+                }
+            }
+
+            if(isInvalid === true){
+                document.querySelector("button").setAttribute("disabled",true)
+            }else{
+                document.querySelector("button").removeAttribute("disabled")
+            }
+        }
+    </script>
+
 </body>
 </html>
