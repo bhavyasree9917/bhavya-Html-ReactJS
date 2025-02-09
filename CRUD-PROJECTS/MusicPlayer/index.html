@@ -279,9 +279,8 @@
                 }
                 radio[i].checked = false;
             }
-            //checkboxes
+            
             var checkbox = document.getElementsByName("actor")
-            // console.log(checkbox);
             for (i = 0; i < checkbox.length; i++) {
                 if (checkbox[i].checked == true) {
                     user.actor.push(checkbox[i].value)
@@ -339,7 +338,7 @@
             document.getElementById("releaseYear").value = allUsers[i].releaseYear
             document.getElementById("genre").value = allUsers[i].genre
 
-            //radiobutton selection
+            
             var radio = document.getElementsByName("rating")
 
             for (j = 0; j < radio.length; j++) {
@@ -347,7 +346,6 @@
                 radio[j].checked = allUsers[i].rating.includes(radio[j].value);
             }
 
-            //checkbox selection
             var checkbox = document.getElementsByName("actor")
             for (var k = 0; k < checkbox.length; k++) {
                 checkbox[k].checked = allUsers[i].actor.includes(checkbox[k].value);
@@ -371,7 +369,7 @@
                 rating: [],
                 actor: []
             }
-            //radiobuttons
+            
             var radio = document.getElementsByName("rating")
             for (i = 0; i < radio.length; i++) {
                 if (radio[i].checked == true) {
@@ -379,9 +377,9 @@
                 }
                 radio[i].checked = false;
             }
-            //checkboxes
+            
             var checkbox = document.getElementsByName("actor")
-            // console.log(checkbox);
+            
             for (i = 0; i < checkbox.length; i++) {
                 if (checkbox[i].checked == true) {
                     user.actor.push(checkbox[i].value)
