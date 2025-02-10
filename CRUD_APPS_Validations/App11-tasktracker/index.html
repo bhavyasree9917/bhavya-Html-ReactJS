@@ -3,136 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Form</title>
+    <title>Task Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            margin: 20px;
         }
-        .form-container {
-            width: 400px;
-            margin: 50px auto;
-            background-color: #ffffff;
+        form {
+            max-width: 400px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
         }
         label {
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #555;
             display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
         }
-        input[type="text"],
-        input[type="date"],
+        input,
+        textarea,
         select,
-        textarea {
+        button {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0 16px 0;
-            border-radius: 4px;
+            margin-bottom: 15px;
+            padding: 8px;
             border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        textarea {
-            resize: vertical;
-            height: 100px;
-        }
-        .form-footer {
-            text-align: center;
+            border-radius: 5px;
         }
         button {
-            background-color: #28a745;
+            background-color: #007BFF;
             color: white;
-            padding: 10px;
             border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
             cursor: pointer;
         }
         button:disabled {
-            background-color: #ccc;
-            color: #666;
+            background-color: gray;
             cursor: not-allowed;
         }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h1>Task Form</h1>
-        <form action="#" method="POST">
-            <label for="id">ID</label>
-            <input type="text" id="id" name="id" required onkeyup="tasktrackerForm()">
-
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required onkeyup="tasktrackerForm()">
-
-            <label for="description">Description</label>
-            <textarea id="description" name="description" required onkeyup="tasktrackerForm()"></textarea>
-
-            <label for="dueDate">Due Date</label>
-            <input type="date" id="dueDate" name="dueDate" required onkeyup="tasktrackerForm()">
-
-            <label for="priority">Priority</label>
-            <select id="priority" name="priority" required onkeyup="tasktrackerForm()">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-            </select>
-
-            <label for="status">Status</label>
-            <select id="status" name="status" required onkeyup="tasktrackerForm()">
-                <option value="not_started">Not Started</option>
-                <option value="in_progress">In Progress</option>
-                <option value="completed">Completed</option>
-            </select>
-
-            <label for="category">Category</label>
-            <select id="category" name="category" required onkeyup="tasktrackerForm()">
-                <option value="work">Work</option>
-                <option value="personal">Personal</option>
-                <option value="urgent">Urgent</option>
-            </select>
-
-            <div class="form-footer">
-                <button type="submit" disabled="true">Submit</button>
-            </div>
-        </form>
-    </div>
+    <h1>Create Task</h1>
+    <form id="taskForm">
+        <label for="taskId">ID</label>
+        <input type="text" id="taskId" name="id" placeholder="Enter task ID" required onkeyup="validtask()">
+        <label for="taskName">Name</label>
+        <input type="text" id="taskName" name="name" placeholder="Enter task name" required onkeyup="validtask()">
+        <label for="taskDescription">Description</label>
+        <textarea id="taskDescription" name="description" placeholder="Enter task description" rows="4" required
+            onkeyup="validtask()"></textarea>
+        <label for="taskDueDate">Due Date</label>
+        <input type="date" id="taskDueDate" name="dueDate" required onchange="validtask()">
+        <label for="taskPriority">Priority</label>
+        <select id="taskPriority" name="priority" required onchange="validtask()">
+            <option value="">Select priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <label for="taskStatus">Status</label>
+        <select id="taskStatus" name="status" required onchange="validtask()">
+            <option value="">Select status</option>
+            <option value="not-started">Not Started</option>
+            <option value="in-progress">In Progress</option>
+            <option value="completed">Completed</option>
+        </select>
+        <label for="taskCategory">Category</label>
+        <input type="text" id="taskCategory" name="category" placeholder="Enter task category" required
+            onkeyup="validtask()">
+        <button type="button" disabled>Submit</button>
+    </form>
     <script>
-        function tasktrackerForm() {
-            var student={
-                id:document.getElementById("id").value,
-                name:document.getElementById("name").value,
-                description:document.getElementById("description").value,
-                dueDate:document.getElementById("dueDate").value,
-                priority:document.getElementById("priority").value,
-                status:document.getElementById("status").value,
-                category:document.getElementById("category").value,
+        function validtask() {
+            var learn = {
+                taskId: document.getElementById("taskId").value,
+                taskName: document.getElementById("taskName").value,
+                taskDescription: document.getElementById("taskDescription").value,
+                taskDueDate: document.getElementById("taskDueDate").value,
+                taskPriority: document.getElementById("taskPriority").value,
+                taskStatus: document.getElementById("taskStatus").value,
+                taskCategory: document.getElementById("taskCategory").value
             }
-
-            console.log(student)
-
-            var isInvalid = false;
-            for(a in student){
-                if(student[a] == ""){
-                    isInvalid = true;
-                }
-            }
-
-            if(isInvalid === true){
-                document.querySelector("button").setAttribute("disabled",true)
-            }else{
-                document.querySelector("button").removeAttribute("disabled")
+        
+        console.log(learn);
+        var datainvalid = false;
+        for (a in learn) {
+            if (learn[a] == "") {
+                datainvalid = true;
             }
         }
+        if (datainvalid == true) {
+            document.querySelector("button").setAttribute("disabled", true)
+        }
+        else {
+            document.querySelector("button").removeAttribute("disabled", true)
+        }
+    }
     </script>
 </body>
 </html>
