@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,18 +68,22 @@
             font-weight: bold;
         }
 
-        input, select, button {
+        input,
+        select,
+        button {
             padding: 8px;
             font-size: 16px;
         }
 
-        .radio-group, .checkbox-group {
+        .radio-group,
+        .checkbox-group {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
 
-        .radio-group input, .checkbox-group input {
+        .radio-group input,
+        .checkbox-group input {
             margin-right: 5px;
         }
 
@@ -106,7 +111,8 @@
             margin-top: 10px;
         }
 
-        th, td {
+        th,
+        td {
             border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
@@ -147,12 +153,15 @@
             .content {
                 flex-direction: column;
             }
-            .form-container, .inventory-container {
+
+            .form-container,
+            .inventory-container {
                 flex: 100%;
             }
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -263,7 +272,7 @@
                                 <button class="edit">Edit</button>
                                 <button class="delete">Delete</button>
                             </td>
-                        </tr> --> 
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -271,156 +280,174 @@
 
     </div>
     <script>
-         var allUsers = []
-function registeruser() {
-    var productName = document.getElementById("name").value
-    var quantity = document.getElementById("quantity").value
-    var price = document.getElementById("price").value
-    var reclvl=document.getElementById("reorderLevel").value
-    var user = {
-        productName,
-        category: [],
-        quantity,
-        price,
-        supplier: [],
-        reclvl
-    }
-    //radiobuttons
-    var radio = document.getElementsByName("supplier")
-    for (i = 0; i < radio.length; i++) {
-        if (radio[i].checked == true) {
-            user.supplier.push(radio[i].value)
-        }
-        radio[i].checked = false;
-    }
-    //checkboxes
-    var checkbox = document.getElementsByName("category")
-    for (i = 0; i < checkbox.length; i++) {
-        if (checkbox[i].checked == true) {
-            user.category.push(checkbox[i].value)
-            console.log(user)
-        }
+        var allUsers = []
+        function registeruser() {
+            var productName = document.getElementById("name").value
+            var quantity = document.getElementById("quantity").value
+            var price = document.getElementById("price").value
+            var reclvl = document.getElementById("reorderLevel").value
+            var user = {
+                productName,
+                category: [],
+                quantity,
+                price,
+                supplier: [],
+                reclvl
+            }
+            //radiobuttons
+            var radio = document.getElementsByName("supplier")
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.supplier.push(radio[i].value)
+                }
+                radio[i].checked = false;
+            }
+            //checkboxes
+            var checkbox = document.getElementsByName("category")
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.category.push(checkbox[i].value)
+                    console.log(user)
+                }
 
-        checkbox[i].checked = false
-    }
-    allUsers.push(user)
-    displayUsers()
-    document.getElementById("name").value = ""
-    document.getElementById("quantity").value = ""
-    document.getElementById("price").value = ""
-    document.getElementById("reorderLevel").value=""
+                checkbox[i].checked = false
+            }
+            allUsers.push(user)
+            displayUsers()
+            document.getElementById("name").value = ""
+            document.getElementById("quantity").value = ""
+            document.getElementById("price").value = ""
+            document.getElementById("reorderLevel").value = ""
+            saveToLocalStorage()
 
-}
-
-function displayUsers() {
-    document.querySelector("tbody").innerHTML = ""
-    allUsers.forEach(function (user, index) {
-        var tr = document.createElement("tr");
-        for (a in user) {
-            var td = document.createElement("td");
-            td.innerHTML = user[a]
-            tr.appendChild(td)
         }
 
-        deltd = document.createElement("td")
-        delbtn = document.createElement("button")
-        delbtn.innerHTML = "delete"
-        delbtn.setAttribute("class", "delete-btn")
-        delbtn.setAttribute("onclick", "del(" + index + ")")
-        deltd.appendChild(delbtn)
-        tr.appendChild(deltd)
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = ""
+            allUsers.forEach(function (user, index) {
+                var tr = document.createElement("tr");
+                for (a in user) {
+                    var td = document.createElement("td");
+                    td.innerHTML = user[a]
+                    tr.appendChild(td)
+                }
 
-        var edttd = document.createElement("td")
-        var edtbtn = document.createElement("button")
-        edtbtn.innerHTML = "Edit"
-        edtbtn.setAttribute("class", "edit-btn")
-        edtbtn.setAttribute("onclick", "edit(" + index + ")")
-        edttd.appendChild(edtbtn);
-        tr.appendChild(edttd);
-        document.querySelector("tbody").appendChild(tr)
-    })
+                deltd = document.createElement("td")
+                delbtn = document.createElement("button")
+                delbtn.innerHTML = "delete"
+                delbtn.setAttribute("class", "delete-btn")
+                delbtn.setAttribute("onclick", "del(" + index + ")")
+                deltd.appendChild(delbtn)
+                tr.appendChild(deltd)
 
-
-
-}
-
-
-function del(i) {
-    allUsers.splice(i, 1);
-    displayUsers();
-}
-var indx;
-function edit(i) {
-    indx = i;
-    document.getElementById("name").value = allUsers[i].productName
-    document.getElementById("quantity").value = allUsers[i].quantity
-    document.getElementById("price").value = allUsers[i].price
-    document.getElementById("reorderLevel").value = allUsers[i].reclvl
+                var edttd = document.createElement("td")
+                var edtbtn = document.createElement("button")
+                edtbtn.innerHTML = "Edit"
+                edtbtn.setAttribute("class", "edit-btn")
+                edtbtn.setAttribute("onclick", "edit(" + index + ")")
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+                document.querySelector("tbody").appendChild(tr)
+            })
+            saveToLocalStorage()
 
 
-    //radiobutton selection
-    var radio = document.getElementsByName("supplier")
 
-    for (j = 0; j < radio.length; j++) {
-
-        radio[j].checked = allUsers[i].supplier.includes(radio[j].value);
-    }
-
-    //checkbox selection
-    var checkbox = document.getElementsByName("category")
-    for (var k = 0; k < checkbox.length; k++) {
-        checkbox[k].checked = allUsers[i].category.includes(checkbox[k].value);
-    }
-
-    document.getElementById("crtbtn").style.display = "none"
-    document.getElementById("updbtn").style.display = "block"
-
-}
-function update() {
-    var productName = document.getElementById("name").value
-    var quantity = document.getElementById("quantity").value
-    var price = document.getElementById("price").value
-    var reclvl=document.getElementById("reorderLevel").value
-    var user = {
-        productName,
-        category: [],
-        quantity,
-        price,
-        supplier: [],
-        reclvl
-    }
-    //radiobuttons
-    var radio = document.getElementsByName("supplier")
-    for (i = 0; i < radio.length; i++) {
-        if (radio[i].checked == true) {
-            user.supplier.push(radio[i].value)
         }
-        radio[i].checked = false;
-    }
-    //checkboxes
-    var checkbox = document.getElementsByName("category")
-    for (i = 0; i < checkbox.length; i++) {
-        if (checkbox[i].checked == true) {
-            user.category.push(checkbox[i].value)
+
+
+        function del(i) {
+            allUsers.splice(i, 1);
+            displayUsers();
         }
-        checkbox[i].checked = false
-    }
-
-    allUsers[indx] = user
-
-    displayUsers();
-    document.getElementById("name").value = ""
-    document.getElementById("quantity").value = ""
-    document.getElementById("price").value = ""
-    document.getElementById("reorderLevel").value=""
+        var indx;
+        function edit(i) {
+            indx = i;
+            document.getElementById("name").value = allUsers[i].productName
+            document.getElementById("quantity").value = allUsers[i].quantity
+            document.getElementById("price").value = allUsers[i].price
+            document.getElementById("reorderLevel").value = allUsers[i].reclvl
 
 
+            //radiobutton selection
+            var radio = document.getElementsByName("supplier")
 
-    document.getElementById("updbtn").style.display = "none"
-    document.getElementById("crtbtn").style.display = "block"
-}
+            for (j = 0; j < radio.length; j++) {
 
+                radio[j].checked = allUsers[i].supplier.includes(radio[j].value);
+            }
+
+            //checkbox selection
+            var checkbox = document.getElementsByName("category")
+            for (var k = 0; k < checkbox.length; k++) {
+                checkbox[k].checked = allUsers[i].category.includes(checkbox[k].value);
+            }
+
+            document.getElementById("crtbtn").style.display = "none"
+            document.getElementById("updbtn").style.display = "block"
+            saveToLocalStorage()
+
+        }
+        function update() {
+            var productName = document.getElementById("name").value
+            var quantity = document.getElementById("quantity").value
+            var price = document.getElementById("price").value
+            var reclvl = document.getElementById("reorderLevel").value
+            var user = {
+                productName,
+                category: [],
+                quantity,
+                price,
+                supplier: [],
+                reclvl
+            }
+            //radiobuttons
+            var radio = document.getElementsByName("supplier")
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+                    user.supplier.push(radio[i].value)
+                }
+                radio[i].checked = false;
+            }
+            //checkboxes
+            var checkbox = document.getElementsByName("category")
+            for (i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked == true) {
+                    user.category.push(checkbox[i].value)
+                }
+                checkbox[i].checked = false
+            }
+
+            allUsers[indx] = user
+
+            displayUsers();
+            document.getElementById("name").value = ""
+            document.getElementById("quantity").value = ""
+            document.getElementById("price").value = ""
+            document.getElementById("reorderLevel").value = ""
+
+
+
+            document.getElementById("updbtn").style.display = "none"
+            document.getElementById("crtbtn").style.display = "block"
+            saveToLocalStorage()
+        }
+        var saveToLocalStorage = () => {
+            localStorage.setItem("allUsers with data", JSON.stringify(allUsers))
+        }
+        var loadFromLocalStorage = () => {
+            var storedData = localStorage.getItem("allUsers");
+            if (storedData) {
+                allUsers = JSON.parse(storedData) || [];
+                displayUsers();
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            loadFromLocalStorage()
+            console.log("the page is being loded")
+        })
     </script>
 
 </body>
+
 </html>
