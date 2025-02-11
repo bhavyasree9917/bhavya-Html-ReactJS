@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 95%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            flex: 30%;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .cart-container {
+            flex: 70%;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+        }
+
+        button {
+            background: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+
+        .cart-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        td button {
+            padding: 5px 10px;
+            margin: 2px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        td .remove {
+            background: #dc3545;
+            color: white;
+        }
+
+        td .remove:hover {
+            background: #c82333;
+        }
+
+        td .edit {
+            background: #ffc107;
+            color: white;
+        }
+
+        td .edit:hover {
+            background: #e0a800;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .form-container,
+            .cart-container {
+                flex: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>E-commerce Cart</h1>
+
+        <div class="content">
+            <div class="form-container">
+                <h2>Add Product</h2>
+                <form id="cart-form">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" id="productName" required>
+
+                    <label for="category">Category:</label>
+                    <select id="category" required>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Home">Home Appliances</option>
+                        <option value="Books">Books</option>
+                    </select>
+
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" required>
+
+                    <label for="price">Price (₹):</label>
+                    <input type="number" id="price" required>
+
+                    <label>Discount:</label>
+                    <select id="discount" required>
+                        <option value="0">No Discount</option>
+                        <option value="10">10% Off</option>
+                        <option value="20">20% Off</option>
+                        <option value="30">30% Off</option>
+                    </select>
+
+                    <button type="button" onclick="addProduct()" id="crtbtn">Add Product</button>
+                    <button type="button" onclick="updateProduct()" id="updbtn" style="display:none;">Update
+                        Product</button>
+                </form>
+            </div>
+
+            <div class="cart-container">
+                <h2>Shopping Cart</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price (₹)</th>
+                            <th>Discount</th>
+                            <th>Total</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-list"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+        var editingIndex = null;
+
+        function addProduct() {
+            var productName = document.getElementById("productName").value;
+            var category = document.getElementById("category").value;
+            var quantity = parseInt(document.getElementById("quantity").value);
+            var price = parseFloat(document.getElementById("price").value);
+            var discount = parseInt(document.getElementById("discount").value);
+            var total = (price * quantity) * (1 - discount / 100);
+
+            var product = {
+                productName,
+                category,
+                quantity,
+                price,
+                discount,
+                total
+            };
+
+            cartData.push(product);
+            localStorage.setItem("cartData", JSON.stringify(cartData));
+
+            displayCart();
+            resetForm();
+        }
+
+        function displayCart() {
+            var cartList = document.getElementById("cart-list");
+            cartList.innerHTML = "";
+            cartData.forEach((product, index) => {
+                var tr = document.createElement("tr");
+
+
+                Object.values(product).forEach(value => {
+                    var td = document.createElement("td");
+                    td.textContent = value;
+                    tr.appendChild(td);
+                });
+
+
+                var deltd = document.createElement("td");
+                var delbtn = document.createElement("button");
+                delbtn.innerHTML = "Delete";
+                delbtn.className = "remove";
+                delbtn.addEventListener("click", function () {
+                    deleteProduct(index);
+                });
+                deltd.appendChild(delbtn);
+                tr.appendChild(deltd);
+
+
+                var edttd = document.createElement("td");
+                var edtbtn = document.createElement("button");
+                edtbtn.innerHTML = "Edit";
+                edtbtn.className = "edit";
+                edtbtn.addEventListener("click", function () {
+                    editProduct(index);
+                });
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+
+
+                cartList.appendChild(tr);
+            });
+        }
+
+
+
+        function editProduct(index) {
+            var product = cartData[index];
+
+            document.getElementById("productName").value = product.productName;
+            document.getElementById("category").value = product.category;
+            document.getElementById("quantity").value = product.quantity;
+            document.getElementById("price").value = product.price;
+            document.getElementById("discount").value = product.discount;
+
+            editingIndex = index;
+            document.getElementById("crtbtn").style.display = "none";
+            document.getElementById("updbtn").style.display = "block";
+        }
+
+        function updateProduct() {
+            var productName = document.getElementById("productName").value;
+            var category = document.getElementById("category").value;
+            var quantity = parseInt(document.getElementById("quantity").value);
+            var price = parseFloat(document.getElementById("price").value);
+            var discount = parseInt(document.getElementById("discount").value);
+            var total = (price * quantity) * (1 - discount / 100);
+
+            var product = {
+                productName,
+                category,
+                quantity,
+                price,
+                discount,
+                total
+            };
+
+            cartData[editingIndex] = product;
+            localStorage.setItem("cartData", JSON.stringify(cartData));
+
+            displayCart();
+            resetForm();
+        }
+
+        function deleteProduct(index) {
+            cartData.splice(index, 1);
+            localStorage.setItem("cartData", JSON.stringify(cartData));
+            displayCart();
+        }
+
+        function resetForm() {
+            document.getElementById("productName").value = "";
+            document.getElementById("category").value = "Electronics";
+            document.getElementById("quantity").value = "";
+            document.getElementById("price").value = "";
+            document.getElementById("discount").value = "0";
+            document.getElementById("crtbtn").style.display = "block";
+            document.getElementById("updbtn").style.display = "none";
+        }
+
+        displayCart();
+    </script>
+
+</body>
+
+</html>
