@@ -160,7 +160,6 @@
         <h1>Language Learning App</h1>
 
         <div class="content">
-            <!-- Left Column: Add Word Form (30%) -->
             <div class="form-container">
                 <h2>Add Vocabulary Word</h2>
                 <form id="word-form">
@@ -211,7 +210,6 @@
                 </form>
             </div>
 
-            <!-- Right Column: Vocabulary List (70%) -->
             <div class="vocabulary-container">
                 <h2>Vocabulary List</h2>
                 <table>
@@ -229,202 +227,104 @@
                         </tr>
                     </thead>
                     <tbody id="word-list">
-                        <!-- <tr>
-                            <td>Elucidate</td>
-                            <td>Explain clearly</td>
-                            <td>He tried to elucidate the concept.</td>
-                            <td>Clarify, Explain</td>
-                            <td>Confuse</td>
-                            <td>Learned</td>
-                            <td>
-                                <button class="remove">Remove</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Pulchritudinous</td>
-                            <td>Physically beautiful</td>
-                            <td>Her pulchritudinous appearance stunned everyone.</td>
-                            <td>Gorgeous, Stunning</td>
-                            <td>Ugly</td>
-                            <td>Needs Review</td>
-                            <td>
-                                <button class="remove">Remove</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ephemeral</td>
-                            <td>Short-lived</td>
-                            <td>Life is ephemeral.</td>
-                            <td>Transient, Fleeting</td>
-                            <td>Permanent</td>
-                            <td>Mastered</td>
-                            <td>
-                                <button class="remove">Remove</button>
-                            </td>
-                        </tr> -->
                     </tbody>
                 </table>
-                <!-- 
-                <h3>Learning Progress</h3>
-                <p>Daily Goal: <strong>10 words</strong></p>
-                <p>Words Learned: <strong>5</strong></p>
-                <p>Achievements: <strong>Basic Vocabulary Badge</strong></p> -->
             </div>
         </div>
     </div>
     <script>
-        var allUsers = []
+        var allUsers = JSON.parse(localStorage.getItem("allUsers")) || [];
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            allUsers.forEach(function (user, index) {
+                var tr = document.createElement("tr");
+                for (var key in user) {
+                    var td = document.createElement("td");
+                    td.innerHTML = user[key];
+                    tr.appendChild(td);
+                }
+
+                var deltd = document.createElement("td");
+                var delbtn = document.createElement("button");
+                delbtn.innerHTML = "Delete";
+                delbtn.setAttribute("class", "remove");
+                delbtn.setAttribute("onclick", "del(" + index + ")");
+                deltd.appendChild(delbtn);
+                tr.appendChild(deltd);
+
+                var edttd = document.createElement("td");
+                var edtbtn = document.createElement("button");
+                edtbtn.innerHTML = "Edit";
+                edtbtn.setAttribute("class", "edit-btn");
+                edtbtn.setAttribute("onclick", "edit(" + index + ")");
+                edttd.appendChild(edtbtn);
+                tr.appendChild(edttd);
+
+                document.querySelector("tbody").appendChild(tr);
+            });
+        }
+
+        function saveToLocalStorage() {
+            localStorage.setItem("allUsers", JSON.stringify(allUsers));
+        }
+
         function registeruser() {
-            var word = document.getElementById("word").value
-            var definition = document.getElementById("definition").value
-            var exampleSentence = document.getElementById("exampleSentence").value
-            var synonyms = document.getElementById("synonyms").value
-            var antonyms = document.getElementById("antonyms").value
+            var word = document.getElementById("word").value;
+            var definition = document.getElementById("definition").value;
+            var exampleSentence = document.getElementById("exampleSentence").value;
+            var synonyms = document.getElementById("synonyms").value;
+            var antonyms = document.getElementById("antonyms").value;
+            var language = [];
+            var prog = [];
+
+            var radio = document.getElementsByName("language");
+            for (var i = 0; i < radio.length; i++) {
+                if (radio[i].checked) {
+                    language.push(radio[i].value);
+                }
+            }
+
+            var checkbox = document.getElementsByName("prog");
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked) {
+                    prog.push(checkbox[i].value);
+                }
+            }
+
+            if (!word || !definition || !exampleSentence) {
+                alert("Please fill out all required fields.");
+                return;
+            }
+
             var user = {
                 word,
                 definition,
                 exampleSentence,
                 synonyms,
                 antonyms,
-                language: [],
-                prog: []
-            }
-            //radiobuttons
-            var radio = document.getElementsByName("language")
-            for (i = 0; i < radio.length; i++) {
-                if (radio[i].checked == true) {
-                    user.language.push(radio[i].value)
-                }
-                radio[i].checked = false;
-            }
-            //checkboxes
-            var checkbox = document.getElementsByName("prog")
-            console.log(checkbox);
-            for (i = 0; i < checkbox.length; i++) {
-                if (checkbox[i].checked == true) {
-                    console.log(checkbox[i].value);
-                    user.prog.push(checkbox[i].value)
-                }
-                checkbox[i].checked = false
-            }
-            console.log(user);
-            allUsers.push(user)
-            displayUsers()
-            document.getElementById("word").value = ""
-            document.getElementById("definition").value = ""
-            document.getElementById("exampleSentence").value = ""
-            document.getElementById("synonyms").value = ""
-            document.getElementById("antonyms").value = ""
+                language: language.join(", "),
+                prog: prog.join(", ")
+            };
 
+            allUsers.push(user);
+            saveToLocalStorage();
+            displayUsers();
+
+            document.getElementById("word").value = "";
+            document.getElementById("definition").value = "";
+            document.getElementById("exampleSentence").value = "";
+            document.getElementById("synonyms").value = "";
+            document.getElementById("antonyms").value = "";
         }
-
-        function displayUsers() {
-            document.querySelector("tbody").innerHTML = ""
-            allUsers.forEach(function (user, index) {
-                var tr = document.createElement("tr");
-                for (a in user) {
-                    var td = document.createElement("td");
-                    td.innerHTML = user[a]
-                    tr.appendChild(td)
-                }
-
-                deltd = document.createElement("td")
-                delbtn = document.createElement("button")
-                delbtn.innerHTML = "delete"
-                delbtn.setAttribute("class", "delete-btn")
-                delbtn.setAttribute("onclick", "del(" + index + ")")
-                deltd.appendChild(delbtn)
-                tr.appendChild(deltd)
-
-                var edttd = document.createElement("td")
-                var edtbtn = document.createElement("button")
-                edtbtn.innerHTML = "Edit"
-                edtbtn.setAttribute("class", "edit-btn")
-                edtbtn.setAttribute("onclick", "edit(" + index + ")")
-                edttd.appendChild(edtbtn);
-                tr.appendChild(edttd);
-                document.querySelector("tbody").appendChild(tr)
-            })
-        }
-        displayUsers()
 
         function del(i) {
             allUsers.splice(i, 1);
+            saveToLocalStorage();
             displayUsers();
         }
-        var indx;
-        function edit(i) {
-            indx = i;
-            document.getElementById("word").value = allUsers[i].word
-            document.getElementById("definition").value = allUsers[i].definition
-            document.getElementById("exampleSentence").value = allUsers[i].exampleSentence
-            document.getElementById("synonyms").value = allUsers[i].synonyms
-            document.getElementById("antonyms").value = allUsers[i].antonyms
 
-            //radiobutton selection
-            var radio = document.getElementsByName("language")
-
-            for (j = 0; j < radio.length; j++) {
-
-                radio[j].checked = allUsers[i].language.includes(radio[j].value);
-            }
-
-            //checkbox selection
-            var checkbox = document.getElementsByName("prog")
-            for (var k = 0; k < checkbox.length; k++) {
-                checkbox[k].checked = allUsers[i].prog.includes(checkbox[k].value);
-            }
-
-            document.getElementById("crtbtn").style.display = "none"
-            document.getElementById("updbtn").style.display = "block"
-
-        }
-        function update() {
-            var word = document.getElementById("word").value
-            var definition = document.getElementById("definition").value
-            var exampleSentence = document.getElementById("exampleSentence").value
-            var synonyms = document.getElementById("synonyms").value
-            var antonyms = document.getElementById("antonyms").value
-            var user = {
-                word,
-                definition,
-                exampleSentence,
-                synonyms,
-                antonyms,
-                language: [],
-                prog: []
-            }
-            //radiobuttons
-            var radio = document.getElementsByName("language")
-            for (i = 0; i < radio.length; i++) {
-                if (radio[i].checked == true) {
-                    user.language.push(radio[i].value)
-                }
-                radio[i].checked = false;
-            }
-            //checkboxes
-            var checkbox = document.getElementsByName("prog")
-            for (i = 0; i < checkbox.length; i++) {
-                if (checkbox[i].checked == true) {
-                    user.prog.push(checkbox[i].value)
-                }
-                checkbox[i].checked = false
-            }
-
-            allUsers[indx] = user
-
-            displayUsers();
-            document.getElementById("word").value = ""
-            document.getElementById("definition").value = ""
-            document.getElementById("exampleSentence").value = ""
-            document.getElementById("synonyms").value = ""
-            document.getElementById("antonyms").value = ""
-
-
-            document.getElementById("updbtn").style.display = "none"
-            document.getElementById("crtbtn").style.display = "block"
-        }
-        
+        displayUsers();
     </script>
 
 </body>
