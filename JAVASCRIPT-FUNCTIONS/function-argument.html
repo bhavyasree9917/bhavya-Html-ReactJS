@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+        //normal function
         // function multiplygivennumber(num1,num2,num3){
         //     return(num1,num2,num3)
         // }
@@ -23,26 +24,26 @@
         multiplythenumbers(3,4,5);
 
         // Exression Function 
-        // var multiplythenumbers = function (num1,num2,num3){
-        //     var total = num1*num2*num3;
-        //     document.write("Total Value :- ",total)
-        // }
+        var multiplythenumbers = function (num1,num2,num3){
+            var total = num1*num2*num3;
+            document.write("Total Value :- ",total)
+        }
 
-        // multiplythenumbers(30,20,70);
+        multiplythenumbers(30,20,70);
 
         // Arrow function 
-        // var multiplythenumbers=(num1,num2,num3)=>{
-        //     var total = num1*num2*num3;
-        //     document.write("Total Value :- ",total)
-        // }
+        var multiplythenumbers=(num1,num2,num3)=>{
+            var total = num1*num2*num3;
+            document.write("Total Value :- ",total)
+        }
 
-        // multiplythenumbers(11,22,44);
+        multiplythenumbers(11,22,44);
 
         // IIFE or SIF
-        // (function (num1,num2,num3){
-        //     var total = num1*num2*num3;
-        //     document.write("Total Value :- ",total)
-        // })(20,30,40)
+        (function (num1,num2,num3){
+            var total = num1*num2*num3;
+            document.write("Total Value :- ",total)
+        })(20,30,40)
     </script>
 </body>
 </html>
