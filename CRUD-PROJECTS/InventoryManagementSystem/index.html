@@ -97,8 +97,8 @@
             border-radius: 4px;
         }
 
-        button:hover {
-            background: #e64a19;
+        button:disabled {
+            background: gray;
         }
 
         .inventory-container {
@@ -173,10 +173,10 @@
                 <h2>Add Product</h2>
                 <form id="product-form">
                     <label for="name">Product Name:</label>
-                    <input type="text" id="name" required>
+                    <input type="text" id="name" required onkeyup="valid()">
 
                     <label>Category:</label>
-                    <div class="checkbox-group">
+                    <div class="checkbox-group" onchange="valid()">
                         <input type="checkbox" id="electronics" value="Electronics" name="category">
                         <label for="electronics">Electronics</label>
 
@@ -191,13 +191,13 @@
                     </div>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" required>
+                    <input type="number" id="quantity" required onkeyup="valid()">
 
                     <label for="price">Price (₹):</label>
-                    <input type="number" id="price" required>
+                    <input type="number" id="price" required onkeyup="valid()">
 
                     <label>Supplier:</label>
-                    <div class="radio-group">
+                    <div class="radio-group" onchange="valid()">
                         <input type="radio" id="supplier1" name="supplier" value="Supplier A">
                         <label for="supplier1">Supplier A</label>
 
@@ -209,9 +209,9 @@
                     </div>
 
                     <label for="reorderLevel">Reorder Level:</label>
-                    <input type="number" id="reorderLevel" required>
+                    <input type="number" id="reorderLevel" required onkeyup="valid()">
 
-                    <button type="button" onclick="registeruser()" id="crtbtn">Join Now</button>
+                    <button type="button" onclick="registeruser()" id="crtbtn" disabled>Join Now</button>
                     <button type="button" onclick="update()" id="updbtn" style="display:none">Update</button>
                 </form>
             </div>
@@ -281,6 +281,8 @@
     </div>
     <script>
         var allUsers = []
+
+        var indx = null;
         function registeruser() {
             var productName = document.getElementById("name").value
             var quantity = document.getElementById("quantity").value
@@ -313,12 +315,57 @@
                 checkbox[i].checked = false
             }
             allUsers.push(user)
+            valid()
             displayUsers()
             document.getElementById("name").value = ""
             document.getElementById("quantity").value = ""
             document.getElementById("price").value = ""
             document.getElementById("reorderLevel").value = ""
+            indx = null;
             saveToLocalStorage()
+
+        }
+
+        function valid() {
+            var isValid = false;
+            var isRadioValid = false;
+            var isCheckboxValid = false;
+
+            var jam = {
+                name: document.getElementById("name").value,
+                quantity: document.getElementById("quantity").value,
+                price: document.getElementById("price").value,
+                reorderLevel: document.getElementById("reorderLevel").value
+            }
+
+            for (a in jam) {
+                if (jam[a] == "") {
+                    isValid = false;
+                    break;
+                } else {
+                    isValid = true
+
+                }
+            }
+
+            var radio = document.getElementsByName("supplier")
+            for (i = 0; i < radio.length; i++) {
+                if (radio[i].checked == true) {
+
+                    isRadioValid = true;
+
+                }
+            }
+
+                var checkbox = document.getElementsByName("category")
+                for (i = 0; i < checkbox.length; i++) {
+                    if (checkbox[i].checked == true) {
+                        isCheckboxValid = true;
+                    }
+                }
+    
+            document.getElementById("crtbtn").disabled = !(isValid && isRadioValid && isCheckboxValid && indx === null)
+            document.getElementById("updbtn").disabled = !(isValid && isRadioValid && isCheckboxValid && indx !== null)
 
         }
 
@@ -357,7 +404,7 @@
 
 
         function del(i) {
-            allUsers.splice(i, 1);
+            allUsers.splice(i, 1)
             displayUsers();
         }
         var indx;
@@ -419,12 +466,15 @@
             }
 
             allUsers[indx] = user
+            valid()
 
             displayUsers();
             document.getElementById("name").value = ""
             document.getElementById("quantity").value = ""
             document.getElementById("price").value = ""
             document.getElementById("reorderLevel").value = ""
+
+            indx = null;
 
 
 
@@ -447,7 +497,7 @@
             console.log("the page is being loded")
         })
 
-        
+
     </script>
 
 </body>
