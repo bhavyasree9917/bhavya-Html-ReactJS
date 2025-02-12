@@ -89,8 +89,8 @@
             border-radius: 4px;
         }
 
-        button:hover {
-            background: #e64a19;
+        button:disabled {
+            background: #5b5756;
         }
 
         .cart-container {
@@ -164,10 +164,10 @@
                 <h2>Add Product</h2>
                 <form id="cart-form">
                     <label for="productName">Product Name:</label>
-                    <input type="text" id="productName" required>
+                    <input type="text" id="productName" required onkeyup="valid()">
 
                     <label for="category">Category:</label>
-                    <select id="category" required>
+                    <select id="category" required onchange="valid()">
                         <option value="Electronics">Electronics</option>
                         <option value="Clothing">Clothing</option>
                         <option value="Home">Home Appliances</option>
@@ -175,20 +175,20 @@
                     </select>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" required>
+                    <input type="number" id="quantity" required onkeyup="valid()">
 
                     <label for="price">Price (₹):</label>
-                    <input type="number" id="price" required>
+                    <input type="number" id="price" required onkeyup="valid()">
 
                     <label>Discount:</label>
-                    <select id="discount" required>
+                    <select id="discount" required onchange="valid()">
                         <option value="0">No Discount</option>
                         <option value="10">10% Off</option>
                         <option value="20">20% Off</option>
                         <option value="30">30% Off</option>
                     </select>
 
-                    <button type="button" onclick="addProduct()" id="crtbtn">Add Product</button>
+                    <button type="button" onclick="addProduct()" id="crtbtn" disabled>Add Product</button>
                     <button type="button" onclick="updateProduct()" id="updbtn" style="display:none;">Update
                         Product</button>
                 </form>
@@ -200,11 +200,10 @@
                     <thead>
                         <tr>
                             <th>Product</th>
-                            <th>Category</th>
                             <th>Quantity</th>
                             <th>Price (₹)</th>
                             <th>Discount</th>
-                            <th>Total</th>
+                            <th>Category</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -214,133 +213,125 @@
             </div>
         </div>
     </div>
-
-    <script>
-        var cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-        var editingIndex = null;
+     <script>
+        var allUsers = []
+        var Index = null;
 
         function addProduct() {
             var productName = document.getElementById("productName").value;
-            var category = document.getElementById("category").value;
-            var quantity = parseInt(document.getElementById("quantity").value);
-            var price = parseFloat(document.getElementById("price").value);
-            var discount = parseInt(document.getElementById("discount").value);
-            var total = (price * quantity) * (1 - discount / 100);
-
-            var product = {
+            var quantity =document.getElementById("quantity").value;
+            var price = document.getElementById("price").value;
+            var category=document.getElementById("category").value;
+            var discount=document.getElementById("discount").value;
+            var user = {
                 productName,
-                category,
                 quantity,
                 price,
-                discount,
-                total
+                category,
+             discount               
             };
+      
 
-            cartData.push(product);
-            localStorage.setItem("cartData", JSON.stringify(cartData));
+        
 
-            displayCart();
-            resetForm();
+            allUsers.push(user);
+            localStorage.setItem("allusersdata", JSON.stringify(allUsers));
+            valid();
+            document.getElementById("productName").value = "";
+            document.getElementById("quantity").value = "";
+            document.getElementById("price").value = "";
+            document.getElementById("category").value= "";
+            document.getElementById("discount").value= "";
+            Index = null;
+            displayUsers();
         }
 
-        function displayCart() {
-            var cartList = document.getElementById("cart-list");
-            cartList.innerHTML = "";
-            cartData.forEach((product, index) => {
+        function valid() {
+            let fields = ["productName", "quantity", "price","category","discount"];
+            let isValid = fields.every(field => document.getElementById(field).value.trim()!= "");   
+
+            document.getElementById("crtbtn").disabled = !(isValid && Index == null);
+            document.getElementById("updbtn").disabled = !(isValid && Index != null);
+        }
+
+        function displayUsers() {
+            document.querySelector("tbody").innerHTML = "";
+            allUsers.forEach(function (user, index) {
                 var tr = document.createElement("tr");
-
-
-                Object.values(product).forEach(value => {
+                for (a in user) {
                     var td = document.createElement("td");
-                    td.textContent = value;
+                    td.innerHTML = user[a];
                     tr.appendChild(td);
-                });
-
-
+                }
                 var deltd = document.createElement("td");
                 var delbtn = document.createElement("button");
-                delbtn.innerHTML = "Delete";
-                delbtn.className = "remove";
-                delbtn.addEventListener("click", function () {
-                    deleteProduct(index);
-                });
+                delbtn.innerHTML = "delete";
+                delbtn.setAttribute("class", "delete-btn");
+                delbtn.setAttribute("onclick", "del(" + index + ")");
                 deltd.appendChild(delbtn);
                 tr.appendChild(deltd);
-
-
                 var edttd = document.createElement("td");
                 var edtbtn = document.createElement("button");
                 edtbtn.innerHTML = "Edit";
-                edtbtn.className = "edit";
-                edtbtn.addEventListener("click", function () {
-                    editProduct(index);
-                });
+                edtbtn.setAttribute("class", "edit-btn");
+                edtbtn.setAttribute("onclick", "edit(" + index + ")");
                 edttd.appendChild(edtbtn);
                 tr.appendChild(edttd);
-
-
-                cartList.appendChild(tr);
+                document.querySelector("tbody").appendChild(tr);
             });
         }
 
+        function del(i) {
+            allUsers.splice(i, 1);
+            localStorage.setItem("allusersdata", JSON.stringify(allUsers));
+            displayUsers();
+        }
 
+        function edit(i) {
+            Index=i;
+            document.getElementById("productName").value = allUsers[i].productName;
+            document.getElementById("quantity").value = allUsers[i].quantity;
+            document.getElementById("price").value = allUsers[i].price;
 
-        function editProduct(index) {
-            var product = cartData[index];
+            document.getElementById("category").value = allUsers[i].category;
+            document.getElementById("discount").value = allUsers[i].discount;
 
-            document.getElementById("productName").value = product.productName;
-            document.getElementById("category").value = product.category;
-            document.getElementById("quantity").value = product.quantity;
-            document.getElementById("price").value = product.price;
-            document.getElementById("discount").value = product.discount;
-
-            editingIndex = index;
             document.getElementById("crtbtn").style.display = "none";
             document.getElementById("updbtn").style.display = "block";
+            
         }
 
         function updateProduct() {
             var productName = document.getElementById("productName").value;
-            var category = document.getElementById("category").value;
-            var quantity = parseInt(document.getElementById("quantity").value);
-            var price = parseFloat(document.getElementById("price").value);
-            var discount = parseInt(document.getElementById("discount").value);
-            var total = (price * quantity) * (1 - discount / 100);
-
-            var product = {
+            var quantity =document.getElementById("quantity").value;
+            var price = document.getElementById("price").value;
+            var category=document.getElementById("category").value;
+            var discount=document.getElementById("discount").value;
+            var user = {
                 productName,
-                category,
                 quantity,
                 price,
-                discount,
-                total
+                category,
+             discount               
             };
-
-            cartData[editingIndex] = product;
-            localStorage.setItem("cartData", JSON.stringify(cartData));
-
-            displayCart();
-            resetForm();
-        }
-
-        function deleteProduct(index) {
-            cartData.splice(index, 1);
-            localStorage.setItem("cartData", JSON.stringify(cartData));
-            displayCart();
-        }
-
-        function resetForm() {
+            allUsers[Index] = user;
+            localStorage.setItem("allusersdata", JSON.stringify(allUsers));
+            valid();
             document.getElementById("productName").value = "";
-            document.getElementById("category").value = "Electronics";
             document.getElementById("quantity").value = "";
             document.getElementById("price").value = "";
-            document.getElementById("discount").value = "0";
-            document.getElementById("crtbtn").style.display = "block";
+            document.getElementById("category").value= "";
+            document.getElementById("discount").value= "";
+            Index = null;
+           
             document.getElementById("updbtn").style.display = "none";
+            document.getElementById("crtbtn").style.display = "block";
+            displayUsers();
         }
 
-        displayCart();
     </script>
+
+
 
 </body>
 
