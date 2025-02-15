@@ -29,7 +29,7 @@
             try {
                 const response = await fetch(apiUrl);
                 const data = await response.json();
-                quote.innerHTML = data.content;
+                quote.innerHTML = data.quote   ;
                 author.innerHTML = data.author;
             } catch (error) {
                 quote.innerHTML = "Error loading quote.";
