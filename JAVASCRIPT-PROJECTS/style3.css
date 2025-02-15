@@ -22,8 +22,8 @@
  
  .container p {
      font-weight: 600;
-     font-size: 15px;
-     border: 1px solid #494eea;
+     font-size: 22px;
+     /* border: 1px solid #494eea; */
      outline: 0;
      padding: 10px;
      margin: 10px 0 20px;
