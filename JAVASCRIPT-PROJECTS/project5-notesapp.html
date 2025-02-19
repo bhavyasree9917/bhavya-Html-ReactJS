@@ -62,8 +62,8 @@
 </head>
 <body>
     <div class="container">
-        <h1><img src="./th (1).jpeg" alt="">Notes</h1>
-        <button class="btn"><img src="./th (11).jpeg" alt="">Create Notes</button>
+        <h1><img src="../download (18).jpg" alt="">Notes</h1>
+        <button class="btn"><img src="../download (9).png" alt="">Create Notes</button>
         <div class="notes-container"></div>
     </div>
 
@@ -81,12 +81,12 @@
         }
 
         createBtn.addEventListener("click", () => {
-            var inputBox = document.createElement("p");
+            var inputBox = document.createElement("div");
             var img = document.createElement("img");
 
             inputBox.className = "input-box";
             inputBox.setAttribute("contenteditable", "true");
-            img.src = "./delete-icon-png-4.jpg";
+            img.src = "download (8).png";
 
             inputBox.appendChild(img);
             notesContainer.appendChild(inputBox);
@@ -94,8 +94,8 @@
         });
 
         notesContainer.addEventListener("click", function (e) {
-            if (e.target.tagName === "IMG") {
-                e.target.parentElement.remove();
+            if (e.target.tagName === "IMG" && e.target.closest('.input-box')) {
+                e.target.closest('.input-box').remove();
                 updateStorage();
             }
         });
@@ -106,8 +106,8 @@
 
         document.addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
-                document.execCommand("insertLineBreak");
                 event.preventDefault();
+                document.execCommand('insertHTML', false, '<br><br>'); 
             }
         });
     </script>
