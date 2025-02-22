@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>User Management</title>
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col">
+                <form action="">
+                    <label for="fname">Name:</label>
+                    <input type="text" name="fname" id="fname" class="form-control" required> <br>
+                    <label for="lname">Surname:</label>
+                    <input type="text" name="lname" id="lname" class="form-control" required> <br>
+                    <label for="age">Age:</label>
+                    <input type="number" name="age" id="age" class="form-control" required> <br>
+                    <label for="mothername">Mother's Name:</label>
+                    <input type="text" name="mothername" id="mothername" class="form-control" required> <br>
+                    <label for="fathername">Father's Name:</label>
+                    <input type="text" name="fathername" id="fathername" class="form-control" required> <br>
+                    <label for="noofmembers">No of Members:</label>
+                    <input type="number" name="noofmembers" id="noofmembers" class="form-control" required> <br>
+                    <label for="eligibility">Eligibility for Vote:</label>
+                    <select name="eligibility" id="eligibility" class="form-control" required>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select> <br>
+
+                    <button type="button" id="createbtn" onclick="createUser()" class="btn btn-primary">Create User</button>
+                    <button type="button" id="updatebtn" onclick="updateUser()" class="btn btn-warning" style="display:none">Update User</button>
+                </form>
+                
+            </div>
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Age</th>
+                            <th>Mother's Name</th>
+                            <th>Father's Name</th>
+                            <th>No of Members</th>
+                            <th>Eligibility for Vote</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var allUsers = [];
+        function createUser() {
+            var user = {
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                age: document.getElementById("age").value,
+                mothername: document.getElementById("mothername").value,
+                fathername: document.getElementById("fathername").value,
+                noofmembers: document.getElementById("noofmembers").value,
+                eligibility: document.getElementById("eligibility").value,
+            };
+            postDataToServer(user);
+        }
+
+        function postDataToServer(user) {
+            var postData = new XMLHttpRequest();
+            postData.onreadystatechange = function () {
+                if (postData.readyState === 4 && postData.status === 201) {
+                    console.log("User Added Successfully !!!");
+                    getUsersFromServer();  
+                }
+            };
+
+            postData.open("POST", "http://localhost:3000/users");
+            postData.setRequestHeader("Content-Type", "Application/json");
+            postData.send(JSON.stringify(user));
+        }
+
+        function getUsersFromServer() {
+            var getData = new XMLHttpRequest();
+            getData.onreadystatechange = function () {
+                if (getData.status === 200 && getData.readyState === 4) {
+                    allUsers = JSON.parse(getData.response);
+                    readUsers();
+                }
+            };
+            getData.open("GET", "http://localhost:3000/users");
+            getData.send();
+        }
+
+        function readUsers() {
+            var tbody = document.querySelector("tbody");
+            tbody.innerHTML = "";  
+            allUsers.forEach(function (user, i) {
+                var myTr = document.createElement("tr");
+                for (let key in user) {
+                    var myTd = document.createElement("td");
+                    myTd.innerHTML = user[key];
+                    myTr.appendChild(myTd);
+                }
+
+                var editTd = document.createElement("td");
+                var editBtn = document.createElement("button");
+                editBtn.innerHTML = "EDIT";
+                editBtn.setAttribute("onClick", "editUser(" + i + ")");
+                editBtn.setAttribute("class", "btn btn-warning");
+                editTd.appendChild(editBtn);
+                myTr.appendChild(editTd);
+
+                var deleteTd = document.createElement("td");
+                var deleteBtn = document.createElement("button");
+                deleteBtn.innerHTML = "DELETE";
+                deleteBtn.setAttribute("onClick", "deleteUser(" + i + ")");
+                deleteBtn.setAttribute("class", "btn btn-danger");
+                deleteTd.appendChild(deleteBtn);
+                myTr.appendChild(deleteTd);
+
+                tbody.appendChild(myTr);
+            });
+        }
+
+        function deleteUser(i) {
+            var getData = new XMLHttpRequest();
+            getData.onreadystatechange = function () {
+                if (getData.status === 200 && getData.readyState === 4) {
+                    allUsers = JSON.parse(getData.response);
+                    readUsers();
+                }
+            };
+            getData.open("DELETE", "http://localhost:3000/users/" + allUsers[i].id);
+            getData.send();
+        }
+
+        var indx;
+        function editUser(i) {
+            indx = i;
+            document.getElementById("fname").value = allUsers[i].fname;
+            document.getElementById("lname").value = allUsers[i].lname;
+            document.getElementById("age").value = allUsers[i].age;
+            document.getElementById("mothername").value = allUsers[i].mothername;
+            document.getElementById("fathername").value = allUsers[i].fathername;
+            document.getElementById("noofmembers").value = allUsers[i].noofmembers;
+            document.getElementById("eligibility").value = allUsers[i].eligibility;
+
+            document.getElementById("createbtn").style.display = "none";
+            document.getElementById("updatebtn").style.display = "block";
+        }
+
+        function updateUser() {
+            var user = {
+                id: allUsers[indx].id,
+                fname: document.getElementById("fname").value,
+                lname: document.getElementById("lname").value,
+                age: document.getElementById("age").value,
+                mothername: document.getElementById("mothername").value,
+                fathername: document.getElementById("fathername").value,
+                noofmembers: document.getElementById("noofmembers").value,
+                eligibility: document.getElementById("eligibility").value,
+            };
+            var postData = new XMLHttpRequest();
+            postData.onreadystatechange = function () {
+                if (postData.readyState === 4 && postData.status === 200) {
+                    console.log("User Updated Successfully !!!");
+                    getUsersFromServer();  
+                }
+            };
+
+            postData.open("PUT", "http://localhost:3000/users/" + allUsers[indx].id);
+            postData.setRequestHeader("Content-Type", "Application/json");
+            postData.send(JSON.stringify(user));
+        }
+
+    
+        getUsersFromServer();
+    </script>
+</body>
+</html>
