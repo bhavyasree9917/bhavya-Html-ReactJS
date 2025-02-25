@@ -17,15 +17,13 @@
             </tr>
         </thead>
         <tbody id="tbody">
-            <!-- <tr>
-            <td>ravi</td>
-        </tr> -->
+           
         </tbody>
     </table>
     <script>
-        var img1 = [
+        var images = [
             {
-                section: "a",
+                section: "1",
                 name: "rampotheneni",
                 image: "",
 
@@ -33,13 +31,23 @@
             {
                 section: "2",
                 name: "bhavyasree",
-                image: "images (11).jpg",
+                image: "",
 
             },
+            {
+                section:"3",
+                name:"pawankalyan",
+                image:""
+            },
+            {
+                section:"4",
+                name:"rameshbabu",
+                image:""
+            }
 
         ]
 
-        img1.forEach(function (user) {
+        images.forEach(function (user) {
             var mytr = document.createElement("tr")
             for (a in user) {
                 var td = document.createElement("td");
