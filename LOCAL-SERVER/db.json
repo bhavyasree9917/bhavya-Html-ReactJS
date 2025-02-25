@@ -1,3 +1,14 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "0c2e",
+      "fname": "ram  bhavya",
+      "lname": "potheneni",
+      "age": "23",
+      "mothername": "lalitha",
+      "fathername": "rameshbabu",
+      "noofmembers": "4",
+      "eligibility": "Yes"
+    }
+  ]
 }
