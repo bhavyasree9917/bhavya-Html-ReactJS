@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createelement</title>
+</head>
+
+<body>
+    <a href=""></a>
+    <ul id="list"></ul>
+    <!-- <img src="" alt=""> -->
+    <div id="imgcreat"></div>
+    <script>
+        var div = document.getElementById("imgcreat")
+        var myimg = document.createElement("img")
+        myimg.setAttribute("src", "https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        myimg.setAttribute("width", "150px")
+        div.appendChild(myimg)
+
+
+        // HTMLHeadingElement
+
+        var head1 = document.createElement("h1")
+        head1.textContent = "bhumika";
+        div.appendChild(head1)
+
+
+        // var ns=Number(prompt("no of headings"))
+
+        var names = ["ram", "bhavya", "sree", "9392470961"];
+        console.log(names[1])
+        // for(i=0;i<=ns;i++){
+        //     var head1 = document.createElement("h1")
+        //     head1.textContent = "bhum";
+        //     div.appendChild(head1)
+        // }
+
+        // name.forEach(function(val) {
+
+        for (i = 0; i <= names.length; i++) {
+            var head1 = document.createElement("h1")
+            div.appendChild(head1)
+            head1.textContent = names[i];
+            // div.appendChild(head1) 
+        }
+
+        // });
+
+        // HTMLParagraphElement
+
+        var paragraph1 = document.createElement("p")
+        paragraph1.textContent = "bhavyasree";
+        div.appendChild(paragraph1)
+
+
+        // HTMLanchorElement
+
+        var anchor = document.createElement("a")
+        anchor.setAttribute("href", "www.examp.com")
+        anchor.textContent = "llink example"
+        div.appendChild(anchor)
+
+        // htmlist create
+
+        var divli = document.getElementById("list")
+        var student = ["sree", "bhavya", "ramesh"];
+        for (i = 0; i < 3; i++) {
+            var myli = document.createElement("li")
+            myli.innerHTML = student[i]
+            // myli.innerHTML=["val","bhim","net"];
+            divli.appendChild(myli)
+        }
+
+        //htmltable
+
+        var names = [12, 13, 13, 12]
+        var prop = ["telugu", "english", "hindi", "maths"]
+        var table = document.createElement("table")
+        table.setAttribute("border", "1")
+        var thead1 = document.createElement("thead")
+
+
+        var tbody1 = document.createElement("tbody")
+        var mytr1 = document.createElement("tr")
+        // thead1.appendChild(mytr)  
+        // tbody1.appendChild(mytr)  
+        // var myth=document.createElement("th")
+        // myth.innerHTML="Name"
+
+        // mytr.appendChild(myth)   
+        // var mytd=document.createElement("td") 
+        // mytd.innerHTML="name"
+        // mytr.appendChild(mytd)
+
+        prop.forEach(function (val, index) {
+
+            var myth = document.createElement("th")
+            myth.innerHTML = prop[index];
+            mytr1.appendChild(myth)
+
+
+            thead1.appendChild(mytr1)
+        }
+   )
+        names.forEach(function (val, index) {
+            var mytr = document.createElement("tr")
+            for(i=0;i<names.length;i++){
+            var mytd = document.createElement("td")
+            mytd.innerHTML = names[index];
+            mytr.appendChild(mytd)
+        }
+
+
+            tbody1.appendChild(mytr)
+
+        })
+        table.appendChild(thead1)
+        table.appendChild(tbody1)
+        document.body.appendChild(table)
+            </script>
+</body>
+</html>
