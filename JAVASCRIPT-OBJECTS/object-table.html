@@ -25,51 +25,43 @@
             {
                 section: "1",
                 name: "rampotheneni",
-                image: "",
-
+                image: ""
             },
             {
                 section: "2",
                 name: "bhavyasree",
-                image: "",
-
+                image: ""
             },
             {
-                section:"3",
-                name:"pawankalyan",
-                image:""
+                section: "3",
+                name: "pawankalyan",
+                image: ""
             },
             {
-                section:"4",
-                name:"rameshbabu",
-                image:""
+                section: "4",
+                name: "rameshbabu",
+                image: ""
             }
-
-        ]
+        ];
 
         images.forEach(function (user) {
-            var mytr = document.createElement("tr")
-            for (a in user) {
+            var mytr = document.createElement("tr");
+            for (var a in user) {
                 var td = document.createElement("td");
                 if (a === "image") {
-                    var myimgtd = document.createElement("td")
-                    var myimg = document.createElement("img")
+                    var myimgtd = document.createElement("td");
+                    var myimg = document.createElement("img");
                     myimg.src = user.image;
-                    myimg.setAttribute("width", "150px")
-                    myimgtd.appendChild(myimg)
-                    mytr.appendChild(myimgtd)
-                }
-                else {
+                    myimg.setAttribute("width", "150px");
+                    myimgtd.appendChild(myimg);
+                    mytr.appendChild(myimgtd);
+                } else {
                     td.textContent = user[a];
-                    mytr.appendChild(td)
+                    mytr.appendChild(td);
                 }
-                document.querySelector("tbody").appendChild(mytr)
             }
-        }
-        )
-
-
-
+            document.querySelector("tbody").appendChild(mytr);
+        });
     </script>
 </body>
 
