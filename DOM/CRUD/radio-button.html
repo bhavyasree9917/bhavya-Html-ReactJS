@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="gender"value="male" id="">male
+    <input type="radio" name="gender"value="female" id="">female
+    <input type="radio" name="gender"value="others" id="">others
+    <script>
+       var allradioBtns=document.getElementsByName("grnder")
+       for(i=0;i<allradioBtns.length;i++){
+        if(allradioBtns[i].value=="female"){
+            allradioBtns[i].checked=true
+        }
+       }
+       console.log(allradioBtns)
+    </script>
+</body>
+</html>
