@@ -7,6 +7,7 @@ function App() {
   <h2>reactjs projects</h2>
     </div>
   );
+  
 }
 
 export default App;
