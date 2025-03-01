@@ -7,7 +7,6 @@ function App() {
       <h2>this is react js</h2>
       <p>introduction to javascript</p>
     </div>
-
   );
   
 }
