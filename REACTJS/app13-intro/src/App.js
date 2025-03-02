@@ -1,14 +1,11 @@
+import logo from './logo.svg';
 import './App.css';
-import Bhavyasree from './Bhavyasree';
-
 
 function App() {
   return (
     <div className="App">
-  <Bhavyasree/>
-  
+     <Bhavyasree/>
     </div>
-    
   );
 }
 
