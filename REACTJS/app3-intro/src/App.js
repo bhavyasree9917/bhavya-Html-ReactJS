@@ -2,10 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Rbp from './RBP.JSX';
 
-
-
-
-
 function App() {
   return (
     <div className="App">
