@@ -4,6 +4,7 @@ import Bhavyasree from './Bhavyasree';
 import Ram from './Ram';
 import Ramesh from './Ramesh';
 import Premtej from './Premtej';
+import Lakshmi from './Lakshmi';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Ram/>
     <Ramesh/>
     <Premtej/>
+   <Lakshmi/>
     </div>
   );
   
