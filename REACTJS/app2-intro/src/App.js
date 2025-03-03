@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Pal from './Pal';
 
 function App() {
   return (
@@ -19,9 +20,8 @@ function App() {
           <input type="text" readonly /><br/>
           
           <label for="">Mobilenumber: </label>
-          <input type="number" /> <br/>
-
-           
+          <input type="number" /> <br/>          
+          <Pal/>           
     </div>
   );
   
