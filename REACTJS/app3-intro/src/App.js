@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Rbp from './RBP.JSX';
+import Rbp from './Rbp.jsx';
 
 function App() {
   return (

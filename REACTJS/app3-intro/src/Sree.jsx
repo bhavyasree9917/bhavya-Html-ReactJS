@@ -7,7 +7,7 @@ class Sree extends Component{
     }
     render(){
         return<div>
-            <h1>{this.props.all.fname}</h1>
+            <h1>{this.props.all.fnmae}</h1>
         </div>
     }
 }
