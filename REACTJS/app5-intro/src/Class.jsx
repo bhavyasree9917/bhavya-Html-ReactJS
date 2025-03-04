@@ -17,8 +17,7 @@ export default class Class extends Component{
             <button onClick={this.changename}>change name</button>
             <h2>{this.state.fname}</h2>
             <h2>{this.state.lname}</h2>
-            <h2>{this.state.contact}</h2>
-            
+            <h2>{this.state.contact}</h2>  
         </div>
     }
 }
