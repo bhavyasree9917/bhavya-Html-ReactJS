@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Class from './Class';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
     <li>babu</li>
     
   </ol>
-     
+    <Class/>
     </div>
   );
 }
