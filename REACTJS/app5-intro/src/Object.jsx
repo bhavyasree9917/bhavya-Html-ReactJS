@@ -4,12 +4,12 @@ export default class Object extends Component{
     constructor(){
         super()
     }
-    Objectdetails=()=>{
+   Objectdetails=()=>{
         this.setState({
             person:{
                 fname:"premtej",
                 lname:"sriramula",
-                contact:9392470961
+                 contact:9392470961
             }
         }
     )
