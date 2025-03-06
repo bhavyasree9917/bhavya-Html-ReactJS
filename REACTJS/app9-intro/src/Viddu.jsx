@@ -19,7 +19,6 @@ export default class Viddu extends Component {
             "lat": "-37.3159",
             "lng": "81.1496"
           }
-          
         }
       },
       "phone": "1-770-736-8031 x56442",
