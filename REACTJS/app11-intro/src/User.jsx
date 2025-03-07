@@ -127,7 +127,7 @@ class User extends Component {
                 </tr>
               );
             })}
-          </tbody>
+7          </tbody>
         </table>
       </div>
     );
