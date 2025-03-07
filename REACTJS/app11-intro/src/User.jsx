@@ -37,7 +37,6 @@ class User extends Component {
     this.setState({ person: { fname: "", lname: "", email: "" } });
   };
 
-  
   handleDelete = (i) => {
     const newUsers = [...this.state.users];
     newUsers.splice(i, 1);
