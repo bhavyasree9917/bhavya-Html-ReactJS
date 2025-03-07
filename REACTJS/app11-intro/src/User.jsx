@@ -13,6 +13,7 @@ class User extends Component {
         { fname: "bhavya", lname: "sree", email: "sree@gmail.com" },
         { fname: "rocky", lname: "jai", email: "jai@gmail.com" },
         { fname: "prem", lname: "Kumar", email: "prem@gmail.com" },
+
       ],
       editIndex: null,
     };
@@ -36,6 +37,7 @@ class User extends Component {
     this.setState({ person: { fname: "", lname: "", email: "" } });
   };
 
+  
   handleDelete = (i) => {
     const newUsers = [...this.state.users];
     newUsers.splice(i, 1);
