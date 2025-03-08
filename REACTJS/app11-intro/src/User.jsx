@@ -11,7 +11,7 @@ class User extends Component {
       },
       users: [
         { fname: "bhavya", lname: "sree", email: "sree@gmail.com" },
-        { fname: "rocky", lname: "jai", email: "jai@gmail.com" },
+        { fname: "rocky", lname: "rocki", email: "rocky@gmail.com" },
         { fname: "prem", lname: "Kumar", email: "prem@gmail.com" },
 
       ],
