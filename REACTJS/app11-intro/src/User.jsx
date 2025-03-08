@@ -129,7 +129,7 @@ class User extends Component {
                 </tr>
               );
             })}
-            7          </tbody>
+                  </tbody>
         </table>
       </div>
     );
