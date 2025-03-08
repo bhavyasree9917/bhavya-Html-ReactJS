@@ -20,8 +20,8 @@ class User extends Component {
   }
   handleChange = (e) => {
     console.log(e.target.name);
-    const newPerson = { ...this.state.person }; 
-    newPerson[e.target.name] = e.target.value; 
+    const newPerson = { ...this.state.person };
+    newPerson[e.target.name] = e.target.value;
     this.setState({ person: newPerson });
   };
 
@@ -128,7 +128,7 @@ class User extends Component {
                 </tr>
               );
             })}
-7          </tbody>
+            7          </tbody>
         </table>
       </div>
     );
