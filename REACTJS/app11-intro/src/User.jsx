@@ -52,6 +52,7 @@ class User extends Component {
     newUsers[this.state.editIndex] = this.state.person;
     this.setState({ users: newUsers, editIndex: null });
     this.clearUser()
+    
   };
   render() {
     return (
