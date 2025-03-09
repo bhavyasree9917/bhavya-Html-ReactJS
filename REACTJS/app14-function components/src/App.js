@@ -10,6 +10,7 @@ function App() {
      <h2>bhavya</h2>
      <hr/>
      <Bhim/>
+     
      <hr/>
 <Ram/>    
     </div>
