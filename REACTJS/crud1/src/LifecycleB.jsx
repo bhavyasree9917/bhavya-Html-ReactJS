@@ -28,4 +28,5 @@ export default class LifeCycleB extends Component {
   componentDidUpdate() {
     console.log("componentDidUpdate");
   }
+  
 }
