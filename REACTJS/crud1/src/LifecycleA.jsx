@@ -23,6 +23,7 @@ export default class LifecycleA extends Component {
         <button onClick={this.changeCount}>Change Count</button>
         <LifeCycleB countValue={this.state.count} />
         {this.state.count === 10 && <MyImgComp/>}
+        
     
 <LifecycleB/> 
     </div>
