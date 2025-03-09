@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Sony from './Sony';
+import LifecycleA from './LifecycleA';
+import LifeCycleB from './LifecycleB';
+
 function App() {
+
   return (
     <div className="App">
-    <Sony/>
-      
-    
+    <LifecycleA/>
+    <LifeCycleB/>
     </div>
   );
 }
