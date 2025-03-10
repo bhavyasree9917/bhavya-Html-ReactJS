@@ -23,6 +23,7 @@ export default class LifeCycleB extends Component {
   }
   getSnapshotBeforeUpdate() {
     console.log(" getSnapshotBeforeUpdate ");
+    
   }
 
   componentDidUpdate() {
