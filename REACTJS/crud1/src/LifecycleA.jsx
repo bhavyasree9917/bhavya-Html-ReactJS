@@ -14,7 +14,6 @@ export default class LifecycleA extends Component {
     console.log("I am from getDerivedStateFromProps, 2nd stage of mounting phase");
     return null; 
   }
-
   render() {
     console.log("iam from render,3rd phase of mounting phase")
     return <div>
