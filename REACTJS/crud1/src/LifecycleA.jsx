@@ -10,7 +10,6 @@ export default class LifecycleA extends Component {
         count:10
     }
   }
-
   static getDerivedStateFromProps(Props, State) {
     console.log("I am from getDerivedStateFromProps, 2nd stage of mounting phase");
     return null; 
