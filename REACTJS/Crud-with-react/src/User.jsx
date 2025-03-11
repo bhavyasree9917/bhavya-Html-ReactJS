@@ -95,7 +95,6 @@ class User extends Component {
             </button>
           )}
         </form>
-
         <hr />
         <table border={1}>
           <thead>
