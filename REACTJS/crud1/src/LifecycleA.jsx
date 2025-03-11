@@ -22,7 +22,6 @@ export default class LifecycleA extends Component {
         <LifeCycleB countValue={this.state.count} />
         {this.state.count === 10 && <MyImgComp/>}
 <LifecycleB/>
- 
     </div>
     
   }
