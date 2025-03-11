@@ -23,7 +23,6 @@ export default class LifecycleA extends Component {
         {this.state.count === 10 && <MyImgComp/>}
 <LifecycleB/>
     </div>
-    
   }
   componentDidMount(){
     console.log("iam from componentdidmount ,4th stage of mounting phase")
