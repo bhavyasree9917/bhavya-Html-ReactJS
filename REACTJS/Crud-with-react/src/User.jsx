@@ -89,6 +89,7 @@ class User extends Component {
             <button type="button" onClick={this.addUser}>
               Add User
             </button>
+            
           ) : (
             <button type="button" onClick={this.handleUpdate}>
               Update User
