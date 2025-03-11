@@ -19,10 +19,11 @@ export default class LifeCycleB extends Component {
   render() {
     console.log(" render ");
 
-    return <h2>{this.props.countValue}</h2>;
+    return <h2>{this.props.countValue}</h2>
   }
   getSnapshotBeforeUpdate() {
     console.log(" getSnapshotBeforeUpdate ");
+    return true;
     
   }
 
