@@ -46,5 +46,38 @@
       "totalPrice": 600,
       "totalprice": "34"
     }
+  ],
+  "socialmedia":[
+    
+      {
+        "id": 1,
+        "content": "This is the first post. Just sharing some thoughts!",
+        "likes": 45,
+        "comments": "hi",
+        "author": "Author1"
+      },
+      {
+        "id": 2,
+        "content": "Had a wonderful day at the park! #sunshine",
+        "likes": 78,
+        "comments": "hi",
+        "author": "Author2"
+      },
+      {
+        "id": 3,
+        "content": "Learning new things every day. Excited for what's next.",
+        "likes": 120,
+        "comments": "hi",
+        "author": "Author3"
+      },
+      {
+        "id": 4,
+        "content": "Just finished reading a great book! Highly recommend it.",
+        "likes": 56,
+        "comments": "hi",
+        "author": "Author4"
+      }
+    
+    
   ]
 }
