@@ -12,5 +12,39 @@
       "email": "bhavyasree@gmail.com",
       "contact": "32456789"
     }
+  ],
+  "Ecart": [
+    {
+      "id": "P001",
+      "name": "Laptop",
+      "price": "8002",
+      "quantity": 2,
+      "totalPrice": 1600,
+      "totalprice": "2345"
+    },
+    {
+      "id": "P002",
+      "name": "Smartphone",
+      "price": 500,
+      "quantity": 3,
+      "totalPrice": 1500,
+      "totalprice": "5678"
+    },
+    {
+      "id": "P003",
+      "name": "Headphones",
+      "price": 100,
+      "quantity": 5,
+      "totalPrice": 500,
+      "totalprice": "34"
+    },
+    {
+      "id": "P004",
+      "name": "Smartwatch",
+      "price": 150,
+      "quantity": 4,
+      "totalPrice": 600,
+      "totalprice": "34"
+    }
   ]
 }
