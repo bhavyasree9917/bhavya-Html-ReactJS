@@ -37,7 +37,7 @@ export default class TicketDetails extends Component {
                   </td>
                   <td>
                     <button
-                      className="btn btn-danger"
+                     className="btn btn-danger"
                       onClick={() => {
                         this.props.handleDelete(booking);
                       }}
