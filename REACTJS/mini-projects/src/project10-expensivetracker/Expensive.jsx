@@ -1,5 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
+import Expensiveform from "./Expensiveform";
+import Expensivetable from "./Expensivetable";
 
 export default class Expensive extends Component {
     constructor() {
@@ -73,70 +75,14 @@ export default class Expensive extends Component {
 
     render() {
         return <div>
-            <form >
-                <label htmlFor="">id</label>
-                <input type="text"
-                    name="id"
-                    value={this.state.person.id}
-                    onChange={this.handlechange} />{""}
-                <br />
-                <label htmlFor="">amount</label>
-                <input type="text"
-                    name="amount"
-                    value={this.state.person.amount}
-                    onChange={this.handlechange} />{""}
-                <br />
-                <label htmlFor="">category</label>
-                <input type="text"
-                    name="category"
-                    value={this.state.person.category}
-                    onChange={this.handlechange} />{""}
-                <br />
-                <label htmlFor="">description</label>
-                <input type="text"
-                    name="description"
-                    value={this.state.person.description}
-                    onChange={this.handlechange} />{""}
-                <br />
-                <label htmlFor="">category</label>
-                <input type="text"
-                    name="category"
-                    value={this.state.person.category}
-                    onChange={this.handlechange} />
-
-                <br />
-                {this.state.editindex === null ? <button type="button" onClick={this.adduser}>add user</button> :
-                    (<button type="button" onClick={this.updateUser}> update user</button>)}
-            </form>
+            <Expensiveform person={this.state.person}
+                adduser={this.adduser}
+                handlechange={this.handlechange}
+                updateUser={this.updateUser}
+                editindex={this.state.editindex} />
             <hr />
-            <table border={1}>
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>amount</th>
-                        <th>category</th>
-                        <th>description</th>
-                        <th>category</th>
-                        <th>edit</th>
-                        <th>delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.state.Expensive.map((val, i) => {
-                        return (<tr key={val.id}>
-                            <td>{val.id}</td>
-                            <td>{val.amount}</td>
-                            <td>{val.category}</td>
-                            <td>{val.description}</td>
-                            <td>{val.category}</td>
+            <Expensivetable Expensive={this.state.Expensive} edituser={this.edituser} deletetuser={this.deletetuser} />
 
-                            <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                            <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
-                        </tr>)
-                    })}
-
-                </tbody>
-            </table>
         </div>
     }
     componentDidMount() {
