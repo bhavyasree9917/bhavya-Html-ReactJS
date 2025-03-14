@@ -42,27 +42,34 @@
   "socialmedia": [
     {
       "id": "1",
-      "content": "This is the first post. Just sharing some thoughts!",
-      "likes": 45,
-      "comments": "hi",
-      "author": "Author1"
+      "content": "This is the first post.",
+      "likes": "150",
+      "comments": "30",
+      "author": "Alice"
+    },
+    {
+      "id": "2",
+      "content": "Here's another post with more likes!",
+      "likes": "250345",
+      "comments": "40",
+      "author": "Bob"
     },
     {
       "id": "3",
-      "content": "Learning new things every day. Excited for what's next.",
-      "likes": 120,
-      "comments": "hi",
-      "author": "Author3"
+      "content": "Third post, just sharing some thoughts.",
+      "likes": "100",
+      "comments": "15",
+      "author": "Charlie"
     },
     {
       "id": "4",
-      "content": "Just finished reading a great book! Highly recommend it.",
-      "likes": "5100",
-      "comments": "hi",
-      "author": "Author45"
+      "content": "The final post in this series!",
+      "likes": "300",
+      "comments": "50",
+      "author": "Diana"
     }
   ],
-  "Taskmanagement": [
+  "system": [
     {
       "id": "1",
       "title": "Task 1",
@@ -97,7 +104,8 @@
         "Rome"
       ],
       "correctAnswer": "Paris",
-      "score": 5
+      "score": 5,
+      "correctanswer": "no"
     },
     {
       "id": "2",
@@ -109,7 +117,8 @@
         "Oganesson"
       ],
       "correctAnswer": "Oxygen",
-      "score": 4
+      "score": 4,
+      "correctanswer": "yes"
     },
     {
       "id": "3",
@@ -216,7 +225,7 @@
       "address": "101 Maple Dr, Austin, TX"
     }
   ],
-  "Movies": [
+  "movieTickets": [
     {
       "seatNumber": "A1",
       "isBooked": "true",
@@ -233,7 +242,7 @@
     },
     {
       "seatNumber": "C5",
-      "isBooked": "true",
+      "isBooked": "true4",
       "category": "Economy",
       "userID": "user456",
       "id": "1e5d"
@@ -277,37 +286,34 @@
       "ccategory": "Home Appliances2"
     }
   ],
-  "Expensive":[
-    
-      {
-        "id": 1,
-        "amount": 150.50,
-        "category": "Transportation",
-        "description": "Taxi fare to business meeting",
-        "date": "2025-03-01"
-      },
-      {
-        "id": 2,
-        "amount": 200.00,
-        "category": "Meals",
-        "description": "Lunch with client at restaurant",
-        "date": "2025-03-05"
-      },
-      {
-        "id": 3,
-        "amount": 50.75,
-        "category": "Office Supplies",
-        "description": "Printer ink and paper",
-        "date": "2025-03-08"
-      },
-      {
-        "id": 4,
-        "amount": 1200.00,
-        "category": "Rent",
-        "description": "Monthly office rent payment",
-        "date": "2025-03-10"
-      }
-    
-    
+  "Expensive": [
+    {
+      "id": "1",
+      "amount": 150.5,
+      "category": "Transportation",
+      "description": "Taxi fare to business meeting",
+      "date": "2025-03-01"
+    },
+    {
+      "id": "2",
+      "amount": 200,
+      "category": "Meals",
+      "description": "Lunch with client at restaurant",
+      "date": "2025-03-05"
+    },
+    {
+      "id": "3",
+      "amount": 50.75,
+      "category": "Office Supplies",
+      "description": "Printer ink and paper",
+      "date": "2025-03-08"
+    },
+    {
+      "id": "4",
+      "amount": 1200,
+      "category": "Rent",
+      "description": "Monthly office rent payment",
+      "date": "2025-03-10"
+    }
   ]
 }

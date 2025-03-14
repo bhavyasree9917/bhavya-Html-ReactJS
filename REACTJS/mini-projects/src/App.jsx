@@ -4,15 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Ecommerse from './E-commerce-cart/Ecommerse'
 
-import Taskmanager from './project3-taskmanagementsyastem/taskmanager'
+
 import Quizzapp from './project4-onlinequizzapp/Quizzapp'
 import Socialmedia from './project2-socialmedia/Socialmedia'
 import Profile from './project5-profilemanagement/Profile'
 import Library from './project6-librarymanagement/Library'
 import Digital from './project7-digitaladdress/Digital'
-import Movie from './project8-movieticketbooking/Movie'
+
 import Inventory from './project9-inventor-management/Inventory'
 import Expensive from './project10-expensivetracker/Expensive'
+import MovieTicket from './project8-movieticketbooking/MovieTicket'
+import TaskManagement from './project3-taskmanagementsyastem/TaskManagement'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,15 +23,14 @@ function App() {
     <>
   {/* <Ecommerse/> */}
 
-  {/* <Taskmanager/> */}
-  {/* <Quizzapp/> */}
+  <Quizzapp/>
   {/* <Socialmedia/> */}
+  {/* <TaskManagement/> */}
   {/* <Profile/> */}
   {/* <Library/> */}
   {/* <Digital/> */}
-  {/* <Movie/> */}
-  <Inventory/>
-  
+ {/* <MovieTicket/> */}
+  {/* <Inventory/> */}
   {/* <Expensive/> */}
 
     </>

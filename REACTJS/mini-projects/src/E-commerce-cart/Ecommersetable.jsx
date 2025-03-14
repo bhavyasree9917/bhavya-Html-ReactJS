@@ -26,7 +26,6 @@ export default class Ecommersetable extends Component{
                     <td><button type="button" onClick={() => this.props.deletetuser(val)}>delete</button></td>
                 </tr>)
             })}
-
         </tbody>
     </table>
     }
