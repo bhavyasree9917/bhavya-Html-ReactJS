@@ -1,5 +1,7 @@
 import { Component } from "react";
 import axios from "axios";
+import Profileform from "./Profileform";
+import Profiletable from "./Profiletable";
 
 export default class Profile extends Component {
     constructor() {
@@ -73,49 +75,13 @@ export default class Profile extends Component {
     render() {
         return (
             <div>
-                <form>
-                    <label htmlFor="">id</label>
-                    <input type="text" name="id" value={this.state.person.id} onChange={this.handlechange} /><br />
-                    <label htmlFor="">name</label>
-                    <input type="text" name="name" value={this.state.person.name} onChange={this.handlechange} /><br />
-                    <label htmlFor="">email</label>
-                    <input type="text" name="email" value={this.state.person.email} onChange={this.handlechange} /><br />
-                    <label htmlFor="">role</label>
-                    <input type="text" name="role" value={this.state.person.role} onChange={this.handlechange} /><br />
-                    <label htmlFor="">preferences</label>
-                    <input type="text" name="preferences" value={this.state.person.preferences} onChange={this.handlechange} /><br />
-                    {this.state.editindex === null ?
-                        <button type="button" onClick={this.adduser}>Add User</button> :
-                        <button type="button" onClick={this.updateUser}>Update User</button>
-                    }
-                </form>
+                <Profileform person={this.state.person}
+                    adduser={this.adduser}
+                    handlechange={this.handlechange}
+                    updateUser={this.updateUser}
+                    editindex={this.state.editindex} />
                 <hr />
-                <table border={1}>
-                    <thead>
-                        <tr>
-                            <th>id</th>
-                            <th>name</th>
-                            <th>email</th>
-                            <th>role</th>
-                            <th>preferences</th>
-                            <th>edit</th>
-                            <th>delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.Profile.map((val, i) => (
-                            <tr key={val.id}>
-                                <td>{val.id}</td>
-                                <td>{val.name}</td>
-                                <td>{val.email}</td>
-                                <td>{val.role}</td>
-                                <td>{val.preferences}</td>
-                                <td><button type="button" onClick={() => this.edituser(val, i)}>edit</button></td>
-                                <td><button type="button" onClick={() => this.deletetuser(val)}>delete</button></td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <Profiletable profile={this.state.Profile} edituser={this.edituser} deletetuser={this.deletetuser} />
             </div>
         );
     }
