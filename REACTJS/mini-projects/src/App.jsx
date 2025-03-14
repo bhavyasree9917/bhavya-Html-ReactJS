@@ -26,7 +26,7 @@ function App() {
   {/* <Quizzapp/> */}
   {/* <Socialmedia/> */}
   {/* <TaskManagement/> */}
-  {/* <Profile/> */}
+  <Profile/>
   {/* <Library/> */}
   {/* <Digital/> */}
  {/* <MovieTicket/> */}

@@ -14,30 +14,38 @@
     }
   ],
   "Ecart": [
-    {
-      "id": "P001",
-      "name": "Laptop",
-      "price": "8002",
-      "quantity": 2,
-      "totalPrice": 1600,
-      "totalprice": "2345"
-    },
-    {
-      "id": "P002",
-      "name": "Smartphone",
-      "price": 500,
-      "quantity": 3,
-      "totalPrice": 1500,
-      "totalprice": "5678"
-    },
-    {
-      "id": "P003",
-      "name": "Headphones",
-      "price": 100,
-      "quantity": 5,
-      "totalPrice": 500,
-      "totalprice": "34"
-    }
+    
+      {
+        "id": "1",
+        "name": "Item 1",
+        "price": "10.00",
+        "quantity": "2",
+        "totalprice": "20.00"
+      },
+      {
+        "id": "2",
+        "name": "Item 2",
+        "price": "15.50",
+        "quantity": "1",
+        "totalprice": "15.50"
+      },
+      {
+        "id": "3",
+        "name": "Item 3",
+        "price": "7.25",
+        "quantity": "5",
+        "totalprice": "36.25"
+      },
+      {
+        "id": "4",
+        "name": "Item 4",
+        "price": "20.00",
+        "quantity": "3",
+        "totalprice": "60.00"
+      }
+    
+    
+    
   ],
   "socialmedia": [
     {
@@ -58,7 +66,7 @@
       "id": "3",
       "content": "Third post, just sharing some thoughts.",
       "likes": "100",
-      "comments": "15",
+      "comments": "1534",
       "author": "Charlie"
     },
     {
@@ -82,7 +90,7 @@
       "title": "Task 2",
       "description": "This task is currently being worked on.",
       "status": "In-Progress",
-      "createdAt": "2025-03-05T10:00:00Z"
+      "createdAt": "2025-03-05T10:00:00Zdxfcghj"
     },
     {
       "id": "3",
@@ -130,7 +138,7 @@
         "Hemingway"
       ],
       "correctAnswer": "Shakespeare",
-      "score": 6,
+      "score": "62",
       "correctanswer": "shakespeare"
     }
   ],
@@ -170,21 +178,24 @@
       "title": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
       "isAvailable": true,
-      "borrower": null
+      "borrower": "vbnm",
+      "isavailable": "b bn"
     },
     {
       "id": "2",
       "title": "1984",
-      "author": "George Orwell",
+      "author": "George Orwellh",
       "isAvailable": false,
-      "borrower": 102
+      "borrower": 102,
+      "isavailable": "ghj"
     },
     {
       "id": "3",
       "title": "To Kill a Mockingbird",
       "author": "Harper Lee",
       "isAvailable": true,
-      "borrower": null
+      "borrower": "bnm",
+      "isavailable": "yghj"
     },
     {
       "id": "4",
@@ -193,6 +204,13 @@
       "isAvailable": false,
       "borrower": 105,
       "isavailable": "y"
+    },
+    {
+      "id": "",
+      "title": "",
+      "author": "",
+      "isavailable": "et",
+      "borrower": "eeee"
     }
   ],
   "Digital": [
@@ -214,15 +232,22 @@
       "id": "3",
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
-      "phone": "+1122334455",
-      "address": "789 Pine Rd, Denver, CO"
+      "phone": "+11223344553",
+      "address": "789 Pine Rd, Denver, COerhj"
     },
     {
       "id": "4",
       "name": "Bob Brown",
       "email": "bob.brown@example.com",
       "phone": "+9988776655",
-      "address": "101 Maple Dr, Austin, TX"
+      "address": "101 Maple Dr, Austin, TXwe"
+    },
+    {
+      "id": "",
+      "name": "",
+      "email": "",
+      "phone": "",
+      "address": "bcnmn,"
     }
   ],
   "movieTickets": [
@@ -230,7 +255,7 @@
       "seatNumber": "A1",
       "isBooked": "true",
       "category": "VIP",
-      "userID": "user123",
+      "userID": "user123erty",
       "id": "66d9"
     },
     {
@@ -275,7 +300,7 @@
       "name": "Coffee Maker",
       "quantity": "302",
       "price": "89.998",
-      "category": "Home Appliances"
+      "category": "Home Appliancesjcfghj"
     },
     {
       "id": "4",
@@ -304,7 +329,7 @@
     {
       "id": "3",
       "amount": 50.75,
-      "category": "Office Supplies",
+      "category": "Office Supplies3g n",
       "description": "Printer ink and paper",
       "date": "2025-03-08"
     },

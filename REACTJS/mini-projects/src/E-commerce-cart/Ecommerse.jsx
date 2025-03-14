@@ -1,6 +1,7 @@
 import { Component } from "react";
 import axios from "axios"
 import Ecommerseform from "./Ecommerseform";
+import Ecommersetable from "./Ecommersetable";
 
 export default class Ecommerse extends Component {
     constructor() {
