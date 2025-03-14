@@ -22,8 +22,8 @@ export default class Ecommersetable extends Component{
                     <td>{val.price}</td>
                     <td>{val.quantity}</td>
                     <td>{val.totalprice}</td>
-                    <td><button type="button" onClick={() => this.props.edituser(val, i)}>edit</button></td>
-                    <td><button type="button" onClick={() => this.props.deletetuser(val)}>delete</button></td>
+                    <td><button type="button"className="btn btn-primary" onClick={() => this.props.edituser(val, i)}>edit</button></td>
+                    <td><button type="button" className="btn btn-danger" onClick={() => this.props.deletetuser(val)}>delete</button></td>
                 </tr>)
             })}
         </tbody>

@@ -23,8 +23,8 @@ render(){
                         <td>{val.likes}</td>
                         <td>{val.comments}</td>
                         <td>{val.author}</td>
-                        <td><button type="button" onClick={() => this.props.edituser(val, i)}>edit</button></td>
-                        <td><button type="button" onClick={() => this.props.deletetuser(val)}>delete</button></td>
+                        <td><button type="button" className="btn btn-primary"onClick={() => this.props.edituser(val, i)}>edit</button></td>
+                        <td><button type="button" className="btn btn-danger"onClick={() => this.props.deletetuser(val)}>delete</button></td>
                     </tr>)
                 })}
 

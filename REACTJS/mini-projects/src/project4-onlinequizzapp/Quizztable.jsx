@@ -24,8 +24,8 @@ export default class Quizztable extends Component {
                                 <td>{val.options}</td>
                                 <td>{val.correctanswer}</td>
                                 <td>{val.score}</td>
-                                <td><button type="button" onClick={() => this.props.edituser(val, i)}>edit</button></td>
-                                <td><button type="button" onClick={() => this.props.deletetuser(val)}>delete</button></td>
+                                <td><button type="button" className="btn btn-danger" onClick={() => this.props.edituser(val, i)}>edit</button></td>
+                                <td><button type="button" className="btn btn-primary" onClick={() => this.props.deletetuser(val)}>delete</button></td>
                             </tr>
                         );
                     })}
