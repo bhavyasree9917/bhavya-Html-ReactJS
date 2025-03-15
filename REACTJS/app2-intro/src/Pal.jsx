@@ -14,5 +14,5 @@ class Pal extends Component{
         </div>
     }
 }
-export default Pal
+export default Pal;
 
