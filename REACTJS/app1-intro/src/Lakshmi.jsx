@@ -22,7 +22,6 @@ function Lakshmi(){
             <td>Row 3</td>
         </tr>
     </table>
-
     </div>
 }
 export default Lakshmi;
