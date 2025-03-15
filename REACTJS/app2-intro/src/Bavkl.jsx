@@ -10,4 +10,4 @@ class Bavkl extends Component{
         </div>
     }
 }
-export default Bavkl
+export default Bavkl;
