@@ -13,6 +13,7 @@ class Rbp extends Component{
     render(){
        return<div>
         <Sree all={this.state}/>
+        
        </div>
     }
 }
