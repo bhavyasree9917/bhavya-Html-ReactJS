@@ -15,9 +15,9 @@ export default class Profileform extends Component {
                     onChange={this.props.handlechange} />
             </div>
             <div className="mb-3">
-                <label htmlFor="formGroupExampleInput2" className="form-label"> name</label>
-                <input type="text" className="form-control" name=" name"
-                    value={this.props.person. name}
+                <label htmlFor="formGroupExampleInput2" className="form-label">name</label>
+                <input type="text" className="form-control" name="name"
+                    value={this.props.person.name}
                     onChange={this.props.handlechange} />
             </div>
             <div className="mb-3">
@@ -27,15 +27,15 @@ export default class Profileform extends Component {
                     onChange={this.props.handlechange} />
             </div>
             <div className="mb-3">
-                <label htmlFor="formGroupExampleInput" className="form-label"> role</label>
-                <input type="text" className="form-control" name=" role"
-                    value={this.props.person. role}
+                <label htmlFor="formGroupExampleInput" className="form-label">role</label>
+                <input type="text" className="form-control" name="role"
+                    value={this.props.person.role}
                     onChange={this.props.handlechange} />
             </div>
             <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">preferences</label>
                 <input type="text" className="form-control" name="preferences"
-                    value={this.props.person.spreferences}
+                    value={this.props.person.preferences}
                     onChange={this.props.handlechange} />
             </div>
             {this.props.editindex === null ? <button type="button" onClick={this.props.adduser}>add user</button> :

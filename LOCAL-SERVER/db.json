@@ -14,38 +14,34 @@
     }
   ],
   "Ecart": [
-    
-      {
-        "id": "1",
-        "name": "Item 1",
-        "price": "10.00",
-        "quantity": "2",
-        "totalprice": "20.00"
-      },
-      {
-        "id": "2",
-        "name": "Item 2",
-        "price": "15.50",
-        "quantity": "1",
-        "totalprice": "15.50"
-      },
-      {
-        "id": "3",
-        "name": "Item 3",
-        "price": "7.25",
-        "quantity": "5",
-        "totalprice": "36.25"
-      },
-      {
-        "id": "4",
-        "name": "Item 4",
-        "price": "20.00",
-        "quantity": "3",
-        "totalprice": "60.00"
-      }
-    
-    
-    
+    {
+      "id": "1",
+      "name": "Item 1",
+      "price": "10.00",
+      "quantity": "2",
+      "totalprice": "20.00"
+    },
+    {
+      "id": "2",
+      "name": "Item 2",
+      "price": "15.50",
+      "quantity": "1",
+      "totalprice": "15.50"
+    },
+    {
+      "id": "3",
+      "name": "Item 3",
+      "price": "7.25",
+      "quantity": "5",
+      "totalprice": "36.25"
+    },
+    {
+      "id": "4",
+      "name": "Item 4",
+      "price": "20.00",
+      "quantity": "3",
+      "totalprice": "60.00"
+    }
   ],
   "socialmedia": [
     {
@@ -131,15 +127,17 @@
     {
       "id": "3",
       "question": "Who wrote 'Hamlet'?",
-      "options": [
-        "Shakespeare",
-        "Dickens",
-        "Austen",
-        "Hemingway"
-      ],
+      "options": "Shakespeare,Dickens,Austen,Hemingwaycb",
       "correctAnswer": "Shakespeare",
       "score": "62",
       "correctanswer": "shakespeare"
+    },
+    {
+      "id": "4",
+      "question": "vhjbgkn",
+      "options": "cfgvhjk",
+      "correctanswer": "gvbjknm;l,",
+      "score": "cvbjknlm"
     }
   ],
   "Profile": [
@@ -162,7 +160,7 @@
       "name": "Alice Johnson",
       "email": "alice.johnson@example.com",
       "role": "Admin",
-      "preferences": "dark mode"
+      "preferences": "dark modefbjgkh"
     },
     {
       "id": "4",

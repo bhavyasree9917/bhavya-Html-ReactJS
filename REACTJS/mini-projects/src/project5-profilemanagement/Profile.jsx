@@ -81,7 +81,7 @@ export default class Profile extends Component {
                     updateUser={this.updateUser}
                     editindex={this.state.editindex} />
                 <hr />
-                <Profiletable profile={this.state.Profile} edituser={this.edituser} deletetuser={this.deletetuser} />
+                <Profiletable Profile={this.state.Profile} edituser={this.edituser} deletetuser={this.deletetuser} />
             </div>
         );
     }
