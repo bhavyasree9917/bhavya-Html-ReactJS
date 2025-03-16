@@ -9,6 +9,7 @@ class Sree extends Component{
         return<div>
             <h1>{this.props.all.fnmae}</h1>
         </div>
+        
     }
 }
 export default Sree;
