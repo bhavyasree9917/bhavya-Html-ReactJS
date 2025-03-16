@@ -8,8 +8,7 @@ class Rbp extends Component{
             fnmae:"sree",
             lname:"sriramula",
             age:20
-        }
-        
+        } 
     }
     render(){
        return<div>
