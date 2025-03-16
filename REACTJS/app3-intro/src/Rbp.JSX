@@ -9,6 +9,7 @@ class Rbp extends Component{
             lname:"sriramula",
             age:20
         } 
+        
     }
     render(){
        return<div>
