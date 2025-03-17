@@ -23,6 +23,7 @@ function App() {
           <input type="number" /> <br/>          
           <Pal/>           
     </div>
+    
   );
   
   
