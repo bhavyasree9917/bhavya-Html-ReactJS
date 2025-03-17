@@ -8,6 +8,7 @@ class Bavkl extends Component{
         return <div>
             <h2>{this.props.all.fname}</h2>
         </div>
+        
     }
 }
 export default Bavkl;
