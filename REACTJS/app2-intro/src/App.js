@@ -23,9 +23,8 @@ function App() {
           <input type="number" /> <br/>          
           <Pal/>           
     </div>
-    
+
   );
-  
   
 }
 export default App;
