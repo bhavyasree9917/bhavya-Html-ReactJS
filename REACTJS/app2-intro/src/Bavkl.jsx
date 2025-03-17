@@ -7,8 +7,7 @@ class Bavkl extends Component{
     render(){
         return <div>
             <h2>{this.props.all.fname}</h2>
-        </div>
-        
+        </div>  
     }
 }
 export default Bavkl;
