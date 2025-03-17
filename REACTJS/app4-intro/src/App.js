@@ -8,6 +8,7 @@ function App() {
      Konidala Venkata Rao and Anjana Devi in Bapatla, Andhra ...</p>
     
     </div>
+    
   );
 }
 
