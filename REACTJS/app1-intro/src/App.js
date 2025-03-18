@@ -17,7 +17,6 @@ function App() {
     <Premtej/>
    <Lakshmi/>
     </div>
-    
   ); 
 }
 
