@@ -24,4 +24,5 @@ function Lakshmi(){
     </table>
     </div>
 }
+
 export default Lakshmi;
