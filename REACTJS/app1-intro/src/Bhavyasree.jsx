@@ -8,7 +8,6 @@ function Bhavyasree() {
 
         <hr />
         <a href="https://www.flipkart.com/">flipkart</a> 
-         
     </div>
 }
 export default Bhavyasree;
