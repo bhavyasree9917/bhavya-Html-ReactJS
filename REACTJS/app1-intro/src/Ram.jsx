@@ -8,6 +8,7 @@ function Ram() {
             <input type="number" disabled />
             <br />
             <button>signup</button>
+            
         </form>
         <hr/>
     </div>
