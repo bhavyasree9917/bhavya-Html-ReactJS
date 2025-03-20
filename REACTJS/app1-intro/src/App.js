@@ -15,8 +15,7 @@ function App() {
     <Ram/>
     <Ramesh/>
     <Premtej/>
-   <Lakshmi/>
-   
+   <Lakshmi/>react-js
     </div>
   ); 
 }
