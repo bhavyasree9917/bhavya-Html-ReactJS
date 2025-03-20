@@ -20,7 +20,6 @@ function Lakshmi(){
             <td>Row 3</td>
             <td>Row 3</td>
             <td>Row 3</td>
-            
         </tr>
     </table>
     </div>
