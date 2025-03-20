@@ -17,7 +17,7 @@ function App() {
     <Premtej/>
    <Lakshmi/>
    
-   react-js
+  
     </div>
   ); 
 }
