@@ -72,11 +72,6 @@ export default class Ecommerse extends Component {
             }
         })
     }
-
-
-
-
-
     render() {
         return <div>
 
