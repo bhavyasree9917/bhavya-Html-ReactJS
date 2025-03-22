@@ -8,6 +8,5 @@ export default class Child2 extends Component {
             <button onMouseOver={this.props.decrement}>decrement</button>
             <button onMouseOver={this.props.reset}>reset</button>
         </div>
-
     }
 }
