@@ -81,7 +81,7 @@ export default class Ecommerse extends Component {
                 updateUser={this.updateUser}
                 editindex={this.state.editindex} />
             <hr />
-            <Ecommersetable Ecart={this.state.Ecart} edituser={this.edituser} deletetuser={this.deletetuser} /> 
+            <Ecommersetable Ecart={this.state.Ecart} edituser={this.edituser} deletetuser={this.deletetuser} />
 
         </div>
     }
