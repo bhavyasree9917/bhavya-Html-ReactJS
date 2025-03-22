@@ -19,7 +19,6 @@ export default class Parent extends Component {
                     increment={increment}
                     decrement={decrement}
                     reset={reset} />
-
             )} />
 
 
