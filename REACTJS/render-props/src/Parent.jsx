@@ -20,8 +20,6 @@ export default class Parent extends Component {
                     decrement={decrement}
                     reset={reset} />
             )} />
-
-
         </div>
 
     }
