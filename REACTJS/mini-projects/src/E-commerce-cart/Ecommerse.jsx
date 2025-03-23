@@ -22,6 +22,7 @@ export default class Ecommerse extends Component {
 
     getEcartFromServer = () => {
         axios.get("http://localhost:3000/Ecart").then((response) => {
+            console.log(response.data)
             this.setState({ Ecart: response.data })
         })
 
@@ -33,6 +34,7 @@ export default class Ecommerse extends Component {
         this.setState({ person: newusr })
     }
     adduser = () => {
+        console.log("adduser called",this.state.person)
         axios.post("http://localhost:3000/Ecart", this.state.person).then(() => {
             this.getEcartFromServer()
             this.clearForm()

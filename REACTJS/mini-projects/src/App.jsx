@@ -15,23 +15,25 @@ import Inventory from './project9-inventor-management/Inventory'
 import Expensive from './project10-expensivetracker/Expensive'
 import MovieTicket from './project8-movieticketbooking/MovieTicket'
 import TaskManagement from './project3-taskmanagementsyastem/TaskManagement'
+import Ecommerse1 from './E-commerce-cart/Ecommerse1'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-  {/* <Ecommerse/> */}
+  <Ecommerse/>
 
   {/* <Quizzapp/> */}
   {/* <Socialmedia/> */}
   {/* <TaskManagement/> */}
-  <Profile/>
+  {/* <Profile/> */}
   {/* <Library/> */}
   {/* <Digital/> */}
  {/* <MovieTicket/> */}
   {/* <Inventory/> */}
   {/* <Expensive/> */}
+  {/* <Ecommerse1/> */}
 
     </>
   )

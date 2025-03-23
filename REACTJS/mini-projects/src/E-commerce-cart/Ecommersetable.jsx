@@ -2,7 +2,7 @@ import { Component } from "react";
 
 export default class Ecommersetable extends Component{
     render(){
-        <table border={1}>
+      return  <table border={1}>
         <thead>
             <tr>
                 <th>id</th>
