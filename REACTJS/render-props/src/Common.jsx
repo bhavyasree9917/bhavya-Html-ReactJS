@@ -18,8 +18,7 @@ reset=()=>{
    this.setState({count:0})
 
 }
-   
-   render(){
+     render(){
       return<div>
          {this.props.render(this.state.count,this.increment,this.decrement,this.reset)}
       </div>
