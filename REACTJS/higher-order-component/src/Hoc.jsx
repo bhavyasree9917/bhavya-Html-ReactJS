@@ -29,7 +29,6 @@ const Hoc=(Clickcounter)=>{
                     decrement={this.decrement}
                     reset={this.reset}
                     />
-
                 </div>
             )
         }
