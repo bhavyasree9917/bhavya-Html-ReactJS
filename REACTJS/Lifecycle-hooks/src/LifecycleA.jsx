@@ -23,8 +23,6 @@ export default class LifecycleA extends Component {
         <h2>Welcome to lifecycle hooks</h2>
         <button onClick={this.changeCount}>Change Count</button>
         <LifecycleB countValue={this.state.count} />
-
-
     </div>
   }
   componentDidMount(){
