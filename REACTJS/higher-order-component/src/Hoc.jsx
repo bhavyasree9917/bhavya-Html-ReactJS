@@ -29,6 +29,7 @@ const Hoc = (Clickcounter) => {
                         reset={this.reset}
                     />
                 </div>
+                
             )
 
         }
