@@ -15,7 +15,6 @@ export default class Commmon extends Component {
     reset = () => {
         this.setState({ count: 18 })
     }
-    
     render() {
         return <div>
             {this.props.render(this.state.count, this.increment, this.decrement, this.reset)}
