@@ -32,7 +32,6 @@ const HOCDemo = (ClickCounterDemo) => {
       );
     }
   }
-
   return NewComnnent;
 };
 
