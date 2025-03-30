@@ -12,6 +12,7 @@ class HoverCounterDemo extends Component {
         <button onMouseOver={handleReset}>Reset Count</button>
       </>
     );
+    
   }
 }
 export default HOCDemo(HoverCounterDemo);
