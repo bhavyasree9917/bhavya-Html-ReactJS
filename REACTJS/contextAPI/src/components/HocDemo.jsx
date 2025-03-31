@@ -27,8 +27,7 @@ const HOCDemo = (ClickCounterDemo) => {
           count={this.state.count}
           handleIncrement={handleIncrement}
           handleDecrement={handleDecrement}
-          handleReset={handleReset}
-          
+          handleReset={handleReset} 
         />
       );
     }
