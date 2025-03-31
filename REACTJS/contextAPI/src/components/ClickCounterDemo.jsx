@@ -11,7 +11,6 @@ class ClickCounterDemo extends Component {
         <button onClick={handleDecrement}>Decrement Count</button>
         <button onClick={handleReset}>Reset Count</button>
       </>
-      
     );
   }
 }
