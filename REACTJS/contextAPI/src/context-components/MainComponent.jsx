@@ -8,7 +8,7 @@ export default class MainComponent extends Component {
 
     this.state = {
       message: "Welcome to Props Drill Down !!!",
-      info: "I am from Context APi",
+      info: "Iam from  contextapi",
     };
   }
 
