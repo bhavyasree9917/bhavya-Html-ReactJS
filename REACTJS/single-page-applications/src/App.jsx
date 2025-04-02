@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from './Home';
-import Contact from './CONTACT.JSX';
+import Contact from './Contact';
 import About from './About';
 import Projects from './Projects';
 
@@ -13,7 +13,6 @@ function App() {
 
   return (
     <>
-
 <h2>Hello I am from Header</h2>
       <Router>
         <nav>
@@ -31,9 +30,6 @@ function App() {
       </Router>
 
       <h2>Hello I am from Footer</h2>
-      
-
-
 
     </>
   )
