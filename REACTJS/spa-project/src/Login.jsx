@@ -15,7 +15,6 @@ class Login extends Component {
     };
   }
 
-
   handleChange = (e) => {
     const newUser = { ...this.state.user };
     newUser[e.target.name] = e.target.value;
