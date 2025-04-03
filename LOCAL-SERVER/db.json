@@ -1,16 +1,11 @@
 {
   "users": [
     {
-      "id": "c57d",
-      "fname": "okfosx123",
-      "lname": "smckm",
-      "email": "ipcmzskc"
-    },
-    {
-      "id": "3c26",
-      "name": "ram ",
+      "id": "39b3",
+      "fname": "bhavyasree",
+      "lname": "sriramula",
       "email": "bhavyasree@gmail.com",
-      "contact": "32456789"
+      "password": "12345"
     }
   ],
   "Ecart": [
