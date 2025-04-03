@@ -14,7 +14,6 @@ class Login extends Component {
       errorMessage: "",
     };
   }
-
   handleChange = (e) => {
     const newUser = { ...this.state.user };
     newUser[e.target.name] = e.target.value;
