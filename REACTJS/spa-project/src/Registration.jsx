@@ -44,7 +44,7 @@ class Registration extends Component {
             <div>
               <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">
+                  <label for="exampleInputEmail" class="form-label">
                     First Name
                   </label>
                   <input
