@@ -17,6 +17,7 @@ function App() {
     <Premtej/>
    <Lakshmi/>
     </div>
+    
   ); 
 }
 export default App;
