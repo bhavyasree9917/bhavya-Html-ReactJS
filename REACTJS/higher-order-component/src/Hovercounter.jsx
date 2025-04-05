@@ -9,7 +9,6 @@ class Hovercounter extends Component {
             <button onMouseOver={this.props.decrement}>decrement</button>
             <button onMouseOver={this.props.reset}>reset</button>
         </div>
-
     }
 }
 export default Hoc(Hovercounter);
