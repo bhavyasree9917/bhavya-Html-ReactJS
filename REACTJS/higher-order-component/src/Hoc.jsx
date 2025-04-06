@@ -33,5 +33,6 @@ const Hoc = (Clickcounter) => {
         } 
     }
     return rp;
+    
 }
 export default Hoc;
