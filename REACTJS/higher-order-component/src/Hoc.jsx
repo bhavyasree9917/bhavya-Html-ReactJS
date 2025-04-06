@@ -30,7 +30,8 @@ const Hoc = (Clickcounter) => {
                     />
                 </div>  
             )
-        }  
+        } 
+         
     }
     return rp;
 }
