@@ -26,7 +26,7 @@ const Hoc = (Clickcounter) => {
                         count={this.state.count}
                         increment={this.increment}
                         decrement={this.decrement}
-                        reset={this.reset}
+                      reset={this.reset}
                     />
                 </div>  
             )
