@@ -32,7 +32,6 @@ export default class Maincd extends Component {
 
                 <Text count={count} />
             </>)}
-
             />
         </>
 
