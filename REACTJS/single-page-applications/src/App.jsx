@@ -28,6 +28,7 @@ function App() {
           <Route path="about" element={<About />} />
         </Routes>
       </Router>
+      
 
       <h2>Hello I am from Footer</h2>
 
