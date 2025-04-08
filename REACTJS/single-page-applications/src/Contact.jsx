@@ -8,5 +8,6 @@ export default class Contact extends Component{
         return<div>
             <h1>welcome to contact component!!!</h1>
         </div>
+        
     }
 }
