@@ -20,4 +20,5 @@ export default class Intfc extends Component{
     render(){
         return this.props.render(this.state.count,this.increment,this.decrement,this.reset)
     }
+    
 }
