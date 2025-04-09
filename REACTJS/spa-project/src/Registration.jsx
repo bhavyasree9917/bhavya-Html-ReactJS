@@ -20,7 +20,6 @@ class Registration extends Component {
       },
     };
   }
-
   handleRegistration = () => {
     console.log(this.state.user);
     axios.post("http://localhost:3000/users", this.state.user).then(() => {
