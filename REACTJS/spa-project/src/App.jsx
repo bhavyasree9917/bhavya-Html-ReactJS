@@ -20,7 +20,6 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="userdetails" element={<Users />} />
         </Routes>
-        
       </Router>
     </>
   );
