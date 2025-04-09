@@ -25,6 +25,7 @@ class Registration extends Component {
     axios.post("http://localhost:3000/users", this.state.user).then(() => {
       this.props.navigate("/login");
     });
+    
     //
   };
 
