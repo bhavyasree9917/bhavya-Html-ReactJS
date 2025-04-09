@@ -5,6 +5,7 @@ export default class Users extends Component {
     return (
       <div>
         <h2>Welcome to User Details Page !!</h2>
+        
       </div>
     )
   }
