@@ -1,24 +1,25 @@
 import { Component } from "react";
 import Common from "./Common";
-import Child1 from ".Child1";
+import Child1 from "./Child1";
 import Child2 from "./Child2";
-
 
 export default class Parent extends Component {
     render() {
         return <div>
-            <Common render={(count, increment, decrement, reset) => (
+            <Common render={(count, increment, decrememt, reset) => (
                 <Child1 count={count}
                     increment={increment}
-                    decrement={decrement}
+                    decrement={decrememt}
                     reset={reset} />
             )} />
-             <Common render={(count, increment, decrement, reset) => (
+            <hr/>
+            <Common render={(count, increment, decrememt, reset) => (
                 <Child2 count={count}
                     increment={increment}
-                    decrement={decrement}
+                    decrement={decrememt}
                     reset={reset} />
             )} />
+
         </div>
     }
 }
