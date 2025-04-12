@@ -9,5 +9,6 @@ export default class Home extends Component{
             <h1>welocome to home component!!!!!</h1>
         </div>
         
+        
     }
 }
