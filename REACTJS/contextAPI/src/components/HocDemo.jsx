@@ -29,6 +29,7 @@ const HOCDemo = (ClickCounterDemo) => {
           handleDecrement={handleDecrement}
           handleReset={handleReset} 
         />
+        
       );
     }
   }
