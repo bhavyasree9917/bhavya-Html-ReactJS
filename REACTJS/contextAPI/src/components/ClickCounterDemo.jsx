@@ -12,7 +12,6 @@ class ClickCounterDemo extends Component {
         <button onClick={handleReset}>Reset count </button>
       </>
     );
-    
   }
 }
 
