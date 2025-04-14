@@ -10,7 +10,6 @@ export default class MainComponent extends Component {
       message: "Welcome to Props Drill Down !!!",
       info: "Iam from  contextapi",
     };
-    
   }
 
   render() {
