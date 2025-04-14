@@ -11,8 +11,7 @@ class HoverCounterDemo extends Component {
         <button onMouseOver={handleDecrement}>Decrement</button>
         <button onMouseOver={handleReset}>Reset </button>
       </>
-    );
-    
+    ); 
     
   }
 }
