@@ -9,6 +9,7 @@ export default class ChildComponent extends Component {
         <hr />
         <UserComponent message={this.props.message}/>
         
+        
       </div>
     )
   }
