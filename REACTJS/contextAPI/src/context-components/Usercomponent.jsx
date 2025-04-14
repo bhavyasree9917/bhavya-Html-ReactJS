@@ -13,6 +13,7 @@ export default class UserComponent extends Component {
           }}
         </UserContextConsumber>
       </div>
+      
     );
   }
 }
