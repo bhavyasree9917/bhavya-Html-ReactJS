@@ -9,6 +9,7 @@ export default class ParentComponent extends Component {
         <hr />
         <ChildComponent message={this.props.message}/>
       </div>
+      
     )
   }
 }
