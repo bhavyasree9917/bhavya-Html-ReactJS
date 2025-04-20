@@ -10,7 +10,6 @@ const Main = () => {
             <UserContextProvider value={newUsers}>
                 <Parent usersInfo={usersInfo} />
             </UserContextProvider>
-
         </div>
     )
 }
