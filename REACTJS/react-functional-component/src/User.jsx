@@ -47,8 +47,10 @@ const User=()=>{
     <form action="">
       <label htmlFor="">firstname</label>
       <input type="text" name="fname" id="" value={studentdetails.fname} onChange={handleevent} />{""}
+      <br/>
       <label htmlFor="">lasttname</label>
       <input type="text" name="lname" id="" value={studentdetails.lname}  onChange={handleevent}/>{""} 
+      <br/>
     {editindex===null?<button type="button" onClick={addstudent}>add student</button>:
     <button type="button" onClick={updatestudent}>update student</button>}
 
