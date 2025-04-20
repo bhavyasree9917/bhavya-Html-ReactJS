@@ -4,7 +4,7 @@ import { UserContextProvider } from './Usercontext'
 
 const Main = () => {
     const [usersInfo, setUsersInfo] = useState(["sree", "bhavya", "ram", "Kalyan"])
-    const [newUsers, setNewUsers] = useState(["bhavya", "ram", "pspk","rakesh","pallavi"])
+    const [newUsers, setNewUsers] = useState(["bhavya", "ram", "pspk","rakesh","pallavi","ramesh"])
     return (
         <div>
             <UserContextProvider value={newUsers}>
