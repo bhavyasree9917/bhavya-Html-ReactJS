@@ -12,6 +12,7 @@ const FuncRenderPropsDemo = ({ render }) => {
   const handleReset = () => {
     setCount(0);
   };
+  
 
   return <div>{render(count,handleIncrement,handleDecrement,handleReset)}</div>;
 };
