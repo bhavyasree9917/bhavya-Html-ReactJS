@@ -10,7 +10,7 @@ const FuncHoverCouter = ({
     <div>
       <button onMouseOver={handleIncrement}>Increment</button>
       <button onMouseOver={handleDecrement}>Decrement</button>
-      <button onMouseOver={handleReset}>Reset</button>
+      <button onMouseOver={handleReset}></button>
       <h2>{count}</h2>
     </div> 
   );
