@@ -13,6 +13,7 @@ const FuncHoverCouter = ({
       <button onMouseOver={handleReset}>Reset</button>
       <h2>{count}</h2>
     </div>
+    
   );
 };
 
