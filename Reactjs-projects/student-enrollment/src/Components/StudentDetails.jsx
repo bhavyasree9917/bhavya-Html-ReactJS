@@ -85,6 +85,7 @@ const StudentDetails = () => {
               </td>
             </tr>
           ))}
+          
         </tbody>
       </table>
     </div>
