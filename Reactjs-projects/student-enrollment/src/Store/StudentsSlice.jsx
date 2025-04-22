@@ -23,6 +23,7 @@ const StudentsSlice = createSlice({
     updateUserAction: (state, action) => {
       const { index, student } = action.payload;
       state.students[index] = student;
+      
     }
   }
 });
