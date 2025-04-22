@@ -84,8 +84,9 @@ const StudentDetails = () => {
                 <button onClick={() => handleDelete(i)}>Delete Student</button>
               </td>
             </tr>
+            
           ))}
-          
+
         </tbody>
       </table>
     </div>
