@@ -11,6 +11,7 @@ const StudentDetails = () => {
   const handleChange = (e) => {
     const newStudent = { ...student };
     newStudent[e.target.name] = e.target.value;
+    
     setStudent(newStudent);
   };
 
