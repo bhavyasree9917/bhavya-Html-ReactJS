@@ -6,7 +6,7 @@ const initialState = {
     { id: 2, name: "ram", age: 28, email: "ram@gmail.com" },
     { id: 3, name: "sree", age: 18, email: "Sree@gmail.com" },
     { id: 4, name: "bhavya", age: 22, email: "bhavya@gmail.com" },
-    { id: 5, name: "kalyan", age: 30, email: "kalyan@gmail.com" }
+    { id: 5, name: "kalyan", age: 52, email: "kalyan@gmail.com" }
   ]
 };
 
