@@ -21,7 +21,7 @@ const Products = ({ data }) => {
                   {/* Recipe Source (You can change this field as needed) */}
                   <p className="card-text">{item.recipe.source}</p>
 
-                  {/* Recipe Nutritional Info (Calories) */}
+                
                   <p className="card-text">
                     <strong>Calories: {Math.round(item.recipe.calories)}</strong>
                   </p>
