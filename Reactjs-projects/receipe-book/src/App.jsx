@@ -1,0 +1,85 @@
+import React, { useState } from "react";
+import "./App.css";
+import Product from "./Product"; // Importing Products component
+
+function App() {
+  const [search, setSearch] = useState('');
+  const [results, setResults] = useState([]); // Store the fetched recipe results
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const appId = 'your_actual_app_id'; // Replace with your real app ID
+  const appKey = 'your_actual_app_key'; // Replace with your real app key
+
+  // Submit Handler for the form
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setResults([]); // Clear previous results
+    setLoading(true);
+
+    try {
+      // Make sure you're using the correct URL format for Edamam API
+      const res = await fetch(
+        `https://api.edamam.com/search?q=${encodeURIComponent(search)}&app_id=${appId}&app_key=${appKey}&from=0&to=9`
+      );
+
+      // Check if the response is successful
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
+      const data = await res.json();
+
+      // Check if there are results
+      if (data.hits.length === 0) {
+        setError('No recipes found for your search.');
+      } else {
+        setResults(data.hits); // Store fetched data in results state
+      }
+    } catch (err) {
+      console.error('API Error:', err);
+      setError('Failed to fetch recipes. Please check your API keys or try again later.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="App">
+      <center>
+        <h2>🍽️ Food Recipe App</h2>
+
+        {/* Search Form */}
+        <form onSubmit={submitHandler}>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search for recipes..."
+            required
+          />
+          <br />
+          <input type="submit" value="Search" />
+        </form>
+
+        {/* Loading & Error Handling */}
+        {loading && <p>Loading recipes...</p>}
+
+        {error && (
+          <p style={{ color: 'red', fontSize: '18px', fontWeight: 'bold' }}>
+            {error}
+          </p>
+        )}
+
+        {/* Pass Results to Products Component */}
+        <div>
+          {/* Only render Products if there are results */}
+          {results.length > 0 && <Products data={results} />}
+        </div>
+      </center>
+    </div>
+  );
+}
+
+export default App;
