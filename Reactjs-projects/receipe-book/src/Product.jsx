@@ -26,7 +26,7 @@ const Products = ({ data }) => {
                     <strong>Calories: {Math.round(item.recipe.calories)}</strong>
                   </p>
 
-                  {/* Link to the Full Recipe */}
+                
                   <p>
                     <a
                       href={item.recipe.url}
