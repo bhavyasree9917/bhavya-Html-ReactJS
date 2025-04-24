@@ -11,7 +11,7 @@ function App() {
   const appId = 'your_actual_app_id'; // Replace with your real app ID
   const appKey = 'your_actual_app_key'; // Replace with your real app key
 
-  // Submit Handler for the form
+  
   const submitHandler = async (e) => {
     e.preventDefault();
     setError(null);
