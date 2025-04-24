@@ -19,7 +19,6 @@ function App() {
     setLoading(true);
 
     try {
-      // Make sure you're using the correct URL format for Edamam API
       const res = await fetch(
         `https://api.edamam.com/search?q=${encodeURIComponent(search)}&app_id=${appId}&app_key=${appKey}&from=0&to=9`
       );
