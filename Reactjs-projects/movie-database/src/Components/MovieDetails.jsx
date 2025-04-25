@@ -90,6 +90,7 @@ const MovieDetails = () => {
         </tbody>
       </table>
     </div>
+    
   );
   
 };
