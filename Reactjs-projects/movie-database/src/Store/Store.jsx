@@ -8,4 +8,4 @@ const store = configureStore({
   },
 });
 
-export default store; // Export the store as default
+export default store; 
