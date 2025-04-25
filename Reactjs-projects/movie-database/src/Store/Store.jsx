@@ -7,5 +7,4 @@ const store = configureStore({
     movies: MoviesSlice, // Add the MoviesSlice reducer to the store
   },
 });
-
 export default store; 
