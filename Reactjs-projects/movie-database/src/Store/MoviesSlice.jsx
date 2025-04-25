@@ -26,6 +26,7 @@ const MoviesSlice = createSlice({
         state.movies[index] = movie;
       }
     }
+    
   }
 });
 
