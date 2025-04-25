@@ -1,4 +1,4 @@
-// Store/Store.js
+
 import { configureStore } from "@reduxjs/toolkit";
 import MoviesSlice from "./MoviesSlice"; 
 
