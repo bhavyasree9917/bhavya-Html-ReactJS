@@ -91,6 +91,7 @@ const MovieDetails = () => {
       </table>
     </div>
   );
+  
 };
 
 export default MovieDetails;
