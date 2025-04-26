@@ -37,6 +37,7 @@ function Chat() {
       </div>
       <MessageInput sendMessage={sendMessage} />
     </div>
+    
   );
 }
 
