@@ -11,13 +11,12 @@ function ProductForm({ onSubmit }) {
     reorderLevel: 0,
     sold: 0,
   });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProduct(prev => ({ ...prev, [name]: value }));
   };
 
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(product);
