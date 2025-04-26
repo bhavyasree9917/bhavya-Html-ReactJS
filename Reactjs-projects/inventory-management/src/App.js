@@ -19,6 +19,7 @@ function App() {
     refresh();
   };
 
+  
   const handleRemoveProduct = (productName) => {
     inventory.removeProduct(productName);
     refresh();
