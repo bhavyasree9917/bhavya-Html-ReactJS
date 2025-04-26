@@ -11,7 +11,6 @@ function Dashboard({ inventory }) {
       <p>Most Sold Products: {inventory.mostSoldProducts.map(p => p.name).join(', ')}</p>
     </div>
   );
-  
 }
 
 export default Dashboard;
