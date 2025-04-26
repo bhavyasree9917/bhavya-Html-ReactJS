@@ -20,6 +20,7 @@ function MessageInput({ sendMessage }) {
       <button onClick={handleSend}>Send</button>
     </div>
   );
+  
 }
 
 export default MessageInput;
