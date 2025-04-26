@@ -7,3 +7,4 @@ import App from './App';
 // Create root and render your app using the new method for React 18+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
