@@ -16,7 +16,6 @@ function ProductList({ products, onRemove, onUpdateQuantity }) {
           <th>Actions</th>
         </tr>
       </thead>
-      
       <tbody>
         {products.map(product => (
           <tr key={product.name}>
