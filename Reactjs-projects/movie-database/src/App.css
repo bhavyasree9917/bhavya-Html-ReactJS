@@ -1,0 +1,69 @@
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+h1 {
+  color: #4CAF50;
+}
+
+.movie-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.movie-form input, .movie-form button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.movie-form button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-form button:hover {
+  background-color: #45a049;
+}
+
+.movie-list, .watchlist {
+  width: 45%;
+  margin: 0 auto;
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card h3 {
+  color: #4CAF50;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e53935;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
