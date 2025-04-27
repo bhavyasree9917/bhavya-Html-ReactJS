@@ -18,5 +18,4 @@ const MovieList = ({ title, movies, removeMovie, addToWatchList }) => {
     </div>
   )
 };
-
 export default MovieList;
