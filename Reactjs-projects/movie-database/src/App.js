@@ -28,7 +28,6 @@ const App = () => {
   const moviesByGenre = (genre) => {
     return movies.filter((movie) => movie.genre === genre);
   };
-
   const addToWatchList = (title) => {
     const movie = movies.find((m) => m.title === title);
     if (movie && !watchList.includes(movie)) {
