@@ -16,8 +16,7 @@ const MovieList = ({ title, movies, removeMovie, addToWatchList }) => {
         ))}
       </div>
     </div>
-  );
-  
+  )
 };
 
 export default MovieList;
