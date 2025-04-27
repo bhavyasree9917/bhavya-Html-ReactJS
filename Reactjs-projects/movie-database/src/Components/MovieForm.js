@@ -18,6 +18,7 @@ const MovieForm = ({ addMovie }) => {
       rating: parseFloat(rating),
       actors: actors.split(',').map((actor) => actor.trim()),
     };
+    
     addMovie(movie);
     setTitle('');
     setDirector('');
