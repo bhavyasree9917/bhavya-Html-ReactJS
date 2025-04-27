@@ -19,6 +19,7 @@ const App = () => {
   const searchByDirector = (director) => {
     return movies.filter((movie) => movie.director === director);
   };
+  
 
   const highestRatedMovies = () => {
     return [...movies].sort((a, b) => b.rating - a.rating).slice(0, 5);
