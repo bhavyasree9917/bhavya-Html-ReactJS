@@ -21,7 +21,6 @@ const WatchList = ({ watchList }) => {
         <p>Your watchlist is empty.</p>
       )}
     </div>
-    
   );
 };
 
