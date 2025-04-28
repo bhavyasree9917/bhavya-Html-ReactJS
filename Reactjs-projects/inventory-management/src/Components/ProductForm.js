@@ -15,7 +15,6 @@ function ProductForm({ onSubmit }) {
     const { name, value } = e.target;
     setProduct(prev => ({ ...prev, [name]: value }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     onSubmit(product);
