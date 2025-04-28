@@ -35,6 +35,7 @@ function ProductList({ products, onRemove, onUpdateQuantity }) {
         ))}
       </tbody>
     </table>
+    
   );
 }
 
