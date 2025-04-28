@@ -10,6 +10,7 @@ function Dashboard({ inventory }) {
       <p>Categories: {inventory.categories.length}</p>
       <p>Most Sold Products: {inventory.mostSoldProducts.map(p => p.name).join(', ')}</p>
     </div>
+    
   );
 }
 
