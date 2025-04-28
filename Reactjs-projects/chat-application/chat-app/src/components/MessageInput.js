@@ -21,5 +21,4 @@ function MessageInput({ sendMessage }) {
     </div>
   );
 }
-
 export default MessageInput;
