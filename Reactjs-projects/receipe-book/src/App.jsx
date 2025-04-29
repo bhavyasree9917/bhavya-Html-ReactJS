@@ -4,7 +4,7 @@ import Product from "./Product"; // Importing Products component
 
 function App() {
   const [search, setSearch] = useState('');
-  const [results, setResults] = useState([]); // Store the fetched recipe results
+  const [results, setResults] = useState([]); 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
