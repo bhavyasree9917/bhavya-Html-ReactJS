@@ -4,5 +4,5 @@ export const Store = configureStore({
     reducer: {
         students: StudentsSlice
     },
-    
+
 });
