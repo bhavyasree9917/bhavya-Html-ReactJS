@@ -5,8 +5,9 @@ import CharacterComponent from './CharacterComponent';
 function App() {
   return (
     <div className="App">
-      <CharacterComponent />
       
+      <CharacterComponent />
+
     </div>
   );
 }
