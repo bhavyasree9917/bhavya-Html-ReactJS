@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const appId = 'your_actual_app_id'; 
-  const appKey = 'your_actual_app_key'; // Replace with your real app key
+  const appKey = 'your_actual_app_key'; 
 
   
   const submitHandler = async (e) => {
