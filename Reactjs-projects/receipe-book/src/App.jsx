@@ -8,14 +8,14 @@ function App() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const appId = 'your_actual_app_id'; // Replace with your real app ID
+  const appId = 'your_actual_app_id'; 
   const appKey = 'your_actual_app_key'; // Replace with your real app key
 
   
   const submitHandler = async (e) => {
     e.preventDefault();
     setError(null);
-    setResults([]); // Clear previous results
+    setResults([]); 
     setLoading(true);
 
     try {
