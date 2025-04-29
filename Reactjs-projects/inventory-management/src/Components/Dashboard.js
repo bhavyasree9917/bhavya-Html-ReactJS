@@ -13,5 +13,4 @@ function Dashboard({ inventory }) {
     
   );
 }
-
 export default Dashboard;
