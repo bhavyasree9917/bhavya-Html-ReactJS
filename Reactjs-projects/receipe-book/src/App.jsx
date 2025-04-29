@@ -23,7 +23,7 @@ function App() {
         `https://api.edamam.com/search?q=${encodeURIComponent(search)}&app_id=${appId}&app_key=${appKey}&from=0&to=9`
       );
 
-      // Check if the response is successful
+      
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
       }
