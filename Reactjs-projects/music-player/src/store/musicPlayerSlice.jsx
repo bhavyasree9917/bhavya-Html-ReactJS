@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Initial songs in the playlist (You can customize this with real data)
+
 const exampleSongs = [
  
     { id: 1, title: 'Song 1', artist: 'Artist 1', duration: 180, url: '/songs/song1.mp3' },
