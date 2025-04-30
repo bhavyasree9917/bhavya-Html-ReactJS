@@ -25,7 +25,6 @@ const MusicPlayer = () => {
       audioRef.current.pause();
     }
   }, [isPlaying, currentSong, volume]);
-
   const handleEnded = () => {
     if (repeatMode) {
       audioRef.current.currentTime = 0;
