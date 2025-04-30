@@ -37,7 +37,7 @@ const MusicPlayer = () => {
   
   const handleSongClick = (song) => {
     dispatch(setCurrentSong(song));
-    dispatch(play());  // Start playing the song
+    dispatch(play());  
   };
 
   // Add a new song to the playlist
