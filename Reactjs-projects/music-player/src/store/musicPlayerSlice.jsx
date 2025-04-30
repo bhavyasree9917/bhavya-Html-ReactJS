@@ -36,7 +36,7 @@ const musicPlayerSlice = createSlice({
     },
     shuffle: (state) => {
       state.shuffleMode = !state.shuffleMode;
-      // Shuffle logic
+      
     },
     setVolume: (state, action) => {
       state.volume = action.payload;
