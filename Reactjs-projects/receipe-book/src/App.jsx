@@ -17,7 +17,6 @@ function App() {
     setError(null);
     setResults([]); 
     setLoading(true);
-
     try {
       const res = await fetch(
         `https://api.edamam.com/search?q=${encodeURIComponent(search)}&app_id=${appId}&app_key=${appKey}&from=0&to=9`
