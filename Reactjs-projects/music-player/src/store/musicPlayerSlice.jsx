@@ -9,7 +9,6 @@ const exampleSongs = [
   { id: 3, title: 'Song 3', artist: 'Artist 3', duration: 200 },
   { id: 4, title: 'Song 4', artist: 'Artist 4', duration: 220 }
 ];
-
 const initialState = {
   currentSong: null,
   isPlaying: false,
