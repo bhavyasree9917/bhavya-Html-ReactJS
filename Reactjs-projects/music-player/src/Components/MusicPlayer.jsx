@@ -40,7 +40,7 @@ const MusicPlayer = () => {
     dispatch(play());  
   };
 
-  // Add a new song to the playlist
+  
   const handleAddSong = () => {
     dispatch(addToPlaylist({
       title: 'New Song',
