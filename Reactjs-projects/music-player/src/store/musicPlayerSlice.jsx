@@ -21,7 +21,6 @@ const initialState = {
   totalDuration: 0,
   playlist: exampleSongs
 };
-
 const musicPlayerSlice = createSlice({
   name: 'musicPlayer',
   initialState,
