@@ -53,8 +53,6 @@ const musicPlayerSlice = createSlice({
     }
   }
 });
-
-
 export const {
   play,
   pause,
