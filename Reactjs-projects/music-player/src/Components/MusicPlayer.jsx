@@ -36,7 +36,7 @@ const MusicPlayer = () => {
 
   
   const handleSongClick = (song) => {
-    dispatch(setCurrentSong(song)); // Set the current song to the clicked song
+    dispatch(setCurrentSong(song));
     dispatch(play());  // Start playing the song
   };
 
