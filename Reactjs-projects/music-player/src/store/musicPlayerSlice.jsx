@@ -32,7 +32,7 @@ const musicPlayerSlice = createSlice({
       state.isPlaying = false;
     },
     skip: (state) => {
-      // Logic for skipping the song
+    
     },
     shuffle: (state) => {
       state.shuffleMode = !state.shuffleMode;
