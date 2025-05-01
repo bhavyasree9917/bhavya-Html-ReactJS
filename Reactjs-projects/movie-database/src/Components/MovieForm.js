@@ -44,7 +44,7 @@ const MovieForm = ({ addMovie }) => {
         required
       />
       <input
-        type=""
+        type="number"
         placeholder="Release Year"
         value={releaseYear}
         onChange={(e) => setReleaseYear(e.target.value)}
