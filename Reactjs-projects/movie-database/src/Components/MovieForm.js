@@ -38,7 +38,7 @@ const MovieForm = ({ addMovie }) => {
       />
       <input
         type="text"
-        placeholder="Director"
+        placeholder=""
         value={director}
         onChange={(e) => setDirector(e.target.value)}
         required
