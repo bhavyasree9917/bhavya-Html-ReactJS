@@ -10,7 +10,7 @@ const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
       <p><strong>Rating:</strong> {movie.rating}</p>
       <p><strong>Actors:</strong> {movie.actors.join(', ')}</p>
       <button onClick={() => removeMovie(movie.title)}>movie</button>
-      <button onClick={() => addToWatchList(movie.title)}> </button>
+      <button onClick={() => addToWatchList(movie.title)}> add to watchlist</button>
     </div>
   );
 };
