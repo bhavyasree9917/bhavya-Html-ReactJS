@@ -31,7 +31,7 @@ const MovieForm = ({ addMovie }) => {
     <form onSubmit={handleSubmit} className="movie-form">
       <input
         type="text"
-        placeholder="Title"
+        placeholder=""
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
