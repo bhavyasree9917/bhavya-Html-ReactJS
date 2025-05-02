@@ -46,7 +46,7 @@ function App() {
       <center>
         <h2>🍽️ Food Recipe App</h2>
 
-        {/* Search Form */}
+        
         <form onSubmit={submitHandler}>
           <input
             type="text"
