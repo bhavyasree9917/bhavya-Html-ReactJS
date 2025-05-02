@@ -31,7 +31,7 @@ function App() {
       if (data.hits.length === 0) {
         setError('No recipes found for your search.');
       } else {
-        setResults(data.hits); 
+        setResults(data.hits); // Store fetched data in results state
       }
     } catch (err) {
       console.error('API Error:', err);
