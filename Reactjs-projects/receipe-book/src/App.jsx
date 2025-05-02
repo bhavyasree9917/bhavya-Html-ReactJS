@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Product from "./Product"; // Importing Products component
+import Product from "./Product"; 
 
 function App() {
   const [search, setSearch] = useState('');
