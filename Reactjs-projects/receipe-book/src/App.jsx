@@ -10,7 +10,6 @@ function App() {
 
   const appId = 'your_actual_app_id'; 
   const appKey = 'your_actual_app_key'; 
-  
   const submitHandler = async (e) => {
     e.preventDefault();
     setError(null);
