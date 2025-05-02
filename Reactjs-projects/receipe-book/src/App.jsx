@@ -27,7 +27,7 @@ function App() {
 
       const data = await res.json();
 
-      // Check if there are results
+      
       if (data.hits.length === 0) {
         setError('No recipes found for your search.');
       } else {
