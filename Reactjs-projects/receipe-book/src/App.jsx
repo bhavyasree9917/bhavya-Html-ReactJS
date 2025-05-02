@@ -68,7 +68,7 @@ function App() {
           </p>
         )}
 
-        {/* Pass Results to Products Component */}
+        
         <div>
           {/* Only render Products if there are results */}
           {results.length > 0 && <Products data={results} />}
