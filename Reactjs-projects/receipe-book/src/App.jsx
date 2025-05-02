@@ -59,7 +59,7 @@ function App() {
           <input type="submit" value="Search" />
         </form>
 
-        {/* Loading & Error Handling */}
+      
         {loading && <p>Loading recipes...</p>}
 
         {error && (
