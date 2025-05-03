@@ -7,7 +7,7 @@ function Message({ message, onDelete }) {
       <button onClick={() => onDelete(message.id)}>Delete</button>
     </div>
   );
-  
+
 }
 export default Message;
 
