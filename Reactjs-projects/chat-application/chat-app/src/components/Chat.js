@@ -38,5 +38,6 @@ function Chat() {
       <MessageInput sendMessage={sendMessage} />
     </div>
   ); 
+  
 }
 export default Chat;
