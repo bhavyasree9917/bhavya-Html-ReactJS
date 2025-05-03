@@ -15,7 +15,7 @@ function MessageInput({ sendMessage }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="Type a message"
+        placeholder=""
       />
       <button onClick={handleSend}>Send</button>
     </div>
