@@ -4,7 +4,7 @@ function Message({ message, onDelete }) {
   return (
     <div>
       <p><strong>{message.sender}</strong>: {message.message}</p>
-      <button onClick={() => onDelete(message.id)}>Delete</button>
+      <button onClick={() => onDelete(message.id)}></button>
     </div>
   );
 
