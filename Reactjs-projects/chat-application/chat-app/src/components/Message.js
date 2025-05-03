@@ -9,5 +9,5 @@ function Message({ message, onDelete }) {
   );
 
 }
-export default ;
+export default Message;
 
