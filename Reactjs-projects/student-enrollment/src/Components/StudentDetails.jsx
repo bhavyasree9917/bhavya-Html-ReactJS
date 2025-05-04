@@ -7,7 +7,7 @@ const StudentDetails = () => {
   const [student, setStudent] = useState({ id: "", name: "", age: "", email: "" });
   const [index, setIndex] = useState(null);
   const dispatch = useDispatch();
-
+  
   const handleChange = (e) => {
     const newStudent = { ...student };
     newStudent[e.target.name] = e.target.value;
@@ -16,7 +16,7 @@ const StudentDetails = () => {
   };
 
   const clearForm = () => {
-    setStudent({ id: "",  "", age: "", email: "" });
+    setStudent({ id: "", name: "", age: "", email: "" });
   };
 
   const handleAddUser = () => {
