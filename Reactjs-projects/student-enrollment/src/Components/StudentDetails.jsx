@@ -44,7 +44,7 @@ const StudentDetails = () => {
     <div>
       <form>
         <label htmlFor="">ID</label>
-        <input type="text" name="id" value={student.id} onChange={handleChange} /><br />
+        <input type="text" name="" value={student.id} onChange={handleChange} /><br />
         <label htmlFor="">Name</label>
         <input type="text" name="name" value={student.name} onChange={handleChange} /><br />
         <label htmlFor="">Age</label>
