@@ -7,7 +7,6 @@ const StudentDetails = () => {
   const [student, setStudent] = useState({ id: "", name: "", age: "", email: "" });
   const [index, setIndex] = useState(null);
   const dispatch = useDispatch();
-
   const handleChange = (e) => {
     const newStudent = { ...student };
     newStudent[e.target.name] = e.target.value;
@@ -23,7 +22,7 @@ const StudentDetails = () => {
     dispatch(addUserAction(student));
     clearForm();
   };
-  
+
 
   const handleEdit = (usr, i) => {
     setStudent(usr);
