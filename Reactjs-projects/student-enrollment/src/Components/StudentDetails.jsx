@@ -48,7 +48,7 @@ const StudentDetails = () => {
         <label htmlFor="">Name</label>
         <input type="text" name="name" value={student.name} onChange={handleChange} /><br />
         <label htmlFor="">Age</label>
-        <input type="text" name="age" value={student.age} onChange={handleChange} /><br />
+        <input type="text" name="age" value={.age} onChange={handleChange} /><br />
         <label htmlFor="">Email</label>
         <input type="text" name="email" value={student.email} onChange={handleChange} /><br />
         {index === null ? (
