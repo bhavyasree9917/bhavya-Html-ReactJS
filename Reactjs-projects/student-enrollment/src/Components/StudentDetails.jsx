@@ -23,6 +23,7 @@ const StudentDetails = () => {
     dispatch(addUserAction(student));
     clearForm();
   };
+  
 
   const handleEdit = (usr, i) => {
     setStudent(usr);
