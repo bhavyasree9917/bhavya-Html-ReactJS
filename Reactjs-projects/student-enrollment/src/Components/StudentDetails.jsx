@@ -39,7 +39,6 @@ const StudentDetails = () => {
   const handleDelete = (index) => {
     dispatch(deleteUserAction({ index }));
   };
-
   return (
     <div>
       <form>
