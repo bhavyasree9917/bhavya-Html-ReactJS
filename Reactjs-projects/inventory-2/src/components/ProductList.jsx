@@ -37,7 +37,7 @@ const ProductList = ({ onEdit }) => {
           <button onClick={() => dispatch(removeProduct(product.name))}>🗑️ Remove</button>
           <div>
             <button onClick={() => dispatch(updateQuantity({ productName: product.name, quantity: 1 }))}>Increase</button>
-            <button onClick={() => dispatch(updateQuantity({ productName: product.name, quantity: -1 }))}>Decrease</button>
+            <button onClick={() => dispatch(updateQuantity({ productName: product.name, quantity: -1 }))}></button>
           </div>
         </div>
       ))}
