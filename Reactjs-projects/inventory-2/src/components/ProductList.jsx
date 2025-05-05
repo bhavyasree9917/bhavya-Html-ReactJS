@@ -7,7 +7,7 @@ const ProductList = ({ onEdit }) => {
   const lowStockProducts = useSelector((state) => state.inventory.products.filter((product) => product.quantity <= product.reorderLevel));
   const dispatch = useDispatch();
 
-  
+  // Function to calculate total price for each product
   const calculateTotalPrice = (product) => {
     return product.quantity * product.price;
   };
