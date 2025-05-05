@@ -92,6 +92,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
           Cancel Edit
         </button>
       )}
+      
     </form>
   );
 };
