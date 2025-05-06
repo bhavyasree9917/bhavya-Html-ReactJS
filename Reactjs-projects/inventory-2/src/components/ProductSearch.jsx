@@ -38,6 +38,7 @@ const ProductSearch = ({ setFilteredProducts }) => {
         <option value="Clothing">Clothing</option>
         {/* Add more categories as needed */}
       </select>
+      
     </div>
   );
 };
