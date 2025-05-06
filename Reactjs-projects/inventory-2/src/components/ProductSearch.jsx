@@ -34,7 +34,7 @@ const ProductSearch = ({ setFilteredProducts }) => {
         <option value="">Select Category</option>
         <option value="Electronics">Electronics</option>
         <option value="Appliances">Appliances</option>
-        <option value="Furniture"></option>
+        <option value="Furniture">Furniture</option>
         <option value="Clothing">Clothing</option>
         {/* Add more categories as needed */}
       </select>
