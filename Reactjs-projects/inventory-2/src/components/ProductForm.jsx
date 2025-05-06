@@ -21,6 +21,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
       setSupplier(selectedProduct.supplier);
       setReorderLevel(selectedProduct.reorderLevel);
     }
+    
   }, [selectedProduct]);
 
   const handleSubmit = (e) => {
