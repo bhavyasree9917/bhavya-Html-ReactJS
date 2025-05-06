@@ -20,7 +20,6 @@ const ProductSearch = ({ setFilteredProducts }) => {
       );
     }
   };
-
   return (
     <div className="search-bar">
       <input
