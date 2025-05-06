@@ -9,7 +9,7 @@ const ProductSearch = ({ setFilteredProducts }) => {
   const dispatch = useDispatch();
 
   const handleSearch = () => {
-    // You can filter by category or name here
+    
     if (categoryFilter) {
       setFilteredProducts(selectProductsByCategory({ category: categoryFilter }));
     } else {
