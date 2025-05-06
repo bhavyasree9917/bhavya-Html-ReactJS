@@ -43,6 +43,7 @@ const ProductList = ({ onEdit }) => {
       ))}
     </div>
   );
+  
 };
 
 export default ProductList;
