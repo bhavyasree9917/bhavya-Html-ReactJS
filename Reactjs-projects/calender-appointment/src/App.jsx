@@ -15,6 +15,7 @@ const App = () => {
         <AppointmentForm editData={editData} setEditData={setEditData} />
         <AppointmentList setEditData={setEditData} />
       </div>
+      
     </Provider>
   );
 };
