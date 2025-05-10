@@ -46,4 +46,5 @@ const AppointmentList = ({ setEditData }) => {
   );
 };
 
+
 export default AppointmentList;
