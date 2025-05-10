@@ -19,7 +19,7 @@ const WeatherForm = () => {
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input
-        placeholder=""
+        placeholder="Enter location"
         value={location}
         onChange={handleChange}
         required
