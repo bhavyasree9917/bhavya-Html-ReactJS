@@ -23,7 +23,7 @@ const WeatherForm = () => {
         value={location}
         onChange={handleChange}
         required
-        className="block w-full mb-2 border p-2"
+        className=""
       />
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
         Add Location
