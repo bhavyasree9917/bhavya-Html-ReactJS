@@ -17,7 +17,6 @@ const AppointmentList = ({ setEditData }) => {
     if (filter === 'missed') return a.date < today && matchSearch;
     return matchSearch;
   });
-
   return (
     <div>
       <div className="flex mb-4 gap-2">
