@@ -42,6 +42,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
         {editData ? 'Update' : 'Add'} Appointment
       </button>
     </form>
+    
   );
 };
 
