@@ -25,6 +25,7 @@ const appointmentSlice = createSlice({
       state.appointments = state.appointments.filter((a) => a.id !== action.payload);
     },
   },
+  
 });
 export const { addAppointment, updateAppointment, deleteAppointment } = appointmentSlice.actions;
 export default appointmentSlice.reducer;
