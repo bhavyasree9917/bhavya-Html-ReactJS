@@ -18,6 +18,7 @@ const AppointmentList = ({ setEditData }) => {
     return matchSearch;
   });
   return (
+    
     <div>
       <div className="flex mb-4 gap-2">
         <input placeholder="Search by event or location" value={search} onChange={(e) => setSearch(e.target.value)} className="border p-2 flex-1" />
@@ -26,7 +27,7 @@ const AppointmentList = ({ setEditData }) => {
           <option value="upcoming">Upcoming</option>
           <option value="missed">Missed</option>
         </select>
-        
+
       </div>
       {filteredAppointments.map((a) => (
         <div key={a.id} className="border p-3 rounded mb-2">
