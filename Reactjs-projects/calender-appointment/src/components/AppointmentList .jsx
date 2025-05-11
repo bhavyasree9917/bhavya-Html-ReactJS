@@ -27,7 +27,6 @@ const AppointmentList = ({ setEditData }) => {
           <option value="missed">Missed</option>
         </select>
       </div>
-
       {filteredAppointments.map((a) => (
         <div key={a.id} className="border p-3 rounded mb-2">
           <h3 className="font-bold">{a.eventName}</h3>
