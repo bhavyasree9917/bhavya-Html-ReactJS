@@ -6,7 +6,7 @@ const VocabularyForm = () => {
   const dispatch = useDispatch();
   const [form, setForm] = useState({
     word: '',
-    
+    definition: '',
     exampleSentence: '',
     synonyms: '',
     antonyms: '',
