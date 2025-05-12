@@ -25,6 +25,7 @@ const VocabularyList = () => {
       ))}
     </div>
   );
+  
 };
 
 export default VocabularyList;
