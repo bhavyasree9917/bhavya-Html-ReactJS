@@ -59,7 +59,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
         value={category}
         onChange={(e) => setCategory(e.target.value)}
       />
-      <label htmlFor="Quantity">Quantity:</label>
+      <label htmlFor="Quantity"></label>
       <input
         type="number"
         placeholder="Quantity"
