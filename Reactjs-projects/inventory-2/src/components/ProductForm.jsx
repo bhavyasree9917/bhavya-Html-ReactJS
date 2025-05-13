@@ -66,7 +66,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
         value={quantity}
         onChange={(e) => setQuantity(Number(e.target.value))}
       />
-      <label htmlFor="Price">Price:</label>
+      <label htmlFor="Price"></label>
       <input
         type="number"
         placeholder="Price"
