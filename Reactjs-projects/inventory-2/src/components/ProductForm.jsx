@@ -80,7 +80,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
         value={supplier}
         onChange={(e) => setSupplier(e.target.value)}
       />
-      <label htmlFor="Reorder"></label>
+      <label htmlFor="Reorder">Reorder Level:</label>
       <input
         type="number"
         placeholder="Reorder Level"
