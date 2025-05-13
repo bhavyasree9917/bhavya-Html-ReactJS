@@ -73,7 +73,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
         value={price}
         onChange={(e) => setPrice(Number(e.target.value))}
       />
-      <label htmlFor="Supplier"></label>
+      <label htmlFor="Supplier">Supplier:</label>
       <input
         type="text"
         placeholder="Supplier"
