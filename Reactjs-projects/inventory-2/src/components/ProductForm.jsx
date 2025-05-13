@@ -45,7 +45,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
 
   return (
     <form onSubmit={handleSubmit} className="form">
-     <label htmlFor="Product"></label>
+     <label htmlFor="Product">Product:</label>
       <input
         type="text"
         placeholder="Product Name"
