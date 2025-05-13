@@ -83,7 +83,7 @@ const ProductForm = ({ selectedProduct, clearSelection }) => {
       <label htmlFor="Reorder">Reorder Level:</label>
       <input
         type="number"
-        placeholder=""
+        placeholder="Reorder Level"
         value={reorderLevel}
         onChange={(e) => setReorderLevel(Number(e.target.value))}
       />
