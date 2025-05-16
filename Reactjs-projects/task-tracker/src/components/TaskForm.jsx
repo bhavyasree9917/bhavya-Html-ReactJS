@@ -35,7 +35,7 @@ const TaskForm = () => {
       <input
         name="name"
         placeholder="Task Name"
-        
+        value={form.name}
         onChange={handleChange}
         required
         className="block w-full mb-2 border p-2"
