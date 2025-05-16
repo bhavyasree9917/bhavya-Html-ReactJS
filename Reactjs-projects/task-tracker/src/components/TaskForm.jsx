@@ -25,7 +25,7 @@ const TaskForm = () => {
       description: '',
       dueDate: '',
       priority: 'low',
-      
+      status: 'pending',
       category: 'Work',
     });
   };
