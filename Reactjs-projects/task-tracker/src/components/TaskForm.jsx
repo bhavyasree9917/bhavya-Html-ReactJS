@@ -34,7 +34,7 @@ const TaskForm = () => {
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input
         name="name"
-        
+        placeholder="Task Name"
         value={form.name}
         onChange={handleChange}
         required
