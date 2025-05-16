@@ -10,7 +10,7 @@ const TaskForm = () => {
     dueDate: '',
     priority: 'low',
     status: 'pending',
-    
+    category: 'Work'
   });
 
   const handleChange = (e) => {
