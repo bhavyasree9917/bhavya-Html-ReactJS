@@ -17,7 +17,7 @@ const initialState = {
       category: 'Appliances',
       quantity: 5,
       price: 50,
-      supplier: 'Home Goods Co.',
+      
       reorderLevel: 10,
     },
     {
