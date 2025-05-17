@@ -27,7 +27,7 @@ const initialState = {
       quantity: 200,
       price: 80,
       supplier: 'FurniMart',
-      reorderLevel: 20,
+      
     },
   ],
 };
