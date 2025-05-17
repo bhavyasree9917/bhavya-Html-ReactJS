@@ -13,8 +13,7 @@ const App = () => {
         <VocabularyList />
       </div>
     </Provider>
-  );
-  
+  ); 
 };
 
 export default App;
