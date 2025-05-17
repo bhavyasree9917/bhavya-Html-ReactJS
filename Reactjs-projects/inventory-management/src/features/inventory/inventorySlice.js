@@ -9,7 +9,7 @@ const initialState = {
       quantity: 50,
       price: 1000,
       supplier: 'Tech Supplier',
-      
+      reorderLevel: 10,
     },
     {
       id: nanoid(),
