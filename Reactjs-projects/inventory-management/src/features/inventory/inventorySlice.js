@@ -20,7 +20,6 @@ const initialState = {
       supplier: 'Home Goods Co.',
       reorderLevel: 10,
     },
-    
     {
       id: nanoid(),
       name: 'Chair',
