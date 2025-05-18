@@ -4,6 +4,8 @@ import { store } from './redux/store';
 import ProductForm from './components/ProductForm';
 import ProductList from './components/ProductList';
 import Cart from './components/Cart';
+import './index.css';
+
 
 const App = () => {
   const [editData, setEditData] = useState(null);
