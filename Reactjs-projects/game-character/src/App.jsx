@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import CharacterForm from './components/CharacterForm';
 import CharacterList from './components/CharacterList';
+import './index.css';
 
 const App = () => {
   const [editData, setEditData] = useState(null);
