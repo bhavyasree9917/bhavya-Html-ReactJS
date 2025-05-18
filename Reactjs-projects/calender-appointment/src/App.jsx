@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import AppointmentForm from './components/AppointmentForm';
 import AppointmentList from './components/AppointmentList ';
+import './index.css';
+
 
 
 const App = () => {
