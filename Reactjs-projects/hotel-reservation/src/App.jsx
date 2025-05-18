@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import ReservationForm from './components/ReservationForm';
 import ReservationList from './components/ReservationList ';
+import './index.css';
 
 const App = () => {
   const [editData, setEditData] = useState(null);
