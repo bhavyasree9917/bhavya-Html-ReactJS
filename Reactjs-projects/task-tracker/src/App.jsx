@@ -3,6 +3,8 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import TaskForm from './components/TaskForm';
 import TaskList from './components/TaskList';
+import './index.css';
+
 
 const App = () => {
   return (
