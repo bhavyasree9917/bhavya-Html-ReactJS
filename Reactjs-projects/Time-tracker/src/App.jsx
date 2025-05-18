@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import TimeTrackerForm from './components/TimeTrackerForm';
 import TimeTrackerList from './components/TimeTrackerList';
+import './index.css';
 
 const App = () => {
   const [editData, setEditData] = useState(null);
