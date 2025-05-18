@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import RecipeForm from './components/RecipeForm ';
 import RecipeList from './components/RecipeList';
+import './index.css';
 
 const App = () => {
   const [editData, setEditData] = useState(null);
