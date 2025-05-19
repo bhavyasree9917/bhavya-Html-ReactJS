@@ -1,13 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Sony from './Sony';
-import User from './User';
+import Welcome from './Welcome';
+import Counter from './Counter';
+import Greeting from './Greeting';
+
+
 // import User from '../../app11-intro/src/User';
 function App() {
   return (
     <div className="App">
-    {/* <Sony/> */}
-    <User/>
+  {/* <Welcome/> */}
+  {/* <Counter/> */}
+  <Greeting/>
+
     </div>
   );
 }

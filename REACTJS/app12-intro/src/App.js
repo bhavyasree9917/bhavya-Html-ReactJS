@@ -1,11 +1,14 @@
 import './App.css';
-import Bhavyasree from './Bhavyasree';
-
+import Timer from './Timer';
+import Toggle from './Toggle';
+import Usercard from './Usercard';
 
 function App() {
   return (
     <div className="App">
-  <Bhavyasree/>
+ {/* <Timer/> */}
+ {/* <Usercard/> */}
+ <Toggle/>
     </div>
     
   );
