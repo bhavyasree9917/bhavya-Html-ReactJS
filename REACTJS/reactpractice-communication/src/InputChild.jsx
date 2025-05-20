@@ -1,12 +1,5 @@
-import { Component } from "react";
+const Inputchild = ({ inputtext }) => {
+    return <p>Current Input: {inputtext}</p>;
+};
 
-export default class Inputchild extends Component{
-    constructor(){
-        super()
-    }
-    render(){
-        return<div>
-            
-        </div>
-    }
-}
+export default Inputchild;
