@@ -1,12 +1,11 @@
-import { Component } from "react";
+const DisplayChild = ({ handleChange }) => {
+    return (
+        <input
+            type="text"
+            placeholder="Type something..."
+            onChange={handleChange}
+        />
+    );
+};
 
-export default class  DisplayChild extends Component{
-    constructor(){
-        super()
-    }
-    render(){
-        return<div>
-            
-        </div>
-    }
-}
+export default DisplayChild;
