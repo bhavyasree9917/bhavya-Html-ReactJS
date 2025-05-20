@@ -20,10 +20,10 @@ function App() {
      {/* <Header/> */}
      {/* <Profile/> */}
      {/* <ClickCounter/> */}
-     {/* <Form/> */}
+     <Form/>
      {/* <Clock/> */}
      {/* <ShowHide/> */}
-     <Avatar/>
+     {/* <Avatar/> */}
      {/* <ColorChanger/> */}
      {/* <TodoList/> */}
     </>
