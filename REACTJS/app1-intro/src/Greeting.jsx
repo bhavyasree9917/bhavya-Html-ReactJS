@@ -15,5 +15,6 @@ export default class Greeting extends Component{
             <h1>{this.state.person.name}</h1>
             <Greetingprop all={this.state.person.name}/>
         </div>
+        
     }
 }
