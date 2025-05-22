@@ -9,8 +9,11 @@ import Welcome from './Welcome';
 import Counter from './Counter';
 import Greeting from './Greeting';
 import Timer from './Timer';
-import UserCard from './Usercard';
+import UserCard from './UserCard';
 import Toggle from './Toggle';
+import Inputfield from './InputField';
+import Loginstatus from './Loginstatus';
+import TodoApp from './TodoApp';
 
 
 function App() {
@@ -27,8 +30,11 @@ function App() {
    {/* <Counter/> */}
    {/* <Greeting/> */}
    {/* <Timer/> */}
-   {/* <UserCard/> */}
-   <Toggle/>
+  {/* <UserCard/> */}
+  {/* <Toggle/> */}
+  {/* <Inputfield/> */}
+  {/* <Loginstatus/> */}
+  <TodoApp/>
     </div>
     
   ); 

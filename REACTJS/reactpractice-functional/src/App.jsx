@@ -10,7 +10,7 @@ import Clock from './Clock'
 import ShowHide from './ShowHide'
 import Avatar from './Avatar'
 import ColorChanger from './Colorchanger'
-import TodoList from './Todolist'
+import Todo from './Todo'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,12 +20,12 @@ function App() {
      {/* <Header/> */}
      {/* <Profile/> */}
      {/* <ClickCounter/> */}
-     <Form/>
+     {/* <Form/> */}
      {/* <Clock/> */}
      {/* <ShowHide/> */}
      {/* <Avatar/> */}
      {/* <ColorChanger/> */}
-     {/* <TodoList/> */}
+     <Todo/>
     </>
   )
 }

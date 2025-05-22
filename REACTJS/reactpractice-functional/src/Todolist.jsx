@@ -1,13 +1,10 @@
-import React from 'react';
 
-const TodoList = ({ todos }) => {
-  return (
-    <ul>
-      {todos.map((todo, index) => (
-        <li key={index}>{todo}</li>
-      ))}
-    </ul>
-  );
-};
+const TodoList = ({ tasks }) => (
+  <ul>
+    {tasks.map((task, idx) => (
+      <li key={idx}>{task}</li>
+    ))}
+  </ul>
+);
 
 export default TodoList;

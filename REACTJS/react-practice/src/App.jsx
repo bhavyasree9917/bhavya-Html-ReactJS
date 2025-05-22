@@ -13,6 +13,7 @@ import Loginstatus from './Loginstatus'
 import Parent from './Parent'
 import MaxDistToClosest from './MaxDistance'
 import MaxDistance from './MaxDistance'
+import LoginStatus from './Loginstatus'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,9 +27,10 @@ function App() {
    <UserCard/> 
   {/* <Toggle/>
   <Inputfield/>
-  <Loginstatus/> */}
-        <Parent/>
-        <MaxDistance/>
+  
+        {/* <Parent/> */}
+        {/* <MaxDistance/> */}
+        <LoginStatus/>
     </>
   )
 }
