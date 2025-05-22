@@ -1,20 +1,18 @@
 import { Component } from "react";
-import Greetingprop from "./Greetingprop";
+import Greeprop from "./Greeprop";
 
 export default class Greeting extends Component{
     constructor(){
         super()
         this.state={
             person:{
-                name:"sriramula bhavyasree"
+                name:"pspk"
             }
         }
     }
     render(){
         return<div>
-            <h1>{this.state.person.name}</h1>
-            <Greetingprop all={this.state.person.name}/>
+            <Greeprop all={this.state.person.name}/>
         </div>
-        
     }
 }
