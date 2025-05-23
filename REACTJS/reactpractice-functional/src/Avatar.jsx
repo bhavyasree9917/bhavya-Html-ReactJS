@@ -6,10 +6,6 @@ const Avatar = ({ imageUrl }) => {
     <div>
       <img 
         src={imageUrl} 
-        alt="User Avatar" 
-        width="150" 
-        height="150" 
-        style={{ borderRadius: '50%' }} 
       />
     </div>
   );
