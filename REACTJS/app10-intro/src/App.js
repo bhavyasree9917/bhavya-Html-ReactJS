@@ -5,6 +5,7 @@ import Counter from './Counter';
 import Greeting from './Greeting';
 import Header from './Header';
 import Profile from './Profile';
+import Clickcounter from './Clickcounter';
 
 
 // import User from '../../app11-intro/src/User';
@@ -15,7 +16,8 @@ function App() {
   {/* <Counter/> */}
   {/* <Greeting/> */}
   {/* <Header/> */}
-  <Profile username="sree"/>
+  {/* <Profile username="sree"/> */}
+  <Clickcounter/>
 
     </div>
   );
