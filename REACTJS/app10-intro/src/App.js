@@ -4,6 +4,7 @@ import Welcome from './Welcome';
 import Counter from './Counter';
 import Greeting from './Greeting';
 import Header from './Header';
+import Profile from './Profile';
 
 
 // import User from '../../app11-intro/src/User';
@@ -13,7 +14,8 @@ function App() {
   {/* <Welcome/> */}
   {/* <Counter/> */}
   {/* <Greeting/> */}
-  <Header/>
+  {/* <Header/> */}
+  <Profile username="sree"/>
 
     </div>
   );
