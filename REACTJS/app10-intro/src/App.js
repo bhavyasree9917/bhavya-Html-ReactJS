@@ -3,6 +3,7 @@ import './App.css';
 import Welcome from './Welcome';
 import Counter from './Counter';
 import Greeting from './Greeting';
+import Header from './Header';
 
 
 // import User from '../../app11-intro/src/User';
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
   {/* <Welcome/> */}
   {/* <Counter/> */}
-  <Greeting/>
+  {/* <Greeting/> */}
+  <Header/>
 
     </div>
   );
