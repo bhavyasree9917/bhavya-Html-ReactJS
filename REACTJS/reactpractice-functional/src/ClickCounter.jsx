@@ -16,3 +16,4 @@ const ClickCounter = () => {
 };
 
 export default ClickCounter;
+
