@@ -15,8 +15,7 @@ const ColorChanger = () => {
           backgroundColor: bgColor,
           width: '200px',
           height: '200px',
-          marginBottom: '10px',
-          border: '1px solid #000'
+        
         }}
       ></div>
       <button onClick={handleChangeColor}>Change Color</button>
