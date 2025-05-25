@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-const Showhide = () => {
+const ShowHide = () => {
     const [isVisible, setIsVisible] = useState(true);
-  const handlevisible=()=>{
-    setIsVisible=(isVisible=>!isVisible)
-  }
 
+
+    const handleshow = () => {
+        setIsVisible(isVisible => !isVisible)
+    }
     return <div>
-        <button onClick={handlevisible}>
-            {isVisible ? "hide" : "show"}paragraph
+        <button onClick={handleshow}>{isVisible ? "hide" : "show"}
+            paragraph
         </button>
         {isVisible && <p>hello world</p>}
 
     </div>
 }
-export default Showhide;
+export default ShowHide;
