@@ -7,13 +7,15 @@ const Form = () => {
 
     const handlenamechange = (e) => setname(e.target.value);
     const handleemailchange = (e) => setemail(e.target.value)
+
+
     return <div>
-        <h1>userform</h1>
+        <h1>user form</h1>
         <label>name</label>
         <input type="text"
             value={name}
             onChange={handlenamechange} />
-        <label >email</label>
+        <label>email</label>
         <input type="email"
             value={email}
             onChange={handleemailchange} />
@@ -22,4 +24,4 @@ const Form = () => {
 
     </div>
 }
-export default Form;
+export default Form
