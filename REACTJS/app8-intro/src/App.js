@@ -6,6 +6,11 @@ import Counter from './Counter';
 import Timer from './Timer';
 import Usercard from './Usercard';
 import Toggle from './Toggle';
+import Header from './Header';
+import Profile from './Profile';
+import Clickcounter from './Clickcounter';
+import Form from './Form';
+import Clock from './Clock';
 
 function App() {
   return (
@@ -16,7 +21,12 @@ function App() {
   {/* <Counter/> */}
   {/* <Timer/> */}
   {/* <Usercard/> */}
-  <Toggle/>
+  {/* <Toggle/> */}
+  {/* <Header/> */}
+  {/* <Profile username="bhavya pspk"/> */}
+  {/* <Clickcounter/> */}
+  {/* <Form/> */}
+  <Clock/>
     </div>
     
   );
