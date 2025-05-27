@@ -6,6 +6,7 @@ const Header = () => {
       <h1>Header functional component</h1>
     </header>
   );
+  
 };
 
 export default Header;
