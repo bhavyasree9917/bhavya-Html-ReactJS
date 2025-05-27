@@ -22,6 +22,7 @@ function Todo() {
         <button type="submit">Add Task</button>
       </form>
       <TodoList tasks={tasks} />
+      
     </div>
   );
 }
