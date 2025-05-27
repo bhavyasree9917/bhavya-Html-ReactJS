@@ -4,6 +4,7 @@ const TodoList = ({ tasks }) => (
     {tasks.map((task, idx) => (
       <li key={idx}>{task}</li>
     ))}
+    
   </ul>
 );
 
