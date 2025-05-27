@@ -12,6 +12,7 @@ const ClickCounter = () => {
       <p> clicked {count} times.</p>
       <button onClick={handleClick}>Click HERE</button>
     </div>
+    
   );
 };
 
