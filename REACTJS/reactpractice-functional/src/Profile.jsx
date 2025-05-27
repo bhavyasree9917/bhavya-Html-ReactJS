@@ -7,5 +7,4 @@ const Profile = ({ username }) => {
         </div>
     );
 };
-
 export default Profile;
