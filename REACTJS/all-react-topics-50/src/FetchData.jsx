@@ -8,6 +8,7 @@ export default function FetchData() {
       .then(res => res.json())
       .then(setData)
       .catch(console.error);
+      
   }, []);
 
   if (!data) return <div>Loading...</div>;
