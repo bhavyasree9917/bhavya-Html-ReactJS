@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Create axios instance
+
 const api = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com',
 });
