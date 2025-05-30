@@ -6,7 +6,6 @@ const api = axios.create({
   baseURL: 'https://jsonplaceholder.typicode.com',
 });
 
-// Add token to every request
 api.interceptors.request.use(config => {
   config.headers.Authorization = 'Bearer my-token';
   return config;
