@@ -19,6 +19,7 @@ export default function FetchStatus() {
         setError(err.message);
         setLoading(false);
       });
+      
   }, []);
 
   if (loading) return <div>Loading...</div>;
