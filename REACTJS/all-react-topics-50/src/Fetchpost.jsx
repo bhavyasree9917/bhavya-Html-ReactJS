@@ -30,7 +30,7 @@ export default function FetchPost() {
       .catch(err => console.log(err));
   }, []);
 
-  if (!post) return <div></div>;
+  if (!post) return <div>Loading...</div>;
 
   return <div>{post.title}</div>;
 }
