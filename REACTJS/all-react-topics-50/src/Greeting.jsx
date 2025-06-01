@@ -7,5 +7,5 @@ class Greeting extends Component {
 }
 export default Greeting
 
-// Usage
+
 
