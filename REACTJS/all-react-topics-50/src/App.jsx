@@ -23,7 +23,7 @@ function App() {
 
   return (
     <>
-      {/* <Welcome/> */}
+      <Welcome/>
       
 {/* <Greeting name="John" /> */}
 {/* <Profile name="Alice" age={28} /> */}
