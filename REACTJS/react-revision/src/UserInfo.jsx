@@ -1,0 +1,33 @@
+import React, { Component } from 'react';
+
+class UserInfo extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: 'bhavi',
+            age: 20
+        };
+    }
+
+    updateName = () => {
+        this.setState({ name: 'ram' });
+    };
+
+    updateAge = () => {
+        this.setState({ age: 21});
+    };
+
+    render() {
+        return (
+            <div>
+                <h2>User Info</h2>
+                <p>Name: {this.state.name}</p>
+                <p>Age: {this.state.age}</p>
+                <button onClick={this.updateName}>Change Name</button>
+                <button onClick={this.updateAge}>Change Age</button>
+            </div>
+        );
+    }
+}
+
+export default UserInfo;
