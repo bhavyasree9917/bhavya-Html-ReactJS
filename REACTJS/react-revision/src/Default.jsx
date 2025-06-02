@@ -2,7 +2,7 @@ import { Component } from "react";
 
 class Default extends  Component {
   render() {
-    return <h1>Welcome, {this.props.name}!</h1>;
+    return <h1> {this.props.name}</h1>;
   }
 }
 
