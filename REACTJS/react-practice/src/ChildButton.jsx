@@ -9,7 +9,6 @@ class ChildButton extends Component {
             <button onClick={this.props.changeMessage}>Change Message</button>
             <h3>{this.props.parentMessage}</h3>
         </div>
-        
     }
 }
 
