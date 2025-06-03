@@ -23,14 +23,14 @@ function App() {
   {/* <Welcome/>
   <Counter/>
   <Greeting/> */}
-  {/* <Timer/> */}
-   <UserCard/> 
+  <Timer/>
+   {/* <UserCard/>  */}
   {/* <Toggle/>
   <Inputfield/>
   
         {/* <Parent/> */}
         {/* <MaxDistance/> */}
-        <LoginStatus/>
+        {/* <LoginStatus/> */}
     </>
   )
 }
