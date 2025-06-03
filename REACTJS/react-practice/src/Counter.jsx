@@ -15,6 +15,5 @@ export default class Counter extends Component {
             <h1>{this.state.count}</h1>
             <button type="button" onClick={this.increment}>increment</button>
         </>)
-        
     }
 }
