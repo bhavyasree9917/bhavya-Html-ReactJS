@@ -9,4 +9,5 @@ class Default extends  Component {
 Default.defaultProps = {
   name: 'Guest'
 };
-export default Default
+export default Default;
+
