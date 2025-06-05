@@ -20,7 +20,7 @@ export default function MemoApp() {
         value={num}
         onChange={e => setNum(parseInt(e.target.value))}
       />
-      <button onClick={() => setDark(!dark)}>Toggle </button>
+      <button onClick={() => setDark(!dark)}>Toggle Theme</button>
     </div>
   );
 }
