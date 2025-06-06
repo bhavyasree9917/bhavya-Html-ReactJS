@@ -7,7 +7,7 @@ class Default extends  Component {
 }
 
 Default.defaultProps = {
-  name: 'Guest'
+  name: 'ram'
 };
 export default Default;
 
