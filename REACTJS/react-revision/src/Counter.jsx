@@ -23,7 +23,7 @@ class Counter extends Component {
                 <h2>Counter App (Class Component)</h2>
                 <p>Count: {this.state.count}</p>
                 <button onClick={this.increment}>Increment</button>
-                <button onClick={this.decrement}></button>
+                <button onClick={this.decrement}>Decrement</button>
                 <button onClick={this.reset}>Reset</button>
             </div>
         );
