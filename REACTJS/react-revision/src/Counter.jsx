@@ -16,7 +16,6 @@ class Counter extends Component {
     reset = () => {
         this.setState({ count: 0 });
     };
-
     render() {
         return (
             <div >
