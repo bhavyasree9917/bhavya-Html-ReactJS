@@ -8,7 +8,7 @@ function Counter15() {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={increment}>Increase</button>
+      <button onClick={increment}>Increment</button>
     </div>
   );
 }
