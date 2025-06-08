@@ -23,4 +23,5 @@ export default function CancelFetch() {
   if (!data) return <div>Loading...</div>;
 
   return <div>{data.title}</div>;
+  
 }
