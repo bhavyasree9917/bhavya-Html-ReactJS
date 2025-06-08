@@ -20,8 +20,8 @@ export default function CancelFetch() {
     return () => controller.abort();
   }, []);
 
-  if (!data) return <div></div>;
+  if (!data) return <div>Loading...</div>;
 
   return <div>{data.title}</div>;
-
+  
 }
