@@ -13,7 +13,7 @@ class Fetch extends Component {
         const { user } = this.state;
         return (
             <div>
-                {user ? <h2>{user.name}</h2> : "Loading user..."}
+                {user ? <h2>{user.name}</h2> : "Loading user"}
             </div>
         );
     }
