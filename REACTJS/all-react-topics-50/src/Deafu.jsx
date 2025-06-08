@@ -10,7 +10,7 @@ class Deafu extends Component{
     }
 }
 Deafu.defaultProps={
-name:"sree"
+name:"sree bhavya"
 
 }
 export default Deafu
