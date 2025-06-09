@@ -2,7 +2,7 @@ import React from 'react';
 
 class MyComponent extends React.Component {
   componentDidMount() {
-    console.log('componentDidMount ');
+    console.log('componentDidMount runs once after render');
   }
 
   render() {
