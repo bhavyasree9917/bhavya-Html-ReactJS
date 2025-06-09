@@ -16,6 +16,5 @@ function Parent21() {
     </div>
   );
 }
-
 export default Parent21;
 
