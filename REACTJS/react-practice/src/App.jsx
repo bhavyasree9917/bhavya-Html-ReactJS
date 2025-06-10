@@ -20,17 +20,17 @@ function App() {
 
   return (
     <>
-  {/* <Welcome/>
-  <Counter/>
-  <Greeting/> */}
-  <Timer/>
-   {/* <UserCard/>  */}
-  {/* <Toggle/>
-  <Inputfield/>
+   {/* <Welcome/> */}
+  {/* <Counter/> */}
+  {/* <Greeting/>  */}
+  {/* <Timer/> */}
+  {/* <UserCard/>   */}
+  {/* <Toggle/> */}
+  {/* <Inputfield/> */}
   
-        {/* <Parent/> */}
-        {/* <MaxDistance/> */}
-        {/* <LoginStatus/> */}
+         {/* <Parent/>  */}
+         {/* <MaxDistance/> */}
+         {/* <LoginStatus/> */}
     </>
   )
 }
