@@ -6,7 +6,7 @@ class MyComponent extends React.Component {
   }
 
   render() {
-    return <h1>Hello my component</h1>;
+    return <h1>Hello my </h1>;
   }
 }
 export default MyComponent;
