@@ -1,4 +1,4 @@
-// 29. useMemo for Expensive Calculations
+
 // useMemo helps optimize performance by caching expensive computations and recomputing only when dependencies change.
 import { useState, useMemo } from 'react';
 
