@@ -7,7 +7,7 @@ function ExpensiveCalculation() {
   const [number, setNumber] = useState(1);
 
   const factorial = useMemo(() => {
-    console.log('Calculating Factoria');
+    console.log('Calculating Factorial...');
     let result = 1;
     for (let i = 1; i <= number; i++) {
       result *= i;
