@@ -18,7 +18,7 @@ function ExpensiveCalculation() {
   return (
     <div>
       <p>Factorial of {number}: {factorial}</p>
-      <button onClick={() => setNumber(number + 1)}>Increase Number</button>
+      <button onClick={() => setNumber(number + 1)}>Increase</button>
       <button onClick={() => setCount(count + 1)}>Increase Counter</button>
       <p>Counter: {count}</p>
     </div>
