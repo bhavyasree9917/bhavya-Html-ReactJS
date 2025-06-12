@@ -13,7 +13,7 @@ function ExpensiveCalculation() {
       result *= i;
     }
     return result;
-  }, [number]); // Recalculates only when number changes
+  }, [number]); 
 
   return (
     <div>
