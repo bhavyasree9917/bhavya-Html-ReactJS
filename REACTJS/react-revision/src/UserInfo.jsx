@@ -14,7 +14,7 @@ class UserInfo extends Component {
     };
 
     updateAge = () => {
-        this.setState({ age: 21});
+        this.setState({ age: 22});
     };
 
     render() {
