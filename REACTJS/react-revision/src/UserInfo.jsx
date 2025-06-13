@@ -10,7 +10,7 @@ class UserInfo extends Component {
     }
 
     updateName = () => {
-        this.setState({ name: 'ram' });
+        this.setState({ name: 'rampotheneni' });
     };
 
     updateAge = () => {
