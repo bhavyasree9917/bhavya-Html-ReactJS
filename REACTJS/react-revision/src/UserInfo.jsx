@@ -4,7 +4,7 @@ class UserInfo extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: 'bhavi',
+            name: 'bhavyasree',
             age: 20
         };
     }
