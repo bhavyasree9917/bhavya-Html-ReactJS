@@ -24,7 +24,7 @@ class UserInfo extends Component {
                 <p>Name: {this.state.name}</p>
                 <p>Age: {this.state.age}</p>
                 <button onClick={this.updateName}>name change</button>
-                <button onClick={this.updateAge}>Change Age</button>
+                <button onClick={this.updateAge}></button>
             </div>
         );
     }
