@@ -20,7 +20,7 @@ import React, { Component } from 'react';
  
      render() {
          return (
-             <div style={{ height: '100vh', border: '1px solid blue' }} onMouseMove={this.handleMouseMove}
+             <div style={{ width:'750px',height: '100vh', border: '1px solid blue' }} onMouseMove={this.handleMouseMove}
              >
  
                  {this.props.render(this.state.x, this.state.y)}
