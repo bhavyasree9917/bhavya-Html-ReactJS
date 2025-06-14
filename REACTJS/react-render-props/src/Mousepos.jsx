@@ -14,7 +14,7 @@ import React, { Component } from 'react';
              x: event.clientX, 
              // Horizontal position (in pixels) from the left edge of the viewport
              y: event.clientY,
-             // Vertical position (in pixels) from the top edge of the viewport.
+             
          });
      };
  
