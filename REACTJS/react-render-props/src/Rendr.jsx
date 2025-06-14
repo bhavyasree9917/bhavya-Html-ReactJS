@@ -18,7 +18,6 @@ import { Component } from "react";
                  <Light
                      isOn={isOn}
                      toggle={toggle}
-                     
                  />
              )} />
          </div>
