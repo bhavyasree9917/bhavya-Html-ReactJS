@@ -12,14 +12,14 @@ export default class Maincd extends Component {
     render() {
         return <>
             <Intfc render={(count, increment, decrement, reset) => (
-               <><Click count={count}
-                increment={increment}
-                decrement={decrement}
-                reset={reset} />
-                <hr />
+                <><Click count={count}
+                    increment={increment}
+                    decrement={decrement}
+                    reset={reset} />
+                    <hr />
 
-                <Text count={count} />
-            </>)}
+                    <Text count={count} />
+                </>)}
             />
 
             <Intfc render={(count, increment, decrement, reset) =>
@@ -35,4 +35,5 @@ export default class Maincd extends Component {
             />
         </>
 
-            }}
+    }
+}
