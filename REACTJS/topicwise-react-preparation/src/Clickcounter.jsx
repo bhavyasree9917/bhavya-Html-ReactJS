@@ -11,5 +11,6 @@ class Clickcounter extends Component {
         </div>
     }
     
+    
 }
 export default Hoc(Clickcounter);
