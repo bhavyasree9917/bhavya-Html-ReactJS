@@ -6,7 +6,7 @@ render(){
         <h1>count:{this.props.count}</h1>
         <button onClick={this.props.increment}>increment</button>
         <button onClick={this.props.decrement}>decrement</button>
-        <button onClick={this.props.reset}>r</button>
+        <button onClick={this.props.reset}>reset</button>
     </div> 
 }
 }
