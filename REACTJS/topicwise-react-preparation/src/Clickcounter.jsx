@@ -9,7 +9,6 @@ class Clickcounter extends Component {
             <button onClick={this.props.decrement}>decrement</button>
             <button onClick={this.props.reset}>reset</button>
         </div>
-        
     }
     
 }
