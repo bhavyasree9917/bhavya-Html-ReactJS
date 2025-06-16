@@ -1,15 +1,15 @@
 import { Component } from "react";
 import Hoc from "./Hoc";
 
-class Hovercounter extends Component {
+class Clickcounter extends Component {
     render() {
         return <div>
-            <h1>count:{this.props.count}</h1>
-            <button onMouseOver={this.props.increment}>increment</button >
-            <button onMouseOver={this.props.decrement}>decrement</button>
-            <button onMouseOver={this.props.reset}>reset</button>
-        </div> 
+            <h1>counter:{this.props.count}</h1>
+            <button onClick={this.props.increment}>increment</button >
+            <button onClick={this.props.decrement}>decrement</button>
+            <button onClick={this.props.reset}>reset</button>
+        </div>
     }
     
 }
-export default Hoc(Hovercounter);
+export default Hoc(Clickcounter);
