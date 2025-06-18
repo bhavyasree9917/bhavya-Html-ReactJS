@@ -5,6 +5,7 @@ import './App.css'
 import Parent from './Parent'
 import Clickcounter from './Clickcounter'
 import Hovercounter from './Hovercounter'
+import Counter1 from './Counter1'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,9 +13,10 @@ function App() {
   return (
     <>
      <Parent/>
-     {/* <Clickcounter/>
+     {/* {/* <Clickcounter/>
   <hr/>
   <Hovercounter/> */}
+  <Counter1/> 
     </>
   )
 }
