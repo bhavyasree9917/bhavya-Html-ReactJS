@@ -20,7 +20,7 @@ export default class Common extends Component {
     }
     render() {
         return <div>
-            {this.props.render(this.state.count, this.increment, this.decrement, this.reset)}
+            {this.props.bhavya(this.state.count, this.increment, this.decrement, this.reset)}
         </div>
     }
 }
