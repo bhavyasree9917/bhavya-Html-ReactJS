@@ -7,7 +7,7 @@ import Child2 from "./Child2";
 export default class Parent extends Component {
     render() {
         return <div>
-            <Common render={(count, increment, decrement, reset) => (
+            <Common bhavya={(count, increment, decrement, reset) => (
                 <Child1 count={count}
                     increment={increment}
                     decrement={decrement}
