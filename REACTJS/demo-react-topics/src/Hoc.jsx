@@ -25,7 +25,7 @@ const Hoc = (Clickcount) => {
                     decrement={decrement}
                     reset={reset} />
             </div>
-            
+        
         }
     }
     return Ram
