@@ -3,7 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Parent from './Parent'
-import Hoc from './Hoc'
+
+
+import Parent1 from './Parent1'
 import Clickcount from './Clickcount'
 import Hovercount from './Hovercount'
 
@@ -13,7 +15,9 @@ function App() {
 
   return (
     <>
-{/* <Parent/> */}
+ {/* <Parent/>  */}
+
+{/* <Parent1/> */}
 <Clickcount/>
 <hr/>
 <Hovercount/>
