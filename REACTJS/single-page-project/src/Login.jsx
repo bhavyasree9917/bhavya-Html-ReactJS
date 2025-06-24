@@ -35,7 +35,6 @@ const Login = () => {
             console.log("Login Failed !!");
         }
     };
-    
     return (
         <div>
             <h2>Welcome to Login page</h2>
@@ -64,6 +63,7 @@ const Login = () => {
             <p style={{ color: "red" }}>{erroMessage}</p>
         </div>
     );
+    
 };
 
 export default Login;
