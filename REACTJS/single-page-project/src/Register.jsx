@@ -1,71 +1,84 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-    const [listusers, setlistusers] = useState([])
-
-    const [users, setUser] = useState({
+    const navigate = useNavigate();
+    const [user, setUser] = useState({
         fname: "",
         lname: "",
         email: "",
         password: "",
-        confirmpassword: ""
-    })
-    const handlechange = (e) => {
-        const newuser = { ...users };
-        newuser[e.target.name] = e.target.value;
-        setUser(newuser)
+        confirmPassword: "",
+    });
+    const [users, setUsers] = useState([]);
+    const handleChange = (e) => {
+        const newUser = { ...user };
+        newUser[e.target.name] = e.target.value;
+        setUser(newUser);
+    };
 
-    }
-    const handlesubmit = () => {
-        const newUsers = JSON.parse(localStorage.getItem("users"))
+    const handleSubmit = () => {
+        const newUsers = JSON.parse(localStorage.getItem("users"));
         if (newUsers !== null) {
-            newUsers.push(users);
-            localStorage.setItem("user", JSON.stringify(newUsers))
+            newUsers.push(user);
+            localStorage.setItem("users", JSON.stringify(newUsers));
         } else {
-            localStorage.setItem("user", JSON.stringify(users))
+            localStorage.setItem("users", JSON.stringify([user]));
         }
-    }
-    // const handlesubmit = (e) => {
-    //     e.preventDefault()
-    //     localstorage()
-    //     console.log(user)
-    // }
 
-    // useEffect(()=>{
-    //     loaddata()
-    //     console.log(listusers)
-    // },[])
-
-    // const loaddata=()=>{
-    //     const exisitingusers =JSON.parse(localStorage.getItem("localdata")) || []
-    //     setlistusers(exisitingusers)
-    // }
-
-
-    // const localstorage = () => {
-
-    //     const updatedusers = [...listusers, user]
-    //     localStorage.setItem("localdata", JSON.stringify(updatedusers))
-    //     setlistusers(updatedusers)
-    // }
-
+        // redirect to Login page
+        navigate("login");
+    };
     return (
         <div>
             <form>
-                <label htmlFor="">First name</label>
-                <input type="text" name="fname" value={users.fname} onChange={handlechange} ></input><br />
-                <label htmlFor="">Last name</label>
-                <input type="text" name="lname" value={users.lname} onChange={handlechange}></input><br />
-                <label htmlFor="">email</label>
-                <input type="email" name="email" value={users.email} onChange={handlechange}></input><br />
-                <label htmlFor="">password</label>
-                <input type="password" name="password" value={users.password} onChange={handlechange}></input><br />
-                <label htmlFor=""> Confirm password</label>
-                <input type="password" name="confirmpassword" value={users.confirmpassword} onChange={handlechange}></input><br />
-                <button type="button" onClick={handlesubmit}>Register</button>
+                <label htmlFor="">First Name :</label>
+                <input
+                    type="text"
+                    name="fname"
+                    value={user.fname}
+                    onChange={handleChange}
+                />{" "}
+                <br />
+                <label htmlFor="">Last Name :</label>
+                <input
+                    type="text"
+                    name="lname"
+                    value={user.lname}
+                    onChange={handleChange}
+                />{" "}
+                <br />
+                <label htmlFor="">Email :</label>
+                <input
+                    type="text"
+                    name="email"
+                    value={user.email}
+                    onChange={handleChange}
+                />{" "}
+                <br />
+                <label htmlFor="">Password :</label>
+                <input
+                    type="text"
+                    name="password"
+                    value={user.password}
+                    onChange={handleChange}
+                />{" "}
+                <br />
+                <label htmlFor="">Confirm Password :</label>
+                <input
+                    type="text"
+                    name="confirmPassword"
+                    value={user.confirmPassword}
+                    onChange={handleChange}
+                />{" "}
+                <br />
+                <button type="button" onClick={handleSubmit}>
+                    Register
+                </button>
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default Register;
