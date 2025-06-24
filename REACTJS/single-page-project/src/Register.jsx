@@ -26,8 +26,6 @@ const Register = () => {
         } else {
             localStorage.setItem("users", JSON.stringify([user]));
         }
-        
-        
         // redirect to Login page
         navigate("login");
     };
