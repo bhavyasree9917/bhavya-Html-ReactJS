@@ -15,12 +15,12 @@ const Login2 = () => {
     const matched = storedUsers.find(
       (u) => u.email === user.email && u.password === user.password
     );
-    
+
 
     if (matched) {
       navigate("/dashboard2");
     } else {
-      setError("Invalid credentials!");
+      setError("Invalid ");
     }
   };
 
