@@ -22,6 +22,7 @@ const Login2 = () => {
       setError("Invalid credentials!");
     }
   };
+  
 
   return (
     <div>
