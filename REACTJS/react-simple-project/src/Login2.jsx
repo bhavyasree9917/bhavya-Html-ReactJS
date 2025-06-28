@@ -27,7 +27,7 @@ const Login2 = () => {
 
   return (
     <div>
-      <h2>Login2 Page</h2>
+      <h2></h2>
       <form>
         <label>Email:</label>
         <input type="text" name="email" onChange={handleChange} value={user.email} /><br />
