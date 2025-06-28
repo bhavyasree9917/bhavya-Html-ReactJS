@@ -35,7 +35,7 @@ const Login2 = () => {
         <input type="password" name="password" onChange={handleChange} value={user.password} /><br />
         <button type="button" onClick={handleSubmit}>Login</button>
       </form>
-      {error && <p style={{ color: "" }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 };
