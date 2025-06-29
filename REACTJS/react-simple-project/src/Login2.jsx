@@ -20,7 +20,7 @@ const Login2 = () => {
     if (matched) {
       navigate("/dashboard2");
     } else {
-      setError("");
+      setError("Invalid !!");
     }
   };
 
