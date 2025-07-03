@@ -10,7 +10,6 @@ import { Component } from "react";
  
                  <Track
                      x={x}
-                     
                      y={y}
                  />
              )} />
