@@ -9,6 +9,5 @@ export default  class Mouseovr extends Component{
             <button onMouseOver={this.props.decrement}>decrement </button>
             <button onMouseOver={this.props.reset}>reset </button>
         </div>)
-        
     }
 }
