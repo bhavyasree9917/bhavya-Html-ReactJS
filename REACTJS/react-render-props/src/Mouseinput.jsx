@@ -7,6 +7,7 @@ import { Component } from "react";
      render() {
          return <>
              <Mousepos render={(x, y) => (
+                
  
                  <Track
                      x={x}
