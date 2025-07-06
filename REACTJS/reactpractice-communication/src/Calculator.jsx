@@ -17,6 +17,7 @@ class Calculator extends Component {
   render() {
     return (
       <div>
+        
         <h2>Square Calculator</h2>
         <Result number={this.state.number} />
         <InputNumber value={this.state.number} onNumberChange={this.handleNumberChange} />
