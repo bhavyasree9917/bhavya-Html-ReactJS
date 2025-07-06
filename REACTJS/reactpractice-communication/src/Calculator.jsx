@@ -6,7 +6,7 @@ class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 12
+      number: 15
     };
   }
 
@@ -21,7 +21,7 @@ class Calculator extends Component {
         <Result number={this.state.number} />
         <InputNumber value={this.state.number} onNumberChange={this.handleNumberChange} />
         {/* <Result number={this.state.number} /> */}
-        
+
       </div>
     );
   }
