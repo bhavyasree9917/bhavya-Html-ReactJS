@@ -21,6 +21,7 @@ class Calculator extends Component {
         <Result number={this.state.number} />
         <InputNumber value={this.state.number} onNumberChange={this.handleNumberChange} />
         {/* <Result number={this.state.number} /> */}
+        
       </div>
     );
   }
