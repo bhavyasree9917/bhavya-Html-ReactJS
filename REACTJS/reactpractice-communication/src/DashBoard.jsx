@@ -3,7 +3,7 @@ import ButtonPanel from './ButtonPanel';
 
 
 const Dashboard = () => {
-  const [message, setMessage] = useState("Waiting for action...");
+  const [message, setMessage] = useState("Waiting ");
 
   const handleChildEvent = (msg) => {
     setMessage(msg);
@@ -16,7 +16,7 @@ const Dashboard = () => {
       <p>{message}</p>
     </div>
   );
-  
+
 };
 
 export default Dashboard;
