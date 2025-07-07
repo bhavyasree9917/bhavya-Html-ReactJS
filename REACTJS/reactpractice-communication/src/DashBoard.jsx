@@ -12,7 +12,6 @@ const Dashboard = () => {
   return (
     <div>
       <h2>Dashboard</h2>
-      
       <ButtonPanel onNotifyParent={handleChildEvent} />
       <p>{message}</p>
     </div>
