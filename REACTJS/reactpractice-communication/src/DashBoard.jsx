@@ -16,6 +16,7 @@ const Dashboard = () => {
       <p>{message}</p>
     </div>
   );
+  
 };
 
 export default Dashboard;
