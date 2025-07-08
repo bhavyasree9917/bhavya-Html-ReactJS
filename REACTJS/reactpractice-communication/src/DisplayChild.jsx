@@ -2,7 +2,7 @@ const DisplayChild = ({ handleChange }) => {
     return (
         <input
             type="text"
-            placeholder="Type "
+            placeholder=" "
             onChange={handleChange}
         />
     );
