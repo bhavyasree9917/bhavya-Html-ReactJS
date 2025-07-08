@@ -6,6 +6,5 @@ const DisplayChild = ({ handleChange }) => {
             onChange={handleChange}
         />
     );
-
 };
 export default DisplayChild;
