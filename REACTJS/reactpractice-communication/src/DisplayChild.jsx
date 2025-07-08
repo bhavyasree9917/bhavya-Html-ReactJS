@@ -5,7 +5,6 @@ const DisplayChild = ({ handleChange }) => {
             placeholder="Type something..."
             onChange={handleChange}
         />
-    );
-    
+    )
 };
 export default DisplayChild;
