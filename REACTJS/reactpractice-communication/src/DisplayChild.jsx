@@ -7,4 +7,5 @@ const DisplayChild = ({ handleChange }) => {
         />
     );
 };
+
 export default DisplayChild;
