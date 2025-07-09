@@ -8,7 +8,7 @@ class Grandparent extends Component {
     const theme = 'light'; 
     return (
       <div>
-        <h2>Grandparent </h2>
+        <h2> </h2>
         <Parnt theme={theme} />
       </div>
     );
