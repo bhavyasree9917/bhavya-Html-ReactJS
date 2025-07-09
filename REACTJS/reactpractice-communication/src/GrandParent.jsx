@@ -5,7 +5,7 @@ import Parnt from './Parnt';
 
 class Grandparent extends Component {
   render() {
-    const theme = 'light'; 
+    const theme = 'ligh'; 
     return (
       <div>
         <h2>Grandparent Component</h2>
