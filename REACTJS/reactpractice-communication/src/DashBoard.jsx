@@ -8,8 +8,6 @@ const Dashboard = () => {
   const handleChildEvent = (msg) => {
     setMessage(msg);
   };
-
-  
   return (
     <div>
       <h2>Dashboard</h2>
