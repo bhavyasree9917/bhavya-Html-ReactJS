@@ -4,8 +4,6 @@ import ButtonPanel from './ButtonPanel';
 
 const Dashboard = () => {
   const [message, setMessage] = useState("Waiting ");
-  
-
   const handleChildEvent = (msg) => {
     setMessage(msg);
   };
