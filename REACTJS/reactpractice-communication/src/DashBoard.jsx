@@ -9,6 +9,7 @@ const Dashboard = () => {
     setMessage(msg);
   };
 
+  
   return (
     <div>
       <h2>Dashboard</h2>
