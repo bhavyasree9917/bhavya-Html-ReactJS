@@ -10,7 +10,7 @@ const MouseTracker = ({ render }) => {
       y: e.clientY,
     });
   };
-
+  
   return (
     <div style={{ height: '100vh' }} onMouseMove={handleMouseMove}>
       {render(position)}
