@@ -16,7 +16,7 @@ const MouseTracker = ({ render }) => {
       {render(position)}
     </div>
   );
-  
+
 };
 
 export default MouseTracker;
