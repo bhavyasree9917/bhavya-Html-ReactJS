@@ -1,4 +1,4 @@
-// MouseTracker.js
+
 import React, { useState } from 'react';
 
 const MouseTracker = ({ render }) => {
