@@ -11,7 +11,6 @@ const InputNumber = ({ value, onNumberChange }) => {
     />
   );
 
-
   
 };
 
