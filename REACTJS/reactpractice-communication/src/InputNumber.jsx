@@ -11,6 +11,7 @@ const InputNumber = ({ value, onNumberChange }) => {
     />
   );
 
+  
 };
 
 export default InputNumber;
