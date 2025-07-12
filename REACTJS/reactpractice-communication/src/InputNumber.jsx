@@ -10,7 +10,6 @@ const InputNumber = ({ value, onNumberChange }) => {
       placeholder="Enter a number"
     />
   );
-  
 };
 
 export default InputNumber;
