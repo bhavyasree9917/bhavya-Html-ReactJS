@@ -6,7 +6,7 @@ class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 32
+      number: 31
     };
   }
 
