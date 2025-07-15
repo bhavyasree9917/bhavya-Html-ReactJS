@@ -8,7 +8,6 @@ const TodoApp = () => {
   const addTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
   };
-
   return (
     <div>
       <h2>Todo App</h2>
