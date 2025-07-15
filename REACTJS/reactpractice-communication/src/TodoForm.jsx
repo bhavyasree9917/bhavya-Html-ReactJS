@@ -10,7 +10,6 @@ const TodoForm = ({ onAddTodo }) => {
       setInput('');
     }
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <input
