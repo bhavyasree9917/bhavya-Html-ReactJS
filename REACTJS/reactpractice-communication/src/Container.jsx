@@ -15,7 +15,7 @@ const Container = () => {
 
     return (
         <div>
-            <button onClick={display}>Click Me</button>
+            <button onClick={display}>Clic Me</button>
             <Inputchild inputtext={inputtext} />
             <DisplayChild handleChange={handleChange} />
         </div>
