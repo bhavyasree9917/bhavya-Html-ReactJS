@@ -6,8 +6,7 @@ const TodoList = ({ todos }) => {
       {todos.map((todo, i) => (
         <li key={i}>{todo}</li>
       ))}
-    </ul>
-    
+    </ul> 
   );
 };
 
