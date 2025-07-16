@@ -7,6 +7,7 @@ const TodoList = ({ todos }) => {
         <li key={i}>{todo}</li>
       ))}
     </ul>
+    
   );
 };
 
