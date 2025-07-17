@@ -6,7 +6,7 @@ const Container = () => {
     const [inputtext, settext] = useState("");
 
     const display = () => {
-        settext("bh");
+        settext("bha");
     };
 
     const handleChange = (e) => {
