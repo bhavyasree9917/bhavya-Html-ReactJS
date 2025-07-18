@@ -19,6 +19,5 @@ const Container = () => {
             <DisplayChild handleChange={handleChange} />
         </div>
     );
-    
 };
 export default Container;
