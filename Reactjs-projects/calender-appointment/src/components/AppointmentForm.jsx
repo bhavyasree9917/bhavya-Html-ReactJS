@@ -30,6 +30,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
     }
     setForm({ eventName: '', date: '', time: '', location: '', description: '', participants: '' });
   };
+  
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input name="eventName" placeholder="Event Name" value={form.eventName} onChange={handleChange} required className="block w-full mb-2 border p-2" />
