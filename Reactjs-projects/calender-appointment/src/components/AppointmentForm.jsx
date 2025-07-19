@@ -28,8 +28,9 @@ const AppointmentForm = ({ editData, setEditData }) => {
     } else {
       dispatch(addAppointment(form));
     }
-    setForm({ eventName: '', date: '', time: '', location: '', description: '', participants: '' });
     
+    setForm({ eventName: '', date: '', time: '', location: '', description: '', participants: '' });
+
   };
 
   return (
