@@ -41,6 +41,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
         {editData ? 'Update' : 'Add'} Appointment
       </button>
+      
     </form>
 
   );
