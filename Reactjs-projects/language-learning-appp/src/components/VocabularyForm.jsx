@@ -24,7 +24,7 @@ const VocabularyForm = () => {
       definition: '',
       exampleSentence: '',
       synonyms: '',
-      antonyms: '',
+      
     });
   };
 
