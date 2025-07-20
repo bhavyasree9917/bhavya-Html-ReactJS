@@ -72,7 +72,6 @@ const VocabularyForm = () => {
       </button>
     </form>
   );
-  
 };
 
 export default VocabularyForm;
