@@ -36,7 +36,7 @@ const VocabularyForm = () => {
         value={form.word}
         onChange={handleChange}
         required
-        className="block w-full mb-2 border "
+        className="block w-full mb-2 border p-2"
       />
       <input
         name="definition"
