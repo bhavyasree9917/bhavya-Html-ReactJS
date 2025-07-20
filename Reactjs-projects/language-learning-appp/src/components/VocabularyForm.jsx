@@ -29,7 +29,7 @@ const VocabularyForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
+    <form onSubmit={handleSubmit} className="p-4 border rounded ">
       <input
         name="word"
         placeholder="Word"
