@@ -28,7 +28,7 @@ const App = () => {
 
       {lowStockProducts.length > 0 && (
         <div>
-          <h3>Low Stock Products</h3>
+          <h3>Low Stock </h3>
           {lowStockProducts.map((product) => (
             <div key={product.id}>
               <p>{product.name} - {product.quantity} left</p>
