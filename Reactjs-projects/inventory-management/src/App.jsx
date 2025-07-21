@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1></h1>
+      <h1>Inventory management</h1>
 
       <ProductForm selectedProduct={selectedProduct} clearSelection={clearSelectedProduct} />
 
