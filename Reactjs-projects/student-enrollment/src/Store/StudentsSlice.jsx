@@ -9,7 +9,6 @@ const initialState = {
     { id: 5, name: "kalyan", age: 52, email: "kalyan@gmail.com" }
   ]
 };
-
 const StudentsSlice = createSlice({
   name: "students",
   initialState,
