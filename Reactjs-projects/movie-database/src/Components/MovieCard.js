@@ -15,4 +15,5 @@ const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
   );
 };
 
+
 export default MovieCard;
