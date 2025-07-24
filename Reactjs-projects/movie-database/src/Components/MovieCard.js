@@ -14,6 +14,4 @@ const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
     </div>
   );
 };
-
-
 export default MovieCard;
