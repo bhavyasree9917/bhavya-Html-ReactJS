@@ -1,6 +1,7 @@
 import React from 'react';
 
 const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
+  
   return (
     <div className="movie-card">
       <h3>{movie.title}</h3>
