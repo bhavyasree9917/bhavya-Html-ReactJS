@@ -1,7 +1,6 @@
 import React from 'react';
 
 const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
-
   
   return (
     <div className="movie-card">
