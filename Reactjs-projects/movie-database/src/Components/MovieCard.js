@@ -2,7 +2,7 @@ import React from 'react';
 
 const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
   return (
-    
+
     <div className="movie-card">
       <h3>{movie.title}</h3>
       <p><strong>Director:</strong> {movie.director}</p>
@@ -13,6 +13,7 @@ const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
       <button onClick={() => removeMovie(movie.title)}>movie</button>
       <button onClick={() => addToWatchList(movie.title)}> add to watchlist</button>
     </div>
+    
   );
 };
 export default MovieCard;
