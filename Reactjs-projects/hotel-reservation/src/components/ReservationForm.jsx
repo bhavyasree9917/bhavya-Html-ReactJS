@@ -30,7 +30,6 @@ const ReservationForm = ({ editData, setEditData }) => {
     }
     setForm({ guestName: '', roomType: '', checkInDate: '', checkOutDate: '', status: 'Booked' });
   };
-
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input name="guestName" placeholder="Guest Name" value={form.guestName} onChange={handleChange} required className="block w-full mb-2 border p-2" />
