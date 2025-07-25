@@ -31,7 +31,6 @@ const ReservationForm = ({ editData, setEditData }) => {
     setForm({ guestName: '', roomType: '', checkInDate: '', checkOutDate: '', status: 'Booked' });
   };
 
-
   
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
