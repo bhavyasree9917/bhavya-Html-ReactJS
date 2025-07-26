@@ -14,7 +14,7 @@ function Chat() {
       receiver,
       message,
       timestamp: new Date().toISOString(),
-      status: 'sent',
+      status: 'sen',
     };
     setMessages([...messages, newMessage]);
     setUnreadCount(unreadCount + 1);
