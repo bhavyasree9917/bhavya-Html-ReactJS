@@ -19,7 +19,7 @@ function Chat() {
     setMessages([...messages, newMessage]);
     setUnreadCount(unreadCount + 1);
   };
-
+  
   const deleteMessage = (messageID) => {
     setMessages(messages.filter(msg => msg.id !== messageID));
   };
@@ -27,7 +27,6 @@ function Chat() {
   const searchMessages = (keyword) => {
     return messages.filter(msg => msg.message.includes(keyword));
   };
-  
   return (
     <div className="chat-container"> 
       <div className="message-list">
