@@ -24,10 +24,11 @@ function Chat() {
     setMessages(messages.filter(msg => msg.id !== messageID));
   };
 
+  
   const searchMessages = (keyword) => {
     return messages.filter(msg => msg.message.includes(keyword));
   };
-  
+
   return (
     <div className="chat-container"> 
       <div className="message-list">
