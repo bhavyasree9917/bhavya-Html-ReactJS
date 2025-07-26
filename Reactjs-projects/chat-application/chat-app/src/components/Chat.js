@@ -27,6 +27,7 @@ function Chat() {
   const searchMessages = (keyword) => {
     return messages.filter(msg => msg.message.includes(keyword));
   };
+  
   return (
     <div className="chat-container"> 
       <div className="message-list">
