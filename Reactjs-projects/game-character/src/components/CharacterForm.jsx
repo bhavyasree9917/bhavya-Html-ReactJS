@@ -43,6 +43,7 @@ const CharacterForm = ({ editData, setEditData }) => {
         {editData ? 'Update' : 'Add'} Character
       </button>
     </form>
+    
   );
 };
 
