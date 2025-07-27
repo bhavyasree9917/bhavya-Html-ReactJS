@@ -46,6 +46,7 @@ const CharacterForm = ({ editData, setEditData }) => {
     </form>
   );
   
+
 };
 
 export default CharacterForm;
