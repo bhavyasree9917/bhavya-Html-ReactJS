@@ -31,6 +31,7 @@ const CharacterForm = ({ editData, setEditData }) => {
     }
     setForm({ name: '', level: 1, healthPoints: 100, manaPoints: 50, strength: 10, agility: 10 });
   };
+
   
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
