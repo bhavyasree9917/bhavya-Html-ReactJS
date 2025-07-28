@@ -44,5 +44,4 @@ const AppointmentForm = ({ editData, setEditData }) => {
     </form>
   );
 };
-
 export default AppointmentForm;
