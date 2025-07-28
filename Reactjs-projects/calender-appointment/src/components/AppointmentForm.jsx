@@ -10,7 +10,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
     time: '',
     location: '',
     description: '',
-
+    participants: '',
   });
 
   useEffect(() => {
