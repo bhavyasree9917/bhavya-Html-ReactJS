@@ -12,7 +12,6 @@ const AppointmentForm = ({ editData, setEditData }) => {
     description: '',
     participants: '',
   });
-
   useEffect(() => {
     if (editData) setForm(editData);
   }, [editData]);
