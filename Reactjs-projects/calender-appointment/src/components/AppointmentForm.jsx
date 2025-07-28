@@ -13,6 +13,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
     participants: '',
   });
 
+  
   useEffect(() => {
     if (editData) setForm(editData);
   }, [editData]);
