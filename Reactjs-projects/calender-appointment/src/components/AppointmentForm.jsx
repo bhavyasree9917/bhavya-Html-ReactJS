@@ -29,7 +29,6 @@ const AppointmentForm = ({ editData, setEditData }) => {
     }
     setForm({ eventName: '', date: '', time: '', location: '', description: '', participants: '' });
   };
-
   
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
