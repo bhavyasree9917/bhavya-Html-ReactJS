@@ -70,6 +70,7 @@ const TaskForm = () => {
         Add Task
       </button>
     </form>
+    
   );
 };
 
