@@ -16,7 +16,7 @@ const TaskForm = () => {
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addTask(form));
@@ -30,6 +30,7 @@ const TaskForm = () => {
     });
   };
 
+  
   return (
     <form onSubmit={handleSubmit} className="p-4 border rounded mb-4">
       <input
