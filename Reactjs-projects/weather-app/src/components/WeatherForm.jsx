@@ -10,6 +10,7 @@ const WeatherForm = () => {
     setLocation(e.target.value);
   };
 
+
   
   const handleSubmit = (e) => {
     e.preventDefault();
