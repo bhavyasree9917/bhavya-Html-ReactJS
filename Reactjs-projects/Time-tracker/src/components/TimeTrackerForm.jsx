@@ -73,7 +73,6 @@ const TimeTrackerForm = ({ editData, setEditData }) => {
       >
         Clock Out
       </button>
-      
     </form>
   );
 };
