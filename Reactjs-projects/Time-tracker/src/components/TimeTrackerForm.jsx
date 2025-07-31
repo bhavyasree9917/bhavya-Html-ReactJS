@@ -66,7 +66,13 @@ const TimeTrackerForm = ({ editData, setEditData }) => {
         onChange={handleChange}
         className="block w-full mb-2 border p-2"
       />
-     
+      <button
+        type="button"
+        onClick={handleClockOut}
+        className="bg-green-500 text-white px-4 py-2 rounded"
+      >
+        Clock Out
+      </button>
     </form>
   );
 };
