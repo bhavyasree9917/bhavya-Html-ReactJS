@@ -26,7 +26,7 @@ const WeatherForm = () => {
         className="block w-full mb-2 border p-2"
       />
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-        add l
+        add lo
       </button>
     </form>
   );
