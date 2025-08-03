@@ -14,6 +14,7 @@ const MovieCard = ({ movie, removeMovie, addToWatchList }) => {
       <button onClick={() => addToWatchList(movie.title)}> add to watchlist</button>
     </div>
     
+    
   );
 };
 export default MovieCard;
