@@ -53,7 +53,6 @@ const VocabularyForm = () => {
         onChange={handleChange}
         className="block w-full mb-2 border p-2"
       />
-      
       <input
         name="synonyms"
         placeholder="Synonyms"
