@@ -43,7 +43,7 @@ const MusicPlayer = () => {
       artist: 'New Artist',
       src: 'path/to/song.mp3',
       albumCover: 'path/to/cover.jpg',
-      duration: 200
+
     }));
   };
 
