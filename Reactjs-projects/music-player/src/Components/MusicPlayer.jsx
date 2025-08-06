@@ -33,8 +33,6 @@ const MusicPlayer = () => {
       dispatch(skip());
     }
   };
-
-  
   const handleSongClick = (song) => {
     dispatch(setCurrentSong(song));
     dispatch(play());  
