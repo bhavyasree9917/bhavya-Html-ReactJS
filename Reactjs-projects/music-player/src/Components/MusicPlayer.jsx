@@ -37,7 +37,6 @@ const MusicPlayer = () => {
     dispatch(setCurrentSong(song));
     dispatch(play());  
   };
-
   const handleAddSong = () => {
     dispatch(addToPlaylist({
       title: 'New Song',
