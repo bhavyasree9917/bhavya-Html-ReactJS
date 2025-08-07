@@ -1,4 +1,4 @@
 function Ram() {
-    return <h1>rampothe</h1>
+    return <h1>rampoth</h1>
 }
 export default Ram
