@@ -13,7 +13,7 @@ class Lifecycle extends Component{
 
     render(){
 return<div>
-   <button onClick={this.timer}>start t</button> 
+   <button onClick={this.timer}>start </button> 
 </div>
     }
 
