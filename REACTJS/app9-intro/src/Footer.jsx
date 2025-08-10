@@ -7,4 +7,5 @@ function Footer() {
     </header>
   );
 }
+
 export default Footer;
