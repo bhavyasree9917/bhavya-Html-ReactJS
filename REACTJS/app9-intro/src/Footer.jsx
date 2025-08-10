@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <header>
-      My Ap
+      My A
     </header>
   );
 }
