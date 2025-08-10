@@ -6,7 +6,6 @@ function Footer() {
       My App
     </header>
   );
-  
 }
 
 export default Footer;
