@@ -13,7 +13,7 @@ const Clock = () => {
     }, [])
 
     return <div>
-        <h1>{time}</h1>
+        <h1>t{time}</h1>
 
     </div>
 }
