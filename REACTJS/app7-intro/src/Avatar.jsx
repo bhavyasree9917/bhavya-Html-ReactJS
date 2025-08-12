@@ -4,6 +4,7 @@ const Avatar=({imageurl})=>{
 <img src="{imageurl}"/>   
     </div> 
 }
+
 Avatar.defaultProps={
     imageurl:'https://via.placeholder.com/150'
 }
