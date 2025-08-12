@@ -1,8 +1,7 @@
 import React from "react";
 const Avatar=({imageurl})=>{
     return<div>
-<img src="{imageurl}"/>
-        
+<img src="{imageurl}"/>   
     </div>
    
 }
