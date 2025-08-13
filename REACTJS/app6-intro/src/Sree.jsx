@@ -6,7 +6,7 @@ export default class sree extends Component {
         super()
         this.state = {
             id: 1,
-            name: "sriramula bhavyasree",
+            name: "sriramula bhavyasre",
             usernmae: "bhavya",
             address: {
                 street: "puthalapattu",
