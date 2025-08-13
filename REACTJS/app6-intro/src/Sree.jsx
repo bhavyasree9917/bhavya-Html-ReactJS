@@ -25,7 +25,6 @@ export default class sree extends Component {
                     bs: "harness real-time e-markets"
                 }
             }
-
         }
     }
     render() {
