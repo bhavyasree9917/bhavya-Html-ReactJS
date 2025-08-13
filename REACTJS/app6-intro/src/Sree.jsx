@@ -22,7 +22,7 @@ export default class sree extends Component {
                 company: {
                     name: "ram",
                     catchphrase: "multilayred client-serverr neural-net",
-                    bs: "harness real-time e-markets"
+                    bs: "harness real-time e-market"
                 }
             }
         }
@@ -38,7 +38,7 @@ export default class sree extends Component {
             <h1>{this.state.address.zipcode}</h1>
             <Ram all={this.state} />
         </div>
-        
+
     }
 
 
