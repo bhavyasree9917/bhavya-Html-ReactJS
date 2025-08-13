@@ -38,6 +38,7 @@ export default class sree extends Component {
             <h1>{this.state.address.zipcode}</h1>
             <Ram all={this.state} />
         </div>
+        
     }
 
 
