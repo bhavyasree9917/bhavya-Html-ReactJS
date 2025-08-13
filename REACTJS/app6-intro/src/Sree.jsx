@@ -22,7 +22,7 @@ export default class sree extends Component {
                 company: {
                     name: "ram",
                     catchphrase: "multilayred client-serverr neural-net",
-                    bs: "harness real-time e-marke"
+                    bs: "harness real-time e-mark"
                 }
             }
         }
