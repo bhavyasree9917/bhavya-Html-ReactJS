@@ -9,7 +9,7 @@ export default class sree extends Component {
             name: "sriramula bhavyasree",
             usernmae: "bhavya",
             address: {
-                street: "puthalapatt",
+                street: "puthalapattu",
                 suite: "apt.556",
                 city: "chittoor",
                 zipcode: 9678544,
