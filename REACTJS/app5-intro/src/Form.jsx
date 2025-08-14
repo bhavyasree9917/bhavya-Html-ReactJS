@@ -10,7 +10,7 @@ const Form = () => {
 
 
     return <div>
-        <h1>registaration form</h1>
+        <h1>registarationform</h1>
         <form action="">
         <label>
             fname
