@@ -7,8 +7,6 @@ const Form = () => {
 
     const handlenamechange = (e) => setname(e.target.value);
     const handleemailchange = (e) => setemail(e.target.value)
-
-
     return <div>
         <h1>registeration form</h1>
         <form action="">
