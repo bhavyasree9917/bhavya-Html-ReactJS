@@ -4,7 +4,7 @@ export default class Counter extends Component{
     constructor(){
         super()
         this.state={
-            count:0
+            count:20
         }
     }
 
