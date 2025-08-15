@@ -9,7 +9,7 @@ function TodoApp() {
     }
 
     return <div>
-        <h1>welcome to my to </h1>
+        <h1>welcome to my t </h1>
         <TodoForm addtodo={addtodo} />
         <TodoList todos={todos} />
 
