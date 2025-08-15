@@ -11,7 +11,7 @@ export default class Counter extends Component{
     increment=()=>{
         this.setState({count:this.state.count+1})
     }
-    
+
     render(){
         return<div>
             <h1>count:{this.state.count}</h1>
