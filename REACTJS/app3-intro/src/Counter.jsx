@@ -16,4 +16,5 @@ export default class Counter extends Component {
             <button onClick={this.increment}>increase the value</button>
         </div>
     }
+    
 }
