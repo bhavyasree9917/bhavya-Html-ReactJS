@@ -13,7 +13,7 @@ export default class Counter extends Component {
     render() {
         return <div>
             <h1>{this.state.count}</h1>
-            <button onClick={this.increment}>increase the </button>
+            <button onClick={this.increment}>increase th </button>
         </div>
     }
 
