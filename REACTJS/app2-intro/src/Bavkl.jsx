@@ -3,6 +3,7 @@ import { Component } from "react";
 class Bavkl extends Component{
     constructor(){
         super()
+        this
     }
     render(){
         return <div>
