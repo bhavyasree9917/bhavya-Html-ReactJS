@@ -18,7 +18,7 @@ export default function CallbackApp() {
     <div style={theme}>
       <h2>Count: {count}</h2>
       <button onClick={increment}>Increase here </button>
-      <button onClick={() => setDark(d => !d)}>Toggle Theme</button>
+      <button onClick={() => setDark(d => !d)}></button>
     </div>
   );
 }
