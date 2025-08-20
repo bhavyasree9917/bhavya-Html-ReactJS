@@ -11,7 +11,7 @@ export default function CallbackApp() {
   const theme = {
     backgroundColor: dark ? 'black' : 'white',
     color: dark ? 'white' : 'black',
-    padding: '2px',
+    padding: '3px',
   };
 
   return (
