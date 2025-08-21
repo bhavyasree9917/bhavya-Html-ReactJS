@@ -11,7 +11,7 @@ export default function FetchData() {
       
   }, []);
 
-  if (!data) return <div>L</div>;
+  if (!data) return <div></div>;
 
   return <div>{data.title}</div>;
 }
