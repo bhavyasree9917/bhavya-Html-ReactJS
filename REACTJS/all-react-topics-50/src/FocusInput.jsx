@@ -10,7 +10,7 @@ function FocusInput() {
   return (
     <div>
       <input ref={inputRef} type="text" placeholder="Click button to focus me" />
-      <button onClick={handleClick}>Fo </button>
+      <button onClick={handleClick}>F </button>
       
     </div>
   );
