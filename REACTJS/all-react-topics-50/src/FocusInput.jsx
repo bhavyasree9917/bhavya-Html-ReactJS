@@ -13,6 +13,7 @@ function FocusInput() {
       <button onClick={handleClick}>Focus Input</button>
     </div>
   );
+  
 }
 export default FocusInput
 
