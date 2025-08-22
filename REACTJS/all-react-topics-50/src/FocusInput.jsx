@@ -11,7 +11,6 @@ function FocusInput() {
     <div>
       <input ref={inputRef} type="text" placeholder="Click button to focus me" />
       <button onClick={handleClick}>Focus Input</button>
-      
     </div>
   );
 }
