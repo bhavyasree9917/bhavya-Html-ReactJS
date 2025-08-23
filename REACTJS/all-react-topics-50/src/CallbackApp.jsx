@@ -11,7 +11,7 @@ export default function CallbackAppTwo() {
   const theme = {
     backgroundColor: dark ? '#222' : '#f9f9f9',
     color: dark ? '#f9f9f9' : '#222',
-    padding: '5px',
+    padding: '2px',
     borderRadius: '10px',
   };
 
