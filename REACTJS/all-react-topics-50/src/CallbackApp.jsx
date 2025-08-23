@@ -12,7 +12,7 @@ export default function CallbackAppTwo() {
     backgroundColor: dark ? '#222' : '#f9f9f9',
     color: dark ? '#f9f9f9' : '#222',
     padding: '5px',
-    borderRadius: '8px',
+    borderRadius: '10px',
   };
 
   return (
