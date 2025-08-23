@@ -1,23 +1,24 @@
 import React, { useState, useCallback } from 'react';
 
-export default function CallbackApp() {
-  const [count, setCount] = useState(0);
+export default function CallbackAppTwo() {
+  const [count, setCount] = useState(10);
   const [dark, setDark] = useState(false);
 
-  const increment = useCallback(() => {
-    setCount(c => c + 1);
+  const decrement = useCallback(() => {
+    setCount(c => c - 1);
   }, []);
 
   const theme = {
-    backgroundColor: dark ? 'black' : 'white',
-    color: dark ? 'white' : 'black',
-    padding: '3px',
+    backgroundColor: dark ? '#222' : '#f9f9f9',
+    color: dark ? '#f9f9f9' : '#222',
+    padding: '5px',
+    borderRadius: '8px',
   };
 
   return (
     <div style={theme}>
       <h2>Count: {count}</h2>
-      <button onClick={increment}>Increase here </button>
+      <button onClick={decrement}>Decrease here</button>
       <button onClick={() => setDark(d => !d)}>Toggle Theme</button>
     </div>
   );
