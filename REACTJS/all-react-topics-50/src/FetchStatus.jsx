@@ -23,7 +23,6 @@ export default function FetchStatus() {
   }, []);
 
   if (loading) return <div>loading</div>;
-  
   if (error) return <div>Error {error}</div>;
 
   return <div>{data.title}</div>;
