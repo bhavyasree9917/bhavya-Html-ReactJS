@@ -19,7 +19,7 @@ const HOCDemo = (ClickCounterDemo) => {
     handleReset = () => {
       this.setState({ count: 0 });
     };
-    
+
     render() {
       const { handleIncrement, handleDecrement, handleReset } = this;
       return (
@@ -31,6 +31,7 @@ const HOCDemo = (ClickCounterDemo) => {
         />
       );
     }
+    
   }
   return NewComnnent;
 };
