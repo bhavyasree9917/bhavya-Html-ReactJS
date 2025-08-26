@@ -11,7 +11,7 @@ const HOCDemo = (ClickCounterDemo) => {
       };
     }
     handleIncrement = () => {
-      this.setState({ count: this.state.count + 1 });
+      this.setState({ count: this.state.count + 15 });
     };
     handleDecrement = () => {
       this.setState({ count: this.state.count - 1 });
