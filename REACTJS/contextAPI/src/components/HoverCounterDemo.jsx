@@ -8,7 +8,7 @@ class HoverCounterDemo extends Component {
       <>
         <h2>The Count : {count}</h2>
         <button onMouseOver={handleIncrement}>Increment.. </button>
-        <button onMouseOver={handleDecrement}>Decrement.</button>
+        <button onMouseOver={handleDecrement}>Decrement..</button>
         <button onMouseOver={handleReset}>Reset. </button>
       </>
     ); 
