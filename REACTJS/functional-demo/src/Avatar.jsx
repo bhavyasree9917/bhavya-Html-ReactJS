@@ -1,7 +1,7 @@
 import React from "react";
 const Avatar=()=>{
     return<div>
-A
+Av
     </div>
 }
 export default Avatar
