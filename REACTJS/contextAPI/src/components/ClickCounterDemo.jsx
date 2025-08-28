@@ -7,7 +7,7 @@ class ClickCounterDemo extends Component {
     return (
       <>
         <h2>The Count : {count}</h2>
-        <button onClick={handleIncrement}></button>
+        <button onClick={handleIncrement}>handleIncrement</button>
         <button onClick={handleDecrement}>Decrement Count</button>
         <button onClick={handleReset}>Reset count </button>
       </>
