@@ -39,7 +39,7 @@ const AppointmentForm = ({ editData, setEditData }) => {
       <input name="description" placeholder="Description" value={form.description} onChange={handleChange} className="block w-full mb-2 border p-2" />
       <input name="participants" placeholder="Participants" value={form.participants} onChange={handleChange} className="block w-full mb-2 border p-2" />
       <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
-        {editData ? 'Update' : 'Add'} appoinment
+        {editData ? 'Update' : 'Add'} appoinmen
       </button>
     </form>
   );
