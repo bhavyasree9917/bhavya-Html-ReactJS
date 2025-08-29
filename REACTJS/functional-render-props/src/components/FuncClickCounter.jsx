@@ -14,7 +14,6 @@ const FuncClickCounter = ({
       <h2>{count}</h2>
     </div> 
   );
-  
 };
 
 export default FuncClickCounter;
