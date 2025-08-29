@@ -12,6 +12,7 @@ const FuncClickCounter = ({
       <button onClick={handleDecrement}>decrement operator </button>
       <button onClick={handleReset}>reset operator </button>
       <h2>{count}</h2>
+      
     </div>
     
   );
