@@ -13,6 +13,7 @@ const FuncClickCounter = ({
       <button onClick={handleReset}>Reset </button>
       <h2>{count}</h2>
     </div> 
+    
   );
 };
 
