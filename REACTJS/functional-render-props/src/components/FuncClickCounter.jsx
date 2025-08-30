@@ -16,4 +16,4 @@ const FuncClickCounter = ({
   );
 };
 
-export default FuncClickCounter;
+export default FuncClickCounter;cfy7ybh 
