@@ -9,7 +9,7 @@ const FuncClickCounter = ({
   return (
     <div>
       <button onClick={handleIncrement}>Increment </button>
-      <button onClick={handleDecrement}>decrement </button>
+      <button onClick={handleDecrement}>Decrement </button>
       <button onClick={handleReset}>Reset </button>
       <h2>{count}</h2>
     </div> 
