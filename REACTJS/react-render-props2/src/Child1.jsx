@@ -11,6 +11,7 @@ export default class Child1 extends Component {
             <button onClick={this.props.decrement}>decrement count </button>
             <button onClick={this.props.reset}>reset count</button>
         </div>
+        
     }
 
 }
