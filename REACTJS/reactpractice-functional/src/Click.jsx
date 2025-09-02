@@ -2,7 +2,7 @@ import React, { useState } from "react";
 const Click = () => {
     const [count, setcount] = useState(0);
     const handleclick = () => {
-        setcount(count => count + 2)
+        setcount(count => count + 34)
 
     }
 
