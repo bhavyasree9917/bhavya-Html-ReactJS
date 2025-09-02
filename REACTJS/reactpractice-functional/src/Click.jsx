@@ -2,14 +2,14 @@ import React, { useState } from "react";
 const Click = () => {
     const [count, setcount] = useState(0);
     const handleclick = () => {
-        setcount(count => count + 3)
+        setcount(count => count + 37)
 
     }
 
 
     return <div>
         <h1>{count}</h1>
-        <button onClick={handleclick}>increase the </button>
+        <button onClick={handleclick}>increase the count</button>
 
     </div>
 }
