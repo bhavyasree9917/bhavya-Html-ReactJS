@@ -9,7 +9,7 @@ const Click = () => {
 
     return <div>
         <h1>{count}</h1>
-        <button onClick={handleclick}>increase  </button>
+        <button onClick={handleclick}>increase </button>
 
     </div>
 }
