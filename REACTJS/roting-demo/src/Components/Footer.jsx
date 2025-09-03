@@ -24,8 +24,8 @@ function Footer() {
         <a href="#" style={linkStyle}>Terms of Service</a>
         <a href="#" style={linkStyle}>Help</a>
       </div>
-      
-      <div style={{ marginTop: '10px' }}>
+
+      <div style={{ marginTop: '12px' }}>
         &copy; {new Date().getFullYear()} My React Website. All rights reserved.
       </div>
     </footer>
