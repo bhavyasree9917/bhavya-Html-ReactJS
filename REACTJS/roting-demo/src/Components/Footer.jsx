@@ -20,7 +20,7 @@ function Footer() {
   return (
     <footer style={footerStyle}>
       <div>
-        <a href="#" style={linkStyle}>Privacy Policy</a>
+        <a href="#" style={linkStyle}></a>
         <a href="#" style={linkStyle}>Terms of Service</a>
         <a href="#" style={linkStyle}>Help</a>
       </div>
