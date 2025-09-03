@@ -26,7 +26,7 @@ function Footer() {
       </div>
 
       <div style={{ marginTop: '12px' }}>
-        &copy; {new Date().getFullYear()} My React Website. All rights reserved
+        &copy; {new Date().getFullYear()} My React Website.
       </div>
     </footer>
   );
