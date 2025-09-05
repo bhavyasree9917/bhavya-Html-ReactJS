@@ -21,7 +21,7 @@ function Footer() {
     <footer style={footerStyle}>
       <div>
         <a href="#" style={linkStyle}>privacy policy</a>
-        <a href="#" style={linkStyle}>Terms of Servic</a>
+        <a href="#" style={linkStyle}>Terms of Service</a>
         <a href="#" style={linkStyle}>Help</a>
       </div>
       <div style={{ marginTop: '12px' }}>
