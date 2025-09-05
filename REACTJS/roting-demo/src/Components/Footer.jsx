@@ -16,6 +16,7 @@ function Footer() {
     margin: '0 12px',
     fontWeight: 'bold'
   };
+  
   return (
     <footer style={footerStyle}>
       <div>
