@@ -27,7 +27,6 @@ function Footer() {
       <div style={{ marginTop: '12px' }}>
         &copy; {new Date().getFullYear()} My React Website.ALL RIGHTS RESERVED.
       </div>
-      
     </footer>
   );
 
