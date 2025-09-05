@@ -13,7 +13,7 @@ function Footer() {
   const linkStyle = {
     color: 'white',
     textDecoration: 'none',
-    margin: '0 15px',
+    margin: '0 10px',
     fontWeight: 'bold'
   };
 
