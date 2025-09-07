@@ -8,5 +8,6 @@ export default class Electronics extends Component{
         return<div>
             <h1>welcome to elctronics page!!!</h1>
         </div>
+        
     }
 }
