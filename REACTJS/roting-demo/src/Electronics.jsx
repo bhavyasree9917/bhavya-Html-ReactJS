@@ -6,7 +6,7 @@ export default class Electronics extends Component{
     }
     render(){
         return<div>
-            <h1>welcome to elctronics page</h1>
+            <h1>welcome to elctronics page!!!</h1>
         </div>
     }
 }
