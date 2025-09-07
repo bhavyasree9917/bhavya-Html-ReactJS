@@ -10,6 +10,6 @@ export default class Home extends Component{
             <p>click to home page</p>
             <h2>home</h2>
         </div>
-        
+  
     }
 }
