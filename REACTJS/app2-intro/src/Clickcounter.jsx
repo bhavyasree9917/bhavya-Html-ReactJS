@@ -10,6 +10,7 @@ const Clickcounter = () => {
         <button onClick={handleclick}>increase</button>
         <button onClick={handleclick}>decrease</button>
         <button onClick={handleclick}>reset</button>
+        
     </div>
 }
 export default Clickcounter;
