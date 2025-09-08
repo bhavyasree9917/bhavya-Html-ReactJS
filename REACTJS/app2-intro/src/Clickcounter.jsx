@@ -9,7 +9,7 @@ const Clickcounter = () => {
         <h1>count:{count}</h1>
         <button onClick={handleclick}>increase</button>
         <button onClick={handleclick}>decrease</button>
-        <button onClick={handleclick}></button>
+        <button onClick={handleclick}>reset</button>
 
     </div>
 }
