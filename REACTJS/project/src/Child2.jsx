@@ -4,7 +4,7 @@ import Child3 from "./Child3";
 export default class extends Component{
     render(){
         return (
-        <div><h1>welcome to</h1>
+        <div><h1>welcome to child</h1>
         
             <Child3 msg={this.props.msg}/></div>)
     }
