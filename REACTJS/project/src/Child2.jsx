@@ -5,6 +5,7 @@ export default class extends Component{
     render(){
         return (
         <div><h1>welcome to child2 componnet....</h1>
+        
             <Child3 msg={this.props.msg}/></div>)
     }
 }
